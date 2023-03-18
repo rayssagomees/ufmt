@@ -1,4 +1,4 @@
-program eq2g_1; // função quadrática com a, b, c definido vs1.0
+program eq2G_1; // função quadrática com a, b, c definido vs1.0
 
 uses
     crt, math; //bibliotecas

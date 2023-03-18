@@ -1,4 +1,4 @@
-program eq2g_2; // resolvendo funçao quadrática vs2.0
+program eq2G_2; // resolvendo funçao quadrática vs2.0
 
 var
     a, b, c, x1, x2, tempdelta: real;

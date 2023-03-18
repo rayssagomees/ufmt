@@ -1,4 +1,4 @@
-program eq1g_1; // resolvendo funções afim vs1.0
+program eq1G_1; // resolvendo funções afim vs1.0
 
 var
     a, b, x: real;
