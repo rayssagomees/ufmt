@@ -1,7 +1,7 @@
 program appendTextFile_2;
 
 uses 
-    SysUtils ;
+    SysUtils;
   
 const
     ARQ_NOME = 'eq2G.txt';

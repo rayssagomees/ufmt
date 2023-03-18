@@ -1,7 +1,7 @@
 program createTextFile_1;
 
 uses 
-  SysUtils ;
+  SysUtils;
   
 const
   ARQ_NOME = 'InfoAulas.txt';

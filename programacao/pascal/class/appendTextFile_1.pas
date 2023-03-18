@@ -1,6 +1,6 @@
 program appendTextFile_1;
 
-uses SysUtils ;
+uses SysUtils;
   
 const
   ARQ_NOME = 'InfoAulas.txt';
