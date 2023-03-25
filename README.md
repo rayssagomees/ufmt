@@ -4,7 +4,7 @@
   ### PROGRAMAÇÃO DE COMPUTADORES
   
   <p>
-    Superando desafios reais de programação para aprimorar <br> minhas habilidades e dominar novas técnicas com excelência. 
+    Aprimorando constantemente minhas habilidades em programação <br> ao enfrentar desafios reais e dominando novas técnicas com excelência. 
   </p>
   
    <!--##### Explore os documentos</a></p>
