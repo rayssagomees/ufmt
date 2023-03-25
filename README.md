@@ -39,7 +39,7 @@ Essa fonte maravilhosa de conhecimento só foi possível graças à coletânea d
 
 > Em breve.
 
-<br><div align="right"><a target="_blank" href="https://github.com/raysantori/codelandia#desafio-codel%C3%A2ndia">🔝 Voltar ao topo</a></div>
+<br><div align="right"><a target="_blank" href="https://github.com/raysantori/ufmt#programa%C3%A7%C3%A3o-de-computadores">🔝 Voltar ao topo</a></div>
 
 <strong>Mostre apoio!</strong> ⭐ Se gostou do desafio.
 
