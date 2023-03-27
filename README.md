@@ -16,6 +16,20 @@
 
 <br>
 
+## 🧩 Exercícios
+
+| Linguagem | Exercício |
+| :---: | :--- |
+| Pascal | Encontre uma função afim pelo valor de dois pontos |
+| Pascal | Descubra todos o números ímpares entre os números naturais N1 e N2 dados |
+| Pascal | Encontre uma solução aceitável para x²-2=0 usando a fórmula iterativa |
+| Pascal | Calcule o volume dos sólidos geométricos |
+| Pascal | Calcule a área das figuras geométricas |
+| Pascal | Encontre todos os intervalos “unitários” |b – a| = 1 que contém um zero da função: f(x) = x²+bx+c entre os inteiros N1 e N2 |
+| Pascal | Encontre uma solução aceitável para x²+bx+c = 0 usando o método de Newton |
+
+<br>
+
 ## 💾 Instalação
 
 Clone o repositório no terminal:
