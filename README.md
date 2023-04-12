@@ -27,6 +27,10 @@
 | Pascal | Calcule a área das figuras geométricas |
 | Pascal | Encontre todos os intervalos “unitários” |b – a| = 1 que contém um zero da função: f(x) = x²+bx+c entre os inteiros N1 e N2 |
 | Pascal | Encontre uma solução aceitável para x²+bx+c = 0 usando o método de Newton |
+| Pascal | Calcule o produto interno e o ângulo entre dois vetores u e v |
+| Pascal | Encontre a posição (i, j) e o valor do menor elemento de uma matriz 3x4 |
+| Pascal | Calcule a soma dos elementos das diagonais: principal e secundária, de uma matriz quadrada 3x3 |
+| Pascal | Calcule a multiplicação de uma matriz A3x3 por um vetor coluna B3x1 |
 
 <br>
 
