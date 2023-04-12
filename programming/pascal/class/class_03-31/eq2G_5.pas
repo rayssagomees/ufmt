@@ -1,10 +1,10 @@
-program eq2G_4;
+program eq2G; // vs2.0
 
 uses
     SysUtils;
 
 const
-    ARQ_NOME = 'eq2G.txt';
+    ARQ_NOME= 'eq2G.txt';
 
 var
     a, b, c: integer;
@@ -12,30 +12,31 @@ var
     tempDelta, x1, x2: real;
     arquivo: Text;
 
-function SplitStr(var s: string; delimiter: char):string;
+function SplitString(var str: string; delimiter: char):string;
 var
     p: integer;
-    token: string;
+    head: string;
+
 begin
-    p:= Pos(delimiter, s);
-    token:= Copy(s, 1, p); // pascal string começa no index 1
-    s:= Copy(s, p+1, 1000); // deleta o token // length(s)-1
-    SplitStr:= Trim(token); // retorna o token
+    p:= Pos(delimiter, str);
+    head:= Copy(str, 1, p-1);
+    str:= Copy(str, p+1, 10000);
+    SplitString:= head;
 end;
 
 begin
     Assign(arquivo, ARQ_NOME);
     Reset(arquivo);
 
-    while not EOF (arquivo) do
+    while not EOF(arquivo) do
     begin
         readln(arquivo, linha);
 
-        tempA:= SplitStr(linha, ' ');
+        tempA:= SplitString(linha, ' ');
         Val(tempA, a);
-        tempB:= SplitStr(linha, ' ');
+        tempB:= SplitString(linha, ' ');
         Val(tempB, b);
-        tempC:= SplitStr(linha, ' ');
+        tempC:= Trim(linha);
         Val(tempC, c);
 
         tempDelta:= b*b-4*a*c;
@@ -44,9 +45,8 @@ begin
         begin
             x1:= (-b + sqrt(tempDelta))/(2*a);
             x2:= (-b - sqrt(tempDelta))/(2*a);
-
-            writeln('x1 = ' + x1:0:2);
-            writeln('x1 = ' + x2:0:2);
+            writeln('x1 = ', x1:0:2);
+            writeln('x2 = ', x2:0:2);
         end;
 
         writeln('Delta = ', tempDelta:0:2);
@@ -54,6 +54,6 @@ begin
     end;
 
     Close(arquivo);
-    writeln('Fim.');
+    writeln('Fim');
     readln;
 end.
