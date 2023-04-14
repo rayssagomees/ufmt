@@ -11,7 +11,7 @@ int main(void)
   float delta;  /* declaração de variável real */
 
   /* %d = mostra como decimal */
-  /*a = 1;
+  /* a = 1;
   b = -3;
   c = 2; */
 
