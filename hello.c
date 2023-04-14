@@ -1,4 +1,4 @@
-/* class_04-14.c */
+/* hello.c */
 /* C constrói um sistema operacional */
 
 /* https://github.com/jmpessoa/LazCWizard */
