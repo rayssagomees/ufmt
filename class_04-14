@@ -1,6 +1,8 @@
 /* class_04-14 */
 /* C constrói um sistema operacional */
 
+#include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 #include <string.h>
 
