@@ -1,10 +1,11 @@
-/*class_04-14*/
+/* class_04-14 */
+/* C constrói um sistema operacional */
 
 #include <math.h>
 #include <string.h>
 
-int main (void)
+int main (void) /* main = programa principal, que é uma função, void dá função sem parâmetro, ou seja (), pode ser com ou sem */
 (
-  print("\n Hello C World! \n");
-  return();
+  printf("\n Hello C World! \n"); /* \n = nova linha */
+  return 0;
 )
