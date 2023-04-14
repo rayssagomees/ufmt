@@ -1,1 +1,10 @@
-// aula 01
+/*class_04-14*/
+
+#include <math.h>
+#include <string.h>
+
+int main (void)
+(
+  print("\n Hello C World! \n");
+  return();
+)
