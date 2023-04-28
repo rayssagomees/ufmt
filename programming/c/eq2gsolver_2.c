@@ -20,8 +20,8 @@ int main(void)
      delta = b*b-4*a*c;
 
      if(delta >= 0 ) {
-      x1 = (-b+sqrt(delta))/2*a;
-      x2 = (-b-sqrt(delta))/2*a;
+      x1 = (-b+sqrt(delta))/(2*a);
+      x2 = (-b-sqrt(delta))/(2*a);
 
       printf("\ndelta = %3.2f", delta);
       printf("\nx1 = %3.2f", x1);
