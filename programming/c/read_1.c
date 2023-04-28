@@ -1,5 +1,5 @@
 /* read_1.c */
-  
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -8,6 +8,7 @@
 int main(void)
 {
   FILE *archive2 = fopen("data.txt","r"); // lê o arquivo
+
   if(archive2 == NULL){
     printf("Não consigo abrir o arquivo.");
     exit(-1);
