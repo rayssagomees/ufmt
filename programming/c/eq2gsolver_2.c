@@ -23,9 +23,9 @@ int main(void)
       x1 = (-b+sqrt(delta))/2*a;
       x2 = (-b-sqrt(delta))/2*a;
 
-      printf("\nEntre delta = %3.2f", delta);
-      printf("\nEntre x1 = %3.2f", x1);
-      printf("\nEntre x2 = %3.2f\n", x2);
+      printf("\ndelta = %3.2f", delta);
+      printf("\nx1 = %3.2f", x1);
+      printf("\nx2 = %3.2f\n", x2);
      }
      else { 
       printf("\ndelta = %3.2f", delta);
