@@ -1,4 +1,4 @@
-/*eq2gsolver.c*/
+/*eq2gsolver_1.c*/
   
 #include <stdio.h>
 #include <stdlib.h>
