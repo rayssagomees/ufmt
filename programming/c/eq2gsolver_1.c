@@ -7,7 +7,7 @@
 
 int main(void)
 {
-  int a, b, c; /* declaração de variável inteira */
+  float a, b, c; /* declaração de variável inteira */
   float delta;  /* declaração de variável real */
 
   /* %d = mostra como decimal */
