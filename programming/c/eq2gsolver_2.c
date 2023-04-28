@@ -7,28 +7,32 @@
 
 int main(void)
 {
-  float a, b, c, delta; /* int declaração de variável inteira, declaração de variável real, %d = mostra como decimal */
+  int a, b, c;
+  float delta, x1, x2;
+  /* int declaração de variável inteira, declaração de variável real, %d = mostra como decimal */
 
-  printf("Entre com a: "); scanf("%f", &a);
-  printf("Entre com b: "); scanf("%f", &b);
-  printf("Entre com c: "); scanf("%f", &c);
+  printf("Entre com a: "); scanf("%d", &a);
 
-  printf("\na = %3.2f \n", a);
-  printf("b = %3.2f \n", b);
-  printf("c = %3.2f \n\n", c);
+  if (a != 0){
+     printf("Entre com b: "); scanf("%d", &b);
+     printf("Entre com c: "); scanf("%d", &c);
 
-  delta = b*b-4*a*c;
+     delta = b*b-4*a*c;
 
-  if (delta >= 0){
-    float x1 = (-b+sqrt(delta))/(2*a);
-    float x2 = (-b-sqrt(delta))/(2*a);
+     if(delta >= 0 ) {
+      x1 = (-b+sqrt(delta))/2*a;
+      x2 = (-b-sqrt(delta))/2*a;
 
-    printf("delta = %3.2f \n\n", delta); /* %f = mostra como float; 0.3 quantidade de decimais na frente do tipo */
-    printf("x1 = %3.2f \n", x1);
-    printf("x2 = %3.2f \n\n", x2);
+      printf("\nEntre delta = %3.2f", delta);
+      printf("\nEntre x1 = %3.2f", x1);
+      printf("\nEntre x2 = %3.2f\n", x2);
+     }
+     else { 
+      printf("\ndelta = %3.2f", delta);
+     }
   }
-  else { /* delta negativo */
-    printf("delta = %0.2f \n\n", delta); /* %f = mostra como float; 0.3 quantidade de decimais na frente do tipo */
+  else {
+      printf("\nErro[A=0]. Insira uma funcao do segundo grau.");
   }
 
   return 0;
