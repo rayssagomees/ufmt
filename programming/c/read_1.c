@@ -7,10 +7,10 @@
 
 int main(void)
 {
-  FILE *archive2 = fopen("data.txt","r");
+  FILE *archive2 = fopen("data.txt","r"); // lê o arquivo
   if(archive2 == NULL){
-  printf("Não consigo ler o arquivo.");
-  exit(-1);
+    printf("Não consigo abrir o arquivo.");
+    exit(-1);
   }
 
   int ch;
@@ -21,7 +21,7 @@ int main(void)
   }
 
   fclose(archive2);
-  printf("\n Hello C World! \n");
+  printf("\n Arquivo lido. \n");
 
   return 0;
 }
