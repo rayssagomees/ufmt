@@ -30,7 +30,7 @@
 | Pascal | Calcule o produto interno e o ângulo entre dois vetores u e v |
 | Pascal | Encontre a posição (i, j) e o valor do menor elemento de uma matriz 3x4 |
 | Pascal | Calcule a soma dos elementos das diagonais: principal e secundária, de uma matriz quadrada 3x3 |
-| Pascal | Calcule a multiplicação de uma matriz A3x3 por um vetor coluna B 3x1 |
+| Pascal | Calcule a multiplicação de uma matriz A 3x3 por um vetor coluna B 3x1 |
 
 <br>
 
