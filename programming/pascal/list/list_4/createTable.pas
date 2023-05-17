@@ -1,11 +1,11 @@
-program create_tabel1;
+program createTable;
 
 var
   output: text;
   i: integer;
 
 begin
-  assign(output, 'tabel1.txt');
+  assign(output, 'table1.txt');
   rewrite(output);
 
   for i := 0 to 3 do

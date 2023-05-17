@@ -1,4 +1,4 @@
-program createTable;
+program table;
 
 const
   max = 4; // número de elementos na tabela
