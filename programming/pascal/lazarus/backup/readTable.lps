@@ -10,13 +10,13 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="LerArquivoTexto"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="23"/>
-        <CursorPos X="30" Y="40"/>
+        <TopLine Value="9"/>
+        <CursorPos Y="37"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="21">
+    <JumpHistory HistoryIndex="22">
       <Position>
         <Filename Value="table.lpr"/>
         <Caret Line="8" Column="31"/>
@@ -104,6 +104,10 @@
       <Position>
         <Filename Value="table.lpr"/>
         <Caret Line="41" Column="39" TopLine="23"/>
+      </Position>
+      <Position>
+        <Filename Value="table.lpr"/>
+        <Caret Line="12" Column="23"/>
       </Position>
     </JumpHistory>
     <RunParams>

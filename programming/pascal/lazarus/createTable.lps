@@ -9,12 +9,25 @@
         <Filename Value="createTable.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <CursorPos X="16" Y="16"/>
+        <CursorPos X="5" Y="17"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory HistoryIndex="2">
+      <Position>
+        <Filename Value="createTable.lpr"/>
+        <Caret Line="13" Column="10"/>
+      </Position>
+      <Position>
+        <Filename Value="createTable.lpr"/>
+        <Caret Line="16" Column="29"/>
+      </Position>
+      <Position>
+        <Filename Value="createTable.lpr"/>
+        <Caret Line="6" Column="23"/>
+      </Position>
+    </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>

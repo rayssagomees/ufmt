@@ -37,7 +37,7 @@ begin
 
       // Faça algo com o número decimal lido
       // Exemplo: exibir na tela
-      WriteLn(numeroDecimal:2:2);
+      WriteLn(numeroDecimal:1:1);
 
       // Limpar a string do número decimal
       numeroStr := '';

@@ -2,7 +2,8 @@ program createTable;
 
 var
   output: text;
-  i: integer;
+  i: integer;    
+  minhaString: string;
 
 begin
   assign(output, 'table1.txt');
@@ -14,7 +15,8 @@ begin
     write(output, ' ');
   end;
 
-  //writeln(output, (i * 0.2 + 1):0:1);
+  writeln(output, (i * 0.2 + 1):0:1);
+  minhaString := Copy(minhaString, 1, Length(minhaString) - 3);
 
   close(output);
 end.
