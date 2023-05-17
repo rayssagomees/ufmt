@@ -6,10 +6,11 @@
     <BuildModes Active="Default"/>
     <Units>
       <Unit>
-        <Filename Value="expandTable.lpr"/>
+        <Filename Value="readTable_2.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <CursorPos X="33" Y="29"/>
+        <TopLine Value="3"/>
+        <CursorPos X="21" Y="25"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>

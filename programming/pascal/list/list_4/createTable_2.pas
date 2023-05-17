@@ -10,11 +10,11 @@ begin
 
   for i := 1 to 5 do // xi
     write(arq, xi[i]:0:1, ' ');
-  writeln(arq);
+    writeln(arq);
 
   for i := 1 to 5 do //f(xi)
     write(arq, fxi[i]:0:3, ' ');
-  writeln(arq);
+    writeln(arq);
 
   close(arq);
   readln;

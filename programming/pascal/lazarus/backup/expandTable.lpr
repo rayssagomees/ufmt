@@ -1,25 +1,46 @@
-program createTable_2.pas;
+program expandTable;
 var
-  arq: text;
+  arqEntrada, arqSaida: text;
+  xi, fxi: array[1..5] of real;
+  xiMedia, fxiMedia: array[1..5] of real;
   i: integer;
-  xi: array[1..5] of real = (0.0, 1.5, 3.0, 4.5, 6.0);
-  fxi: array[1..5] of real = (0.001, 0.016, 0.028, 0.046, 0.057);
 begin
-  assign(arq, 'table2.txt');
-  rewrite(arq);
+  assign(arqEntrada, 'table2.txt');
+  reset(arqEntrada);
 
-  // Escrever os valores de xi na primeira linha do arquivo
+  // Ler os valores de xi da primeira linha do arquivo
   for i := 1 to 5 do
-    write(arq, xi[i]:0:1, ' ');
-  writeln(arq);
+    read(arqEntrada, xi[i]);
 
-  // Escrever os valores de f(xi) na segunda linha do arquivo
+  // Ler os valores de f(xi) da segunda linha do arquivo
   for i := 1 to 5 do
-    write(arq, fxi[i]:0:3, ' ');
-  writeln(arq);
+    read(arqEntrada, fxi[i]);
 
-  close(arq);
-  writeln('Arquivo "table2.txt" criado com sucesso!');
+  close(arqEntrada);
+
+  // Calcular as médias dos valores de xi e f(xi)
+  for i := 1 to 5 do
+    xiMedia[i] := (xi[i] + xi[i+1]) / 2;
+
+  for i := 1 to 5 do
+    fxiMedia[i] := (fxi[i] + fxi[i+1]) / 2;
+
+  // Escrever os valores expandidos no arquivo de saída
+  assign(arqSaida, 'table2expand.txt');
+  rewrite(arqSaida);
+
+  // Escrever os valores de xi expandidos na primeira linha do arquivo
+  for i := 1 to 4 do
+    write(arqSaida, xi[i]:0:1, ' ', xiMedia[i]:0:1, ' ');
+  writeln(arqSaida, xi[5]:0:1);
+
+  // Escrever os valores de f(xi) expandidos na segunda linha do arquivo
+  for i := 1 to 4 do
+    write(arqSaida, fxi[i]:0:3, ' ', fxiMedia[i]:0:3, ' ');
+  writeln(arqSaida, fxi[5]:0:3);
+
+  close(arqSaida);
+  writeln('Arquivo "tabela2expandida.txt" criado com sucesso!');
   readln;
 end.
 
