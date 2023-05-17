@@ -9,12 +9,50 @@
         <Filename Value="readTable.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <CursorPos X="33" Y="20"/>
+        <TopLine Value="33"/>
+        <CursorPos X="27" Y="48"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory HistoryIndex="8">
+      <Position>
+        <Filename Value="readTable.lpr"/>
+        <Caret Line="7" Column="48"/>
+      </Position>
+      <Position>
+        <Filename Value="readTable.lpr"/>
+        <Caret Line="21" Column="19" TopLine="9"/>
+      </Position>
+      <Position>
+        <Filename Value="readTable.lpr"/>
+        <Caret Line="15" Column="36"/>
+      </Position>
+      <Position>
+        <Filename Value="readTable.lpr"/>
+        <Caret Line="50" Column="7" TopLine="34"/>
+      </Position>
+      <Position>
+        <Filename Value="readTable.lpr"/>
+        <Caret Line="54" Column="10" TopLine="34"/>
+      </Position>
+      <Position>
+        <Filename Value="readTable.lpr"/>
+        <Caret Line="59" Column="72" TopLine="36"/>
+      </Position>
+      <Position>
+        <Filename Value="readTable.lpr"/>
+        <Caret Line="54" Column="38" TopLine="35"/>
+      </Position>
+      <Position>
+        <Filename Value="readTable.lpr"/>
+        <Caret Line="39" Column="17" TopLine="27"/>
+      </Position>
+      <Position>
+        <Filename Value="readTable.lpr"/>
+        <Caret Line="46" Column="28" TopLine="33"/>
+      </Position>
+    </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>

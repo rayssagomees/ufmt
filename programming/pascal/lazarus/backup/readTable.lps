@@ -6,108 +6,43 @@
     <BuildModes Active="Default"/>
     <Units>
       <Unit>
-        <Filename Value="table.lpr"/>
+        <Filename Value="readTable.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="LerArquivoTexto"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="9"/>
-        <CursorPos Y="37"/>
+        <TopLine Value="27"/>
+        <CursorPos X="9" Y="34"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="22">
+    <JumpHistory HistoryIndex="6">
       <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="8" Column="31"/>
+        <Filename Value="readTable.lpr"/>
+        <Caret Line="7" Column="48"/>
       </Position>
       <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="9" Column="21"/>
+        <Filename Value="readTable.lpr"/>
+        <Caret Line="21" Column="19" TopLine="9"/>
       </Position>
       <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="11" Column="13"/>
+        <Filename Value="readTable.lpr"/>
+        <Caret Line="15" Column="36"/>
       </Position>
       <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="10" Column="26"/>
+        <Filename Value="readTable.lpr"/>
+        <Caret Line="50" Column="7" TopLine="34"/>
       </Position>
       <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="45" Column="10" TopLine="17"/>
+        <Filename Value="readTable.lpr"/>
+        <Caret Line="54" Column="10" TopLine="34"/>
       </Position>
       <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="10" Column="12"/>
+        <Filename Value="readTable.lpr"/>
+        <Caret Line="59" Column="72" TopLine="36"/>
       </Position>
       <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="31" Column="45" TopLine="17"/>
-      </Position>
-      <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="10" Column="27"/>
-      </Position>
-      <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="24" Column="27" TopLine="10"/>
-      </Position>
-      <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="27" Column="46" TopLine="13"/>
-      </Position>
-      <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="31" Column="45" TopLine="17"/>
-      </Position>
-      <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="27" Column="30" TopLine="13"/>
-      </Position>
-      <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="26" Column="23" TopLine="17"/>
-      </Position>
-      <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="60" Column="10" TopLine="32"/>
-      </Position>
-      <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="16" Column="42"/>
-      </Position>
-      <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="24" Column="39" TopLine="15"/>
-      </Position>
-      <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="31" Column="24" TopLine="15"/>
-      </Position>
-      <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="29" Column="34" TopLine="15"/>
-      </Position>
-      <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="32" Column="33" TopLine="17"/>
-      </Position>
-      <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="35" Column="34" TopLine="23"/>
-      </Position>
-      <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="50" TopLine="22"/>
-      </Position>
-      <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="41" Column="39" TopLine="23"/>
-      </Position>
-      <Position>
-        <Filename Value="table.lpr"/>
-        <Caret Line="12" Column="23"/>
+        <Filename Value="readTable.lpr"/>
+        <Caret Line="54" Column="38" TopLine="35"/>
       </Position>
     </JumpHistory>
     <RunParams>
