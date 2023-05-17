@@ -9,12 +9,62 @@
         <Filename Value="expandTable.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <CursorPos X="33" Y="29"/>
+        <TopLine Value="13"/>
+        <CursorPos X="30" Y="31"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory HistoryIndex="11">
+      <Position>
+        <Filename Value="expandTable.lpr"/>
+        <Caret Line="4" Column="8"/>
+      </Position>
+      <Position>
+        <Filename Value="expandTable.lpr"/>
+        <Caret Line="31" Column="10" TopLine="17"/>
+      </Position>
+      <Position>
+        <Filename Value="expandTable.lpr"/>
+        <Caret Line="44" Column="5" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="expandTable.lpr"/>
+        <Caret Line="37" Column="9" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="expandTable.lpr"/>
+        <Caret Line="30" Column="19" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="expandTable.lpr"/>
+        <Caret Line="37" Column="46" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="expandTable.lpr"/>
+        <Caret Line="56" Column="24" TopLine="35"/>
+      </Position>
+      <Position>
+        <Filename Value="expandTable.lpr"/>
+        <Caret Line="61" Column="18" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="expandTable.lpr"/>
+        <Caret Line="53" Column="20" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="expandTable.lpr"/>
+        <Caret Line="20" Column="9"/>
+      </Position>
+      <Position>
+        <Filename Value="expandTable.lpr"/>
+        <Caret Line="38" Column="12" TopLine="24"/>
+      </Position>
+      <Position>
+        <Filename Value="expandTable.lpr"/>
+        <Caret Line="41" Column="8" TopLine="14"/>
+      </Position>
+    </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>
