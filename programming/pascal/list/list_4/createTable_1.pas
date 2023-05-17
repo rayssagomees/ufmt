@@ -1,4 +1,4 @@
-program createTable;
+program createTable_1.pas;
 
 var
   output: text;

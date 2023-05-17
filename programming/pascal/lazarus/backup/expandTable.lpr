@@ -1,72 +1,25 @@
-program expandTable;
-
-const
-  max = 5; // número de elementos na tabela
-
+program createTable_2.pas;
 var
-  arquivoEntrada, arquivoSaida: Text;
-  tabelaEntrada: array[0..1, 0..max-1] of real; // tabela de entrada com duas linhas e MAX colunas
-  tabelaSaida: array[0..2, 0..(max*2)-1] of real; // tabela de saída expandida com três linhas e MAX*2 colunas
+  arq: text;
   i: integer;
-
+  xi: array[1..5] of real = (0.0, 1.5, 3.0, 4.5, 6.0);
+  fxi: array[1..5] of real = (0.001, 0.016, 0.028, 0.046, 0.057);
 begin
-  Assign(arquivoEntrada, 'tabela2.txt'); // Abrir o arquivo de entrada
-  Reset(arquivoEntrada);
+  assign(arq, 'table2.txt');
+  rewrite(arq);
 
-  // Ler a primeira linha da tabela de entrada
-  for i := 0 to max-1 do
-  begin
-    Read(arquivoEntrada, tabelaEntrada[0, i]);
-  end;
+  // Escrever os valores de xi na primeira linha do arquivo
+  for i := 1 to 5 do
+    write(arq, xi[i]:0:1, ' ');
+  writeln(arq);
 
-  // Ler a segunda linha da tabela de entrada
-  for i := 0 to max-1 do
-  begin
-    Read(arquivoEntrada, tabelaEntrada[1, i]);
-  end;
+  // Escrever os valores de f(xi) na segunda linha do arquivo
+  for i := 1 to 5 do
+    write(arq, fxi[i]:0:3, ' ');
+  writeln(arq);
 
-  Close(arquivoEntrada); // Fechar o arquivo de entrada
-
-  // Preencher a primeira linha da tabela de saída com os valores xi da tabela de entrada
-  for i := 0 to max-1 do
-  begin
-    tabelaSaida[0, i*2] := tabelaEntrada[0, i];
-  end;
-
-  // Preencher a segunda linha da tabela de saída com os valores f(xi) da tabela de entrada
-  for i := 0 to max-1 do
-  begin
-    tabelaSaida[1, i*2] := tabelaEntrada[1, i];
-  end;
-
-  // Calcular e preencher a terceira linha da tabela de saída com os valores médios
-  for i := 0 to max-2 do
-  begin
-    tabelaSaida[2, i*2+1] := (tabelaEntrada[0, i] + tabelaEntrada[0, i+1]) / 2; // cálculo da média dos xi
-    tabelaSaida[2, i*2+2] := (tabelaEntrada[1, i] + tabelaEntrada[1, i+1]) / 2; // cálculo da média dos f(xi)
-  end;
-
-  // Abre o arquivo de saída
-  Assign(arquivoSaida, 'tabela2expandida.txt');
-  Rewrite(arquivoSaida);
-
-  // Escreve a tabela de saída no arquivo
-  for i := 0 to (max*2)-1 do
-  begin
-    Write(arquivoSaida, tabelaSaida[0, i]:0:1, ' ');
-  end;
-  WriteLn(arquivoSaida);
-
-  for i := 0 to (max*2)-1 do
-  begin
-    Write(arquivoSaida, tabelaSaida[1, i]:0:3, ' ');
-  end;
-  WriteLn(arquivoSaida);
-
-  for i := 0 to (max*2)-1 do
-  begin
-    Write(arquivoSaida, tabelaSaida[2, i]:0:1, ' ');
-  end;
-
-  Close(arquivoSaida); // Fecha o arquivo de sa
+  close(arq);
+  writeln('Arquivo "table2.txt" criado com sucesso!');
+  readln;
+end.
 

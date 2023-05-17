@@ -9,13 +9,21 @@
         <Filename Value="expandTable.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="44"/>
-        <CursorPos X="7" Y="72"/>
+        <CursorPos X="5" Y="21"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory HistoryIndex="1">
+      <Position>
+        <Filename Value="expandTable.lpr"/>
+        <Caret Line="61" Column="25" TopLine="44"/>
+      </Position>
+      <Position>
+        <Filename Value="expandTable.lpr"/>
+        <Caret Line="15" Column="32"/>
+      </Position>
+    </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>
