@@ -1,0 +1,83 @@
+% Lista de figuras ========================================
+
+    % Renomear título da lista de figuras
+    \renewcommand{\listfigurename}{Lista de Figuras}
+    
+    % Sem identação da lista
+    \setlength{\cftfigindent}{0pt} 
+    
+    % Personalizar o formato (Figura 1 – Nome .... 10)
+    \renewcommand{\cftfigpresnum}{Figura\ } 
+    %\renewcommand{\cftfigaftersnum}{\ –\ }
+    
+    % Ajustar pontilhado (1.5) ou deixar sem nada (\cftnodots)
+    \renewcommand{\cftdotsep}{\cftnodots} 
+    
+    % Ajustar espaçamento entre número e texto
+    \setlength{\cftfignumwidth}{3cm} 
+    
+    % Espaçamento entre linhas da lista
+    \setlength{\cftbeforefigskip}{6pt} 
+    
+    % Mudar fonte / estilo
+    %\renewcommand{\cftfigfont}{\bfseries} 
+    %\renewcommand{\cftfigpagefont}{\bfseries}
+
+    % Centralizar o título da Lista de Figuras
+    \renewcommand{\cftloftitlefont}{\hfill\bfseries\Large}
+    \renewcommand{\cftafterloftitle}{\hfill\mbox{}}
+
+% Lista de tabelas ========================================
+
+    % Renomear título da lista de tabelas
+    \renewcommand{\listtablename}{Lista de Tabelas}
+    
+    % Sem identação da lista
+    \setlength{\cfttabindent}{0pt} 
+    
+    % Personalizar o formato (Tabela 1 – Nome 10)
+    \renewcommand{\cfttabpresnum}{Tabela\ } 
+    %\renewcommand{\cfttabaftersnum}{\ –\ }
+    
+    % Ajustar pontilhado (1.5) ou deixar sem nada (\cftnodots)
+    \renewcommand{\cftdotsep}{\cftnodots} 
+    
+    % Ajustar espaçamento entre número e texto
+    \setlength{\cfttabnumwidth}{3cm} 
+    
+    % Espaçamento entre linhas da lista
+    \setlength{\cftbeforetabskip}{6pt} 
+    
+    % Mudar fonte / estilo
+    %\renewcommand{\cfttabfont}{\bfseries} 
+    %\renewcommand{\cfttabpagefont}{\bfseries}
+
+    % Centralizar o título da Lista de Tabelas
+    \renewcommand{\cftlottitlefont}{\hfill\bfseries\Large}
+    \renewcommand{\cftafterlottitle}{\hfill\mbox{}}
+
+% Sumário ========================================
+
+    % Renomear sumário
+    \renewcommand{\contentsname}{Sumário}
+
+    % Força o sumário e as listas a não terem numeração na primeira página
+    \tocloftpagestyle{empty}
+
+    % Remove todos os recuos
+    \setlength{\cftsecindent}{0pt}
+    \setlength{\cftsubsecindent}{0pt}
+    \setlength{\cftsubsubsecindent}{0pt}
+
+    % Alinhamento perfeito dos números
+    \setlength{\cftsecnumwidth}{1cm}
+    \setlength{\cftsubsecnumwidth}{1cm}
+    \setlength{\cftsubsubsecnumwidth}{1cm}
+
+    % Controla a numeração
+    \setcounter{secnumdepth}{3}
+    \setcounter{tocdepth}{3}
+
+    % Centralizar o título do Sumário
+    \renewcommand{\cfttoctitlefont}{\hfill\bfseries\Large}
+    \renewcommand{\cftaftertoctitle}{\hfill\mbox{}}

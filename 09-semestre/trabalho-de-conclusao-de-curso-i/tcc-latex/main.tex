@@ -1,0 +1,27 @@
+\documentclass[a4paper,12pt]{article}
+
+% Páginas ocultas essenciais
+\input{assets/package}
+\input{assets/style/page}
+\input{assets/command}
+\input{assets/preencha-aqui}
+
+\begin{document}
+
+% Desliga a numeração visual para os elementos pré-textuais
+\pagestyle{empty}
+
+% Estrutura
+    % Elementos pré-textuais
+    \input{estrutura/01-elementos-pre-textuais/00-index}
+
+    % A partir daqui, liga a numeração no topo direito
+    \pagestyle{estiloabnt}
+
+    % Elementos textuais
+    \input{estrutura/02-elementos-textuais/00-index}
+
+    % Elementos pós-textuais
+    \input{estrutura/03-elementos-pos-textuais/00-index}
+
+\end{document}
