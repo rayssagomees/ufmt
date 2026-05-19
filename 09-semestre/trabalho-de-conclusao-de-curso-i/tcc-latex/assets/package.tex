@@ -1,96 +1,62 @@
 \usepackage[utf8]{inputenc}
-\pagestyle{empty}
 
-% Define o idioma do documento para português do Brasil
-\usepackage[brazil]{babel}
+% Fontes e Idioma
+\usepackage{mathptmx} % Altera a fonte do texto e da matemática para Times
+% O idioma [brazil] já é gerenciado nativamente pelas opções da classe no main.tex
 
-% Altera a fonte do texto e da matemática para Times
-\usepackage{mathptmx}
-
-% Altera a margem do documento
-\usepackage[tmargin=3cm, bmargin=2cm, lmargin=3cm, rmargin=2cm]{geometry}
-
-% Espaçamento entre linhas de 1,5
-\onehalfspacing 
-
-% Altera a margem de um bloco
-\usepackage{changepage} 
-
-% Inclui imagens
-\usepackage{graphicx} 
-
-% Recursos personalizáveis para legendas
-\usepackage{caption} 
-
-% Personalizar o formato (Figura 1 – Nome .... 10)
-\usepackage{tocloft} 
-
-% Cria glossário em ordem alfabética
-\usepackage[acronym]{glossaries}
-\makeglossaries
-
-% Deixar títulos do sumário maiúsculo
-\usepackage{textcase}
-
-% Pacote para criar hiperlinks no PDF
-\usepackage[
-    colorlinks=true,  % Remove as caixas coloridas feias ao redor dos links
-    linkcolor=black,  % Cor dos links internos (como o sumário)
-    citecolor=black,  % Cor dos links para as referências bibliográficas
-    urlcolor=black    % Cor dos links de sites
-]{hyperref}
-
-% Citações
-\usepackage[alf]{abntex2cite}
-
-% Preenche o espaços vazios da tabela
-\usepackage{tabularx}
-
-\usepackage{fancyhdr}
-
-
-
-
-
-
-
-
-
-
-
-
-\usepackage{multicol,multirow}
-\setlength{\columnsep}{.75cm}
-\usepackage{xcolor}
-
-% ESPAÇAMENTO ENTRE PARAGRÁFOS
-\usepackage{parskip}
-\setlength{\parskip}{1em}
-
-% RECUO
-\setlength{\parindent}{1.25cm}
-
-\usepackage{textcomp}
-
-\usepackage{graphicx}
+% --- Margens e Espaçamento ---
+% O abntex2 já define as margens padrão da ABNT (3cm superior/esquerda, 2cm inferior/direita).
+% Não utilize o pacote geometry aqui para não quebrar o layout da classe.
 
 \usepackage{setspace}
-\usepackage{float} 
+\OnehalfSpacing % Espaçamento entre linhas de 1,5
 
+% Elementos Gráficos e Imagens
+\usepackage{graphicx} 
+\usepackage{caption} % Recursos personalizáveis para legendas
+\usepackage{float} 
+\usepackage{tikz}
+\usepackage{pgfplots} % Plotagem de gráficos
+\pgfplotsset{compat=1.18}
+\usepackage{adjustbox}
+
+% Tabelas
+\usepackage{tabularx}
 \usepackage{array}
 \usepackage{colortbl}
+\usepackage{multicol,multirow}
+\setlength{\columnsep}{.75cm}
 
-\usepackage{tikz}
-\usepackage{pgfplots} % Pacote para plotagem de gráficos
-\pgfplotsset{compat=1.18} % Configurações opcionais
-%\usetkzobj{all}
-\usepackage{adjustbox}
-\usepackage{enumitem} % Pacote para personalizar listas
-\usepackage{pifont} % Pacote para símbolos adicionais
-\usepackage{array}
+% Formatação de Texto e Elementos
+\usepackage{changepage} % Altera a margem de um bloco
+\usepackage{xcolor}
+\usepackage{enumitem} % Personalizar listas
+\usepackage{pifont} % Símbolos adicionais
+\usepackage{textcomp}
+\usepackage{textcase} % Deixar títulos em maiúsculo
 
-\setlength{\parindent}{0pt}
+% --- Configuração de Parágrafos (Normas ABNT) ---
+% Removido o pacote parskip que eliminava o recuo do parágrafo.
+\setlength{\parindent}{1.25cm} % Recuo padrão da primeira linha do parágrafo
+\setlength{\parskip}{0.2cm}    % Espaçamento sutil entre parágrafos
 
-\usepackage{amssymb,amsmath,amsfonts,amsthm,mathtools,bm,siunitx,ntheorem,empheq,gensymb}
-
+% Matemática Avançada
+% (Removido ntheorem pois causava conflito com amsthm)
+\usepackage{amssymb,amsmath,amsfonts,amsthm,mathtools,bm,siunitx,empheq,gensymb}
 \everymath{\displaystyle}
+
+% --- Elementos Pós-Textuais (Hiperlinks, Citações e Glossário) ---
+% Citações padrão ABNT
+\usepackage[alf]{abntex2cite}
+
+% Configuração dos links (O abntex2 já carrega o hyperref nativamente)
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,  % Cor dos links internos (como o sumário)
+    citecolor=black,  % Cor dos links para as referências
+    urlcolor=black    % Cor dos links de sites
+}
+
+% Glossário (Deve ser carregado após o hyperref)
+\usepackage[acronym]{glossaries}
+\makeglossaries

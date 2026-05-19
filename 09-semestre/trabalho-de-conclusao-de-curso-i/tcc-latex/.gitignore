@@ -1,0 +1,20 @@
+# Ocultar um arquivo específico
+# config.json
+
+# Ocultar uma pasta inteira e tudo dentro dela
+# dist/
+
+# Ocultar todos os arquivos com uma determinada extensão
+# *.log
+
+main.acn
+main.bbl
+main.glo
+main.glsdefs
+main.ist
+main.synctex.gz
+main.thm
+main.aux
+main.fdb_latexmk
+main.fls
+main.log

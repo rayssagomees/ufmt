@@ -1,17 +1,10 @@
-\geometry{
-    includehead, % Inclui a altura do cabeçalho no espaço do texto
-}
+% --- Configuração de Estilo de Página (Nativo do abntex2) ---
+% Removidos os comandos do geometry e fancyhdr para evitar conflitos estruturais.
 
-% Cria o estilo com número no topo direito
-\fancypagestyle{estiloabnt}{
-    \fancyhf{} % Limpa tudo
-    \renewcommand{\headrulewidth}{0pt} % Tira a linha preta
-    \fancyhead[R]{\thepage} % Número no topo direito
-}
+% Cria/redefine o estilo customizado 'estiloabnt' usando os comandos nativos
+\makepagestyle{estiloabnt}
+\makeoddhead{estiloabnt}{}{}{\textnormal{\thepage}}  % Número no topo direito nas páginas da frente
+\makeevenhead{estiloabnt}{\textnormal{\thepage}}{}{} % Número no topo esquerdo nas páginas do verso
 
-% O GRANDE TRUQUE: Sobrescreve o estilo "plain" padrão do LaTeX
-\fancypagestyle{plain}{
-    \fancyhf{}
-    \renewcommand{\headrulewidth}{0pt}
-    \fancyhead[R]{\thepage}
-}
+% Nota: O abntex2 já configura o estilo 'plain' das aberturas de capítulo 
+% automaticamente, ocultando o número para cumprir rigorosamente a norma ABNT.
