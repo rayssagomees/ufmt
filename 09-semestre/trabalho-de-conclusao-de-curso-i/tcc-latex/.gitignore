@@ -3,6 +3,8 @@
 main.acn
 main.bbl
 main.glo
+main.glg
+main.gls
 main.ist
 main.synctex.gz
 main.thm
@@ -19,6 +21,7 @@ main.ind
 main.glsdefs
 main.lof
 main.nlo
+main.nls
 fix_bib_authors.ps1
 *.aux
 
