@@ -1,0 +1,40 @@
+% Pacotes essenciais
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{makeidx} % Pacote para o Índice remissivo
+
+% Pacote de citações ABNT (Sistema autor-data)
+\usepackage[alf]{abntex2cite}
+
+% Configura o índice
+\makeindex
+
+\usepackage{glossaries}
+
+\usepackage{glossaries}
+\makeglossaries 
+
+% --- DEFINIÇÃO DE SIGLAS ---
+% Comando: \newacronym{identificador}{Sigla}{Significado}
+
+\newacronym{acp}{ACP}{Análise de Componentes Principais}
+\newacronym{rna}{RNA}{Redes Neurais Artificiais}
+\newacronym{teo}{OTE}{Ótimo técnico-econômico}
+
+% --- DEFINIÇÃO DE SÍMBOLOS ---
+% Comando: \newglossaryentry{identificador}{name={Símbolo}, description={Significado}}
+
+\newglossaryentry{rho}{
+    name={$\rho$},
+    description={Densidade}
+}
+
+\newglossaryentry{A}{
+    name={$A$},
+    description={Absorbância}
+}
+
+\newglossaryentry{gamma}{
+    name={$\gamma$},
+    description={Peso específico}
+}

@@ -1,11 +1,4 @@
-# Ocultar um arquivo específico
-# config.json
-
-# Ocultar uma pasta inteira e tudo dentro dela
-# dist/
-
-# Ocultar todos os arquivos com uma determinada extensão
-# *.log
+# *.log ### Ocultar todos os arquivos com uma determinada extensão
 
 main.acn
 main.bbl
@@ -18,3 +11,13 @@ main.aux
 main.fdb_latexmk
 main.fls
 main.log
+main.blg
+main.lot
+main.toc
+main.idx
+main.ilg
+main.ind
+main.glsdefs
+
+.vscode/
+build/

@@ -1,24 +1,28 @@
 <div align="center">
-  <img width="125" src="https://cms.ufmt.br/files/galleries/271/U8da65bf02feeb496c26b61aa683487730f264f73.png">
-  
-  ### PROGRAMAÇÃO DE COMPUTADORES
-  
-  <p>
-    Aprimorando constantemente minhas habilidades em programação <br> ao enfrentar desafios reais e dominando novas técnicas com excelência. 
-  </p>
-  
-   <!--##### Explore os documentos</a></p>
-  
-  <p> Demonstração | Relatar bug</p>-->
-  
-  <!---<img width="3%" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">--> <img width="3%" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg"> <img width="3%" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-plain.svg">
+  <img width="100" src="09-semestre/trabalho-de-conclusao-de-curso-i/tcc-latex/figuras/ufmt-logotipo.png">
 </div>
+
+## 2022/1
+
+> Em breve.
 
 <br>
 
-## 🧩 Exercícios
+## 2022/2
 
-| Linguagem | Exercício |
+> Em breve.
+
+<br>
+
+## 2023/1
+
+> Em breve.
+
+<br>
+
+### PROGRAMAÇÃO DE COMPUTADORES
+
+| Linguagem | Conteúdo |
 | :---: | :--- |
 | Pascal | Encontre uma função afim pelo valor de dois pontos |
 | Pascal | Descubra todos o números ímpares entre os números naturais N1 e N2 dados |
@@ -34,31 +38,58 @@
 
 <br>
 
-## 💾 Instalação
-
-Clone o repositório no terminal:
-
-  ```
-  git clone https://github.com/raysantori/ufmt.git
-  ```
-
-## 🤝 Criadores
-
-Essa fonte maravilhosa de conhecimento só foi possível graças à coletânea de aulas e exercícios da UFMT.<br><br>
-
-| Autora | Instituição |
-| :----: | :----: | 
-| <a target="_blank" href="https://github.com/raysantori"><img width="125" src="https://camo.githubusercontent.com/d2b0f736a9c109c53e868f498015c4e07c30ea702a6fbfec86a1ad2cf9deafc1/68747470733a2f2f692e6962622e636f2f4462527a51776d2f7261792d6f63746f6361742d72656d6f766562672d707265766965772e706e67"><br></a> | <a target="_blank" href="https://github.com/ufmt"><img width="125" src="https://cms.ufmt.br/files/galleries/271/U8da65bf02feeb496c26b61aa683487730f264f73.png"></a> |
-| <a target="_blank" href="https://github.com/raysantori"><sub>@raysantori</sub></a> | <a target="_blank" href="https://github.com/ufmt"><sub>@ufmt</sub></a> | 
-
-<br>
-
-## 📃 Licença
+## 2023/2
 
 > Em breve.
 
-<div align="right"><a target="_blank" href="https://github.com/raysantori/ufmt#programa%C3%A7%C3%A3o-de-computadores">🔝 Voltar ao topo</a></div>
+<br>
 
-<strong>Mostre apoio!</strong> ⭐ Se gostou do desafio.
+## 2024/1
 
-###### Copyright © 2023 raysantori.com. Todos os direitos reservados.
+> Em breve.
+
+<br>
+
+## 2024/2
+
+> Em breve.
+
+<br>
+
+## 2025/1
+
+> Em breve.
+
+<br>
+
+## 2025/2
+
+> Em breve.
+
+<br>
+
+## 2026/1
+
+> Em breve.
+
+<br>
+
+### TRABALHO DE CONCLUSÃO DE CURSO I
+
+| Conteúdo |  |
+| :--- | :--- |
+| Influência do teor de cimento, do tempo de cura e da exposição à água na resistência à compressão de adobes de solo-cimento | <a target="_blank" href="/">Acessar</a> |
+
+<br>
+
+## 2026/2
+
+> Em breve.
+
+<br>
+
+<div align="right"><a target="_blank" href="https://github.com/raysantori/ufmt#">🔝 Voltar ao topo</a></div>
+
+<strong>Mostre apoio!</strong> ⭐ Se gostou do conteúdo.
+
+###### © 2026 Rayssa Gomes. Todos os direitos reservados.
