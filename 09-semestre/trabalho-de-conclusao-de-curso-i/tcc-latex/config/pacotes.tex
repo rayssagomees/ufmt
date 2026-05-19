@@ -1,7 +1,10 @@
-% Pacotes essenciais
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{makeidx} % Pacote para o Índice remissivo
+
+% Pacotes essenciais 
+\usepackage[utf8]{inputenc} % Codificação do arquivo [6]
+\usepackage[T1]{fontenc}    % Seleção de códigos de fonte [6]
+\usepackage{lmodern}        % Usa a fonte Latin Modern [7]
+\usepackage{indentfirst}    % Indenta o 1o parágrafo da seção 
+\usepackage{graphicx}       % Inclusão de gráficos e figuras [9]
 
 % Pacote de citações ABNT (Sistema autor-data)
 \usepackage[alf]{abntex2cite}
@@ -10,9 +13,10 @@
 \makeindex
 
 \usepackage{glossaries}
-
-\usepackage{glossaries}
 \makeglossaries 
+
+\usepackage{nomencl}
+\makenomenclature
 
 % --- DEFINIÇÃO DE SIGLAS ---
 % Comando: \newacronym{identificador}{Sigla}{Significado}
@@ -20,21 +24,3 @@
 \newacronym{acp}{ACP}{Análise de Componentes Principais}
 \newacronym{rna}{RNA}{Redes Neurais Artificiais}
 \newacronym{teo}{OTE}{Ótimo técnico-econômico}
-
-% --- DEFINIÇÃO DE SÍMBOLOS ---
-% Comando: \newglossaryentry{identificador}{name={Símbolo}, description={Significado}}
-
-\newglossaryentry{rho}{
-    name={$\rho$},
-    description={Densidade}
-}
-
-\newglossaryentry{A}{
-    name={$A$},
-    description={Absorbância}
-}
-
-\newglossaryentry{gamma}{
-    name={$\gamma$},
-    description={Peso específico}
-}

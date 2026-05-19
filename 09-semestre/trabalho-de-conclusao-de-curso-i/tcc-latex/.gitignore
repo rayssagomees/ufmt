@@ -3,7 +3,6 @@
 main.acn
 main.bbl
 main.glo
-main.glsdefs
 main.ist
 main.synctex.gz
 main.thm
@@ -18,6 +17,12 @@ main.idx
 main.ilg
 main.ind
 main.glsdefs
+main.lof
+main.nlo
+fix_bib_authors.ps1
+*.aux
 
 .vscode/
 build/
+
+.latexmkrc

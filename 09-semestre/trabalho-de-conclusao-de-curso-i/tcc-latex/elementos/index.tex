@@ -1,6 +1,14 @@
 % Retira o espaço extra obsoleto entre as frases
 \frenchspacing
 
-\input{elementos/pre-textuais/00-index.tex}
-\input{capitulos/00-index.tex}
-\input{elementos/pos-textuais/00-index.tex}
+% --- ELEMENTOS PRÉ-TEXTUAIS ---
+\pretextual
+\input{elementos/pre-textuais/00-index}
+
+% --- ELEMENTOS TEXTUAIS ---
+\textual
+\input{capitulos/00-index}
+
+% --- ELEMENTOS PÓS-TEXTUAIS ---
+\postextual
+\input{elementos/pos-textuais/00-index}
