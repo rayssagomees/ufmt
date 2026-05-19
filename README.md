@@ -16,8 +16,6 @@
 
 ## 2023/1
 
-> Em breve.
-
 <br>
 
 ### PROGRAMAÇÃO DE COMPUTADORES
@@ -78,7 +76,7 @@
 
 | Conteúdo |  |
 | :--- | :--- |
-| Influência do teor de cimento, do tempo de cura e da exposição à água na resistência à compressão de adobes de solo-cimento | <a target="_blank" href="/">Acessar</a> |
+| Influência do teor de cimento, do tempo de cura e da exposição à água na resistência à compressão de adobes de solo-cimento | <a target="_blank" href="https://github.com/rayssagomees/ufmt/blob/main/09-semestre/trabalho-de-conclusao-de-curso-i/tcc-latex/main.pdf">Acessar</a> |
 
 <br>
 
