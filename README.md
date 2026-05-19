@@ -16,8 +16,6 @@
 
 ## 2023/1
 
-<br>
-
 ### PROGRAMAÇÃO DE COMPUTADORES
 
 | Linguagem | Conteúdo |
@@ -67,10 +65,6 @@
 <br>
 
 ## 2026/1
-
-> Em breve.
-
-<br>
 
 ### TRABALHO DE CONCLUSÃO DE CURSO I
 
