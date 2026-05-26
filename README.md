@@ -144,6 +144,11 @@
 
 ### ESTRUTURAS METÁLICAS I
 
+| Conteúdo |  |
+| :--- | :--- |
+| Método dos Estados Limites | <a target="_blank" href="https://github.com/rayssagomees/ufmt/blob/main/09-semestre/estruturas-metalicas-i/main.pdf">Acessar</a> |
+
+
 ### TRABALHO DE CONCLUSÃO DE CURSO I
 
 | Conteúdo |  |
