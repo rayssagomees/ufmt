@@ -22,6 +22,8 @@ main.glsdefs
 main.lof
 main.nlo
 main.nls
+main.logr
+main.loq
 fix_bib_authors.ps1
 *.aux
 

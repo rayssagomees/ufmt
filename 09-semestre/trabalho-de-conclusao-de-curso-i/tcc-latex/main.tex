@@ -1,14 +1,31 @@
 \documentclass[
-    12pt,           % Tamanho da fonte
-    openright,      % Capítulos começam em página ímpar
-    twoside,        % Impressão frente e verso
-    a4paper,        % Tamanho do papel
-    brazilian       % Idioma do documento
+    12pt,
+    openright,
+    oneside,
+    a4paper,
+    brasilian,
+    chapter=TITLE,
+    section=TITLE,
+    sumario=abnt-6027-2012
 ]{abntex2}
 
-% --- CONFIGURAÇÕES ---
-\input{config/pacotes.tex}
-\input{config/dados.tex}
+\usepackage{packages/abnt}
+
+% Metadados da capa e da folha de rosto.
+\titulo{Influência do teor de cimento, do tempo de cura e da exposição à água na resistência à compressão de adobes de solo-cimento}
+
+\autor{Rayssa Carolina Gomes dos Santos}
+
+\orientador{Prof. Dr. Raul Tadeu Lobato Ferreira}
+
+\preambulo{Projeto de pesquisa apresentado ao Curso de Engenharia Civil, Universidade Federal de Mato Grosso, Campus Universitário do Araguaia, como pré-requisito para obtenção do título de Bacharel em Engenharia Civil.}
+
+\instituicao{Universidade Federal de Mato Grosso \\ Campus Universitário do Araguaia \\ Instituto de Ciências Exatas e da Terra \\ Curso de Engenharia Civil}
+
+\local{Barra do Garças}
+
+\data{\the\year}
+
 
 % --- DOCUMENTO ---
 \begin{document}
@@ -16,5 +33,5 @@
     \selectlanguage{brazilian}
     
     % Conteúdo
-    \input{elementos/index.tex}
+    \input{elements/index.tex}
 \end{document}
