@@ -8,7 +8,6 @@ main.gls
 main.ist
 main.synctex.gz
 main.thm
-main.aux
 main.fdb_latexmk
 main.fls
 main.log
@@ -24,6 +23,7 @@ main.nlo
 main.nls
 main.logr
 main.loq
+main.xdy
 fix_bib_authors.ps1
 *.aux
 
