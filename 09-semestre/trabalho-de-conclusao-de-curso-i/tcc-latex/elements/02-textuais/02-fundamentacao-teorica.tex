@@ -6,9 +6,43 @@
 
 %2.1 SOLO - nesse subitem você pode definir o solo (produto do intemperismo sobre as rochas) e fazer comentários sobre sua origem (solos residuais, solos transportados e as características dos horizontes), fazer comentários sobre o tamanho das partículas, comentários sobre o comportamento desse material com a variação da umidade (limites de consistência)
 
-O solo constitui um material natural da crosta terrestre gerado a partir da decomposição ou da ruptura mecânica, química e bioquímica das rochas subjacentes, por meio de um processo contínuo conhecido como intemperismo, operante na interface entre a litosfera e a atmosfera \cite{Kovacs2017, Barroso2019, Junior2021, Soler2021}. Quanto à sua origem e formação geológica, os solos classificam-se fundamentalmente em dois grupos: os solos residuais, formados \textit{in situ} e que permanecem sobrejacentes à rocha matriz original, e os solos transportados, constituídos por partículas que sofreram erosão e foram deslocadas de seu local de origem por agentes como água, vento ou gravidade \cite{Junior2021, Silva2019, Barroso2019, Soler2021}. O avanço desse perfil intempérico dita a variação das propriedades físicas ao longo da profundidade \cite{Rahardjoa2004}. Com o tempo e os diferentes graus de exposição ambiental, o terreno desenvolve camadas sobrepostas denominadas horizontes pedológicos, os quais apresentam características nítidas, exibindo horizontes superiores tipicamente mais finos e ricos em umidade, que evoluem verticalmente até o substrato rochoso alterado ou em processo de decomposição \cite{Rahardjoa2004, Tangari2021}.
+%### 2.1 O SOLO
 
-Fisicamente, a distribuição granulométrica (tamanho das partículas) funciona como a base quantitativa primordial para distinguir e antecipar o comportamento mecânico e hidráulico dos solos \cite{Castro2023, Liu2024}. Essa caracterização divide o material em frações grossas (como pedregulhos e areias) e frações finas (siltes e argilas), sendo que, para os solos finos, a plasticidade e a mineralogia ditam as propriedades gerais de forma muito mais eficaz do que a análise textural isolada \cite{MorenoMaroto2021}. Desse modo, o comportamento mecânico da matriz fina sofre severa influência das variações em seu teor de umidade \cite{Demir2021}. Para quantificar essas transições, utilizam-se os limites de consistência de Atterberg, nos quais o \gls{lc} determina a transição do estado sólido para o semissólido, ponto abaixo do qual reduções na umidade não alteram o volume do material; o \gls{lp} separa os estados semissólido e plástico, representando o limiar em que o solo pode ser moldado sem se fraturar; e o \gls{ll} demarca a transição para o estado de comportamento fluido e de baixa resistência ao cisalhamento \cite{Demir2021, MorenoMaroto2021}. A diferença matemática entre o \gls{ll} e o \gls{lp} origina o \gls{ip}, parâmetro que reflete a amplitude hídrica em que o solo exibe plasticidade, correlacionando-se diretamente com o potencial de contração, expansão e sensibilidade à umidade \cite{Smith1985}.
+O solo é um material originado da crosta terrestre, formado pela decomposição e alteração das rochas por processos físicos, químicos e biológicos conhecidos como intemperismo \cite{Barroso2019, Junior2021, Silva2019, Soler2021}. No entanto, seu conceito varia de acordo com a área de conhecimento. Na agronomia, o solo é geralmente entendido como a camada da crosta terrestre capaz de sustentar o desenvolvimento das plantas. Já na geotecnia e na engenharia civil, ele é definido como um material que pode servir tanto como suporte para estruturas quanto como material de construção, podendo ser escavado por meios mecânicos e apresentando redução de resistência quando submetido à ação prolongada da água.
+
+Quanto à sua origem, os solos podem ser classificados em residuais e transportados \cite{Junior2021, Silva2019, Soler2021, Zhang2020}. Os solos residuais são formados no próprio local de ocorrência, a partir da decomposição da rocha de origem. Já os solos transportados, também chamados de sedimentares, resultam da erosão e do deslocamento de partículas por agentes naturais, como a água (solos aluviais), o vento (solos eólicos), a gravidade (solos coluviais) e o gelo (solos glaciais).
+
+Ao longo desse processo, o intemperismo promove a formação de diferentes horizontes no perfil do solo. As camadas mais superficiais apresentam maior concentração de matéria orgânica, enquanto os horizontes intermediários concentram partículas mais finas e argilominerais. Nas camadas mais profundas, encontra-se a rocha de origem em diferentes estágios de decomposição.
+
+\input{assets/images/perfil-de-intemperismo}
+
+Apesar dessa classificação quanto à origem, \citeonline{Zhang2020} destaca que os diferentes tipos de solo apresentam comportamentos mecânicos distintos. Os solos transportados ou sedimentares tendem a aumentar sua resistência e rigidez ao longo do tempo em razão dos processos de deposição e adensamento. Já os solos residuais apresentam comportamento oposto, pois o intemperismo promove a degradação gradual da rocha de origem, reduzindo sua resistência.
+
+Do ponto de vista físico, as partículas do solo são classificadas em frações grossas (pedregulho e areia) e frações finas (silte e argila). Enquanto as partículas grossas apresentam pouca ou nenhuma coesão, as frações finas são responsáveis pelas propriedades de coesão e plasticidade do material \citeonline{Junior2021, nbr6502, Soler2021, Santos2020}. A distribuição dessas partículas é representada pela curva granulométrica, obtida tradicionalmente por ensaios de peneiramento para as frações grossas e por sedimentação para as frações finas.
+
+Entretanto, \citeonline{Santos2020} destacam limitações na análise por sedimentação baseada na Lei de Stokes. Segundo os autores, o método considera que as partículas de argila possuem formato esférico, desconsiderando sua geometria lamelar. Como consequência, os resultados podem não representar adequadamente a distribuição real das partículas. Nesse contexto, os autores apontam que a granulometria a laser fornece resultados mais consistentes e representativos da estrutura do material.
+
+O comportamento das frações finas do solo é fortemente influenciado pelo teor de umidade. À medida que a quantidade de água varia, o material passa pelos estados sólido, semissólido, plástico e líquido. Essas transições são avaliadas por meio dos Limites de Atterberg \cite{Junior2021, Silva2019, MorenoMaroto2021, Nogueira2025}.
+
+O \gls{lc} corresponde ao teor de umidade a partir do qual a perda de água deixa de provocar redução de volume no solo. Já o \gls{lp} representa o teor mínimo de umidade necessário para que o material apresente comportamento plástico e possa ser moldado sem se romper. Por sua vez, o \gls{ll} define a umidade na qual o solo passa do estado plástico para o estado líquido.
+
+A faixa de plasticidade do material é expressa pelo \gls{ip}, calculado pela diferença entre o Limite de Liquidez e o Limite de Plasticidade:
+
+\begin{equation}
+IP = LL - LP
+\end{equation}
+
+Esse parâmetro está diretamente relacionado à quantidade e ao tipo de argilominerais presentes no solo, sendo amplamente utilizado para avaliar seu comportamento plástico.
+
+Por fim, estudos recentes têm apontado limitações nos sistemas tradicionais de classificação da plasticidade dos solos baseados nos Limites de Atterberg, como USCS, AASHTO, Polidori e a linha A de Casagrande. Embora as críticas apresentem enfoques distintos, os autores convergem ao questionar a capacidade desses métodos de representar adequadamente o comportamento dos solos.
+
+Segundo \citeonline{MorenoMaroto2021}, alguns critérios utilizados nesses sistemas são arbitrários e carecem de uma fundamentação física consistente. O autor questiona, em especial, o valor limite de liquidez igual a 50 adotado por Casagrande, argumentando que esse parâmetro não representa de forma adequada a capacidade de deformação do solo. Como alternativa, propõe um sistema de classificação baseado em propriedades como a tenacidade e o limite de dobramento.
+
+De forma complementar, \citeonline{Nogueira2025} destaca que os sistemas convencionais apresentam limitações quando aplicados a solos tropicais, especialmente os residuais e lateríticos. De acordo com o autor, esses métodos foram desenvolvidos a partir de solos típicos de regiões de clima temperado e, por isso, não conseguem representar adequadamente características importantes dos solos tropicais. Nesses materiais, o comportamento mecânico é fortemente influenciado por processos de cimentação química e pela estrutura herdada da rocha de origem, aspectos que não podem ser avaliados apenas por parâmetros de plasticidade e granulometria.
+
+%O solo constitui um material natural da crosta terrestre gerado a partir da decomposição ou da ruptura mecânica, química e bioquímica das rochas subjacentes, por meio de um processo contínuo conhecido como intemperismo, operante na interface entre a litosfera e a atmosfera \cite{Kovacs2017, Barroso2019, Junior2021, Soler2021}. Quanto à sua origem e formação geológica, os solos classificam-se fundamentalmente em dois grupos: os solos residuais, formados \textit{in situ} e que permanecem sobrejacentes à rocha matriz original, e os solos transportados, constituídos por partículas que sofreram erosão e foram deslocadas de seu local de origem por agentes como água, vento ou gravidade \cite{Junior2021, Silva2019, Barroso2019, Soler2021}. O avanço desse perfil intempérico dita a variação das propriedades físicas ao longo da profundidade \cite{Rahardjoa2004}. Com o tempo e os diferentes graus de exposição ambiental, o terreno desenvolve camadas sobrepostas denominadas horizontes pedológicos, os quais apresentam características nítidas, exibindo horizontes superiores tipicamente mais finos e ricos em umidade, que evoluem verticalmente até o substrato rochoso alterado ou em processo de decomposição \cite{Rahardjoa2004, Tangari2021}.
+
+%Fisicamente, a distribuição granulométrica (tamanho das partículas) funciona como a base quantitativa primordial para distinguir e antecipar o comportamento mecânico e hidráulico dos solos \cite{Castro2023, Liu2024}. Essa caracterização divide o material em frações grossas (como pedregulhos e areias) e frações finas (siltes e argilas), sendo que, para os solos finos, a plasticidade e a mineralogia ditam as propriedades gerais de forma muito mais eficaz do que a análise textural isolada \cite{MorenoMaroto2021}. Desse modo, o comportamento mecânico da matriz fina sofre severa influência das variações em seu teor de umidade \cite{Demir2021}. Para quantificar essas transições, utilizam-se os limites de consistência de Atterberg, nos quais o \gls{lc} determina a transição do estado sólido para o semissólido, ponto abaixo do qual reduções na umidade não alteram o volume do material; o \gls{lp} separa os estados semissólido e plástico, representando o limiar em que o solo pode ser moldado sem se fraturar; e o \gls{ll} demarca a transição para o estado de comportamento fluido e de baixa resistência ao cisalhamento \cite{Demir2021, MorenoMaroto2021}. A diferença matemática entre o \gls{ll} e o \gls{lp} origina o \gls{ip}, parâmetro que reflete a amplitude hídrica em que o solo exibe plasticidade, correlacionando-se diretamente com o potencial de contração, expansão e sensibilidade à umidade \cite{Smith1985}.
 
 \section{Solo como material construtivo}
 
@@ -23,291 +57,14 @@ A principal vantagem ambiental da terra está no fato de ser um material abundan
 Nesse sentido, \citeonline{Zhang2025} apontam que os materiais à base de terra consomem, em média, apenas 6\% da energia utilizada na produção do concreto e geram cerca de 3\% das emissões de carbono associadas aos tijolos cerâmicos convencionais. De forma semelhante, \citeonline{Fernandes2019}, por meio de uma análise de \gls{lca}, verificaram que o \gls{btc} apresenta uma energia incorporada de apenas 3,94 MJ por bloco e um \gls{gwp} de 0,39 kg $CO_2$ eq por bloco. Esses resultados indicam uma redução de aproximadamente 50\% nos impactos ambientais potenciais quando comparado aos sistemas convencionais de alvenaria.
 
 Em relação ao fim da vida útil, a terra crua sem aditivos químicos se destaca por seu potencial de reutilização e reintegração ao meio ambiente. Dentro da lógica do conceito "do berço ao berço" (\textit{cradle-to-cradle}), o material pode ser destorroado, reumedecido e reutilizado diversas vezes. Segundo \citeonline{Morel2021, Aspillaga2024}, a terra é 100\% reciclável e biodegradável, podendo retornar ao ambiente natural sem gerar resíduos poluentes.
- 
-\begin{figure}[p]
-    \centering
-    \caption{\label{fig_diagrama_fases}Diagrama de entradas e saídas dos processos para construir uma parede de taipa de pilão.}
- 
-    \resizebox{0.97\textwidth}{!}{%
-    \begin{tikzpicture}[
-        >={Stealth[length=3.5mm]},
-        % ---------- BLOCOS ----------
-        bloco_laranja/.style={
-            rectangle, fill=orange!45,
-            minimum width=4.4cm, text width=4.1cm, minimum height=1.2cm,
-            text centered, rounded corners=4pt,
-            font=\sffamily\small\bfseries},
-        bloco_azul/.style={
-            rectangle, fill=cyan!75!black,
-            minimum width=4.4cm, text width=4.1cm, minimum height=1.2cm,
-            text centered, rounded corners=4pt,
-            font=\sffamily\small\bfseries},
-        bloco_roxo/.style={
-            rectangle, fill=violet!55,
-            minimum width=4.4cm, text width=4.1cm, minimum height=1.2cm,
-            text centered, rounded corners=4pt,
-            font=\sffamily\small\bfseries},
-        bloco_cinza/.style={
-            rectangle, fill=gray!55,
-            minimum width=4.4cm, text width=4.1cm, minimum height=1.2cm,
-            text centered, rounded corners=4pt,
-            font=\sffamily\small\bfseries},
-        bloco_verde/.style={
-            rectangle, fill=green!55,
-            minimum width=4.4cm, text width=4.1cm, minimum height=1.2cm,
-            text centered, rounded corners=4pt,
-            font=\sffamily\small\bfseries},
-        % ---------- TEXTOS ----------
-        txt_in/.style={font=\sffamily\footnotesize, align=right, text width=2.4cm},
-        txt_out/.style={font=\sffamily\footnotesize, align=left,  text width=3.2cm},
-        txt_label/.style={font=\sffamily\footnotesize, align=left, text width=2.7cm},
-        txt_fase/.style={font=\sffamily\small\bfseries, rotate=90, align=center},
-        txt_hdr/.style={font=\sffamily\small\bfseries},
-        % ---------- SETAS ----------
-        seta/.style={->,  draw=gray!65, line width=3.2pt},
-        seta_loop/.style={->, draw=gray!55, line width=1.4pt},
-    ]
- 
-    % ==============================================
-    % LAYOUT DE COLUNAS (coordenadas X)
-    %   col_fase_txt = -8.5   texto vertical fase
-    %   col_lim_esq  = -7.5   limite esq. das linhas
-    %   col_div_vert = -6.2   divisória vertical
-    %   col_lbl      = -6.1   início rótulos (A1, A4…)
-    %   col_in_east  = -0.3   âncora east das entradas
-    %   col_proc     =  3.2   centro dos processos
-    %   col_out_west =  6.6   âncora west das saídas
-    %   col_lim_dir  = 10.5   limite dir. das linhas
-    % ==============================================
- 
-    % ==============================================
-    % TÍTULO
-    % ==============================================
-    \node[font=\sffamily\bfseries\normalsize] at (3.2, 2) {TAIPA DE PILÃO};
- 
-    % ==============================================
-    % CABEÇALHO
-    % ==============================================
-    \node[txt_hdr] at ( -1.5, 1.0) {ENTRADAS};
-    \node[txt_hdr] at ( 3.2, 1.0) {PROCESSOS};
-    \node[txt_hdr] at ( 7.5, 1.0) {SAÍDAS};
- 
-    \draw[thick] (-6, 0.5) -- (10.5, 0.5);
- 
-    % ==============================================
-    % DIVISÓRIA VERTICAL DE FASES
-    % ==============================================
-    %\draw[thick] (-6.2, 0.4) -- (-6.2, -21.0);
- 
-    % ==============================================
-    % RÓTULOS VERTICAIS DAS FASES
-    % ==============================================
-    \node[txt_fase] at (-7.0, -0.5)  {Produto};
-    \node[txt_fase] at (-7.0, -6.5)  {Construção};
-    \node[txt_fase] at (-7.0, -14.5)  {Uso};
-    \node[txt_fase] at (-7.0, -19.5) {Fim da Vida Útil};
- 
-    % ==============================================
-    % A1 — RAW MATERIALS SUPPLY  y = -1.0
-    % ==============================================
-    \node[txt_label, anchor=north west] at (-6.1,  0)
-        {\textbf{A1}\\[-2pt]Fornecimento de matéria-prima};
- 
-    \node[txt_in,  anchor=east] (inA1) at (-0.3, -0.5) {Combustível};
-    \node[bloco_laranja]        (prA1) at ( 3.2, -0.5)
-        {Fornecimento de matérias-primas\\(extração)};
-    \node[txt_out, anchor=west] (ouA1) at ( 6.6, -0.5)
-        {Solo orgânico e rochas\\Emissões para o ar};
- 
-    \draw[seta] (inA1.east) -- (prA1.west);
-    \draw[seta] (prA1.east) -- (ouA1.west);
- 
-    % Separador Product / A4
-    \draw[thick] (-6, -1.5) -- (10.5, -1.5);
- 
-    % ==============================================
-    % A4 — TRANSPORT OF MATERIALS  y = -3.1
-    % ==============================================
-    \node[txt_label, anchor=north west] at (-6.1, -2)
-        {\textbf{A4}\\[-2pt]Transporte};
- 
-    \node[txt_in,  anchor=east] (inA4) at (-0.3, -2.4) {Combustível};
-    \node[bloco_azul]           (prA4) at ( 3.2, -2.4)
-        {Transporte de materiais e equipamentos};
-    \node[txt_out, anchor=west] (ouA4) at ( 6.6, -2.4) {Emissões para o ar};
- 
-    \draw[seta] (inA4.east) -- (prA4.west);
-    \draw[seta] (prA4.east) -- (ouA4.west);
-    \draw[seta] (prA1.south) -- (prA4.north);
- 
-    % Separador leve A4 / Construção
-    \draw[gray!40, thin] (-6, -3.25) -- (10.5, -3.3);
- 
-    % ==============================================
-    % A5 — CONSTRUCTION
-    % ==============================================
-    \node[txt_label, anchor=north west] at (-6.1, -7)
-        {\textbf{A5}\\[-2pt]Instalação/\\Construção};
- 
-    % --- Formwork assembly  y = -5.1 ---
-    \node[txt_in, anchor=east] (inFA) at (-0.3, -4.2) {Solo\\Cal};
-    \node[bloco_azul]          (prFA) at ( 3.2, -4.2) {Montagem de fôrmas};
- 
-    \draw[seta] (inFA.east) -- (prFA.west);
-    \draw[seta] (prA4.south) -- (prFA.north);
- 
-    % --- Mixing  y = -6.6 ---
-    \node[txt_in,  anchor=east] (inMX) at (-0.3, -6)
-        {Solo\\Cal\\Água\\Combustível};
-    \node[bloco_azul]           (prMX) at ( 3.2, -6) {Mistura};
-    \node[txt_out, anchor=west] (ouMX) at ( 6.6, -6)
-        {Resíduos de embalagens de cal\\Emissões para o ar};
- 
-    \draw[seta] (inMX.east) -- (prMX.west);
-    \draw[seta] (prMX.east) -- (ouMX.west);
-
-    \draw[seta] (prFA.south) -- (prMX.north);
-    % --- Filling the formwork  y = -8.1 ---
-    \node[txt_in,  anchor=east] (inFF) at (-0.3, -7.8) {Combustível};
-    \node[bloco_azul]           (prFF) at ( 3.2, -7.8) {Preenchimento da fôrma};
-    \node[txt_out, anchor=west] (ouFF) at ( 6.6, -7.8)
-        {Resíduos de material misto\\Emissões para o ar};
- 
-    \draw[seta] (inFF.east) -- (prFF.west);
-    \draw[seta] (prFF.east) -- (ouFF.west);
-    \draw[seta] (prMX.south) -- (prFF.north);
- 
-    % Loop retorno (base de Mixing de volta para as entradas)
-    \draw[seta_loop]
-        ($(ouFF)+(0,0.7)$) -- ($(ouFF.north west)+(1.72,0.1)$) -- ($(prFF.north west)+(-1,0.2)$) -- ($(prMX.south west)+(-1,0.2)$) -- ($(prMX.south west)+(0,0.2)$);
- 
-    % --- Ramming  y = -9.5 ---
-    \node[txt_in,  anchor=east] (inRM) at (-0.3, -9.7) {Combustível};
-    \node[bloco_azul]           (prRM) at ( 3.2, -9.7) {Apiloamento};
-    \node[txt_out, anchor=west] (ouRM) at ( 6.6, -9.7) {Emissões para o ar};
- 
-    \draw[seta] (inRM.east) -- (prRM.west);
-    \draw[seta] (prRM.east) -- (ouRM.west);
-    \draw[seta] (prFF.south) -- (prRM.north);
- 
-    % --- Formwork disassembly  y = -10.8 ---
-    \node[bloco_azul] (prFD) at (3.2, -11.6) {Desmontagem da fôrma};
-    \draw[seta] (prRM.south) -- (prFD.north);
- 
-    % Caixa tracejada verde — A5
-    %\draw[dashed, green!55!black, line width=1.2pt, rounded %corners=5pt]
-    %    (-4.5, -4.45) rectangle (5.7, -11.45);
- 
-    % Separador Construção / Use
-    \draw[thick] (-6, -12.5) -- (10.5, -12.5);
- 
-    % ==============================================
-    % B2 — USE / MAINTENANCE
-    % ==============================================
-    \node[txt_label, anchor=north west] at (-6.1, -14)
-        {\textbf{B2}\\[-2pt]Manutenção};
- 
-    % --- Transport (Use)  y = -13.1 ---
-    \node[txt_in,  anchor=east] (inTU) at (-0.3, -13.5) {Combustível};
-    \node[bloco_roxo]           (prTU) at ( 3.2, -13.5) {Transporte};
-    \node[txt_out, anchor=west] (ouTU) at ( 6.6, -13.5) {Emissões para o ar};
- 
-    \draw[seta] (inTU.east) -- (prTU.west);
-    \draw[seta] (prTU.east) -- (ouTU.west);
-    \draw[seta] (prFD.south) -- (prTU.north);
- 
-    % --- Whitewashing  y = -14.5 ---
-    \node[txt_in,  anchor=east] (inWS) at (-0.3, -15.5) {Água de\\cal};
-    \node[bloco_roxo]           (prWS) at ( 3.2, -15.5)
-        {Caiação/\\tratamento de superfície};
-    \node[txt_out, anchor=west] (ouWS) at ( 6.6, -15.5)
-        {Resíduos de embalagens de cal};
- 
-    \draw[seta] (inWS.east) -- (prWS.west);
-    \draw[seta] (prWS.east) -- (ouWS.west);
-    \draw[seta] (prTU.south) -- (prWS.north);
- 
-    % Separador Use / End-of-life
-    \draw[thick] (-6, -16.7) -- (10.5, -16.7);
- 
-    % ==============================================
-    % END-OF-LIFE
-    % ==============================================
- 
-    % --- C1 Demolition  y = -16.55 ---
-    \node[txt_label, anchor=north west] at (-6.1, -17.2)
-        {\textbf{C1}\\[-2pt]Demolição};
- 
-    \node[txt_in,  anchor=east] (inDM) at (-0.3, -17.7) {Combustível};
-    \node[bloco_cinza]          (prDM) at ( 3.2, -17.7) {Demolição};
-    \node[txt_out, anchor=west] (ouDM) at ( 6.6, -17.7) {Emissões para o ar};
- 
-    \draw[seta] (inDM.east) -- (prDM.west);
-    \draw[seta] (prDM.east) -- (ouDM.west);
-    \draw[seta] (prWS.south) -- (prDM.north);
- 
-    % Separador C1 / C3
-    \draw[gray!40, thin] (-6, -18.5) -- (10.5, -18.5);
- 
-    % --- C3 Milling/Sieving  y = -18.1 ---
-    \node[txt_label, anchor=north west] at (-6.1, -18.7)
-        {\textbf{C3}\\[-2pt]Processamento de resíduos};
- 
-    \node[txt_in,  anchor=east] (inML) at (-0.3, -19.5) {Eletricidade};
-    \node[bloco_cinza]          (prML) at ( 3.2, -19.5) {Moagem/Peneiramento};
- 
-    \draw[seta] (inML.east) -- (prML.west);
-    \draw[seta] (prDM.south) -- (prML.north);
- 
-    % Separador C3 / C4
-    \draw[gray!40, thin] (-6, -20.3) -- (10.5, -20.3);
- 
-    % --- C4 Disposal on site  y = -19.5 ---
-    \node[txt_label, anchor=north west] at (-6.1, -20.7)
-        {\textbf{C4}\\[-2pt]Descarte};
- 
-    \node[bloco_cinza] (prDS) at (5.4, -21.2) {Descarte no local};
-
-    \draw[seta, dashed] (prDM.south east) -- (prDS);
- 
-    % Separador C4 / D
-    \draw[thick] (-6, -22.1) -- (10.5, -22.1);
- 
-    % --- D Recovery/Recycling  y = -20.85 ---
-    \node[txt_label, anchor=north west] at (-6.1, -22.2)
-        {\textbf{D}\\[-2pt]Reutilização, Recuperação\\Reciclagem};
- 
-    \node[bloco_verde] (prRR) at (3.2, -23) {Recuperação / Reciclagem};
-    \draw[seta] (prML.south west) -- (prRR.north west);
- 
-    % Seta triângulo verde Formwork → Mixing
-    \draw[->, draw=green!55!black, line width=3.2pt,
-          >={Triangle[length=4mm,width=2mm]}]
-        (prFA.south west |- -5,-5.3) -- (-5,-5.5 -| prMX.north west);
- 
-    % Linha tracejada verde larga (contorno A4 → D, lado esquerdo)
-    \draw[dashed, green!55!black, line width=1.2pt]
-        (prMX.north west)
-        -- (prFA.south west |- prFA.south west)
-        -- (-2.5, -4.8 |- prFA.south west)
-        -- (-2.5, -23)
-        -- (prRR.west |- 0,-23)
-        -- (prRR.west);
- 
-    % Linha final
-    \draw[thick] (-6, -24) -- (10.5, -24);
- 
-    \end{tikzpicture}%
-    }% fim do resizebox
- 
-    \vspace{0.2cm}
-    \fonte{\citeonline[p. 9, adaptado pelo autor]{Fernandes2019}.}
-\end{figure}
-
 
 %Ressalvas Metodológicas: O Impasse da Estabilização Química
 
 Apesar das vantagens ambientais da terra como material de construção, a literatura aponta um desafio relacionado ao uso de estabilizantes químicos. Para reduzir a degradação da terra crua quando exposta à água, a adição de cimento Portland tornou-se uma prática comum. No entanto, \citeonline{MoraRuiz2025, Fernandes2019} destacam que a incorporação desse material aumenta significativamente o \gls{gwp} dos compósitos. Como consequência, parte dos benefícios ambientais da terra pode ser perdida, reduzindo sua vantagem em relação a outros materiais construtivos. Esse cenário reforça a importância de pesquisas voltadas ao desenvolvimento de estabilizantes alternativos, especialmente aqueles produzidos a partir de resíduos ou materiais de origem orgânica.
+
+\input{assets/diagram/taipa-de-pilao.tex}
+
+%\FloatBarrier
 
 %Conforto dos Usuários
 

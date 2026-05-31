@@ -1,0 +1,279 @@
+\begin{figure}[htbp]
+    \centering
+    \caption{\label{fig_diagrama_fases}Diagrama de entradas e saídas dos processos para construir uma parede de taipa de pilão.}
+ 
+    \resizebox{0.97\textwidth}{!}{%
+    \begin{tikzpicture}[
+        >={Stealth[length=3.5mm]},
+        % ---------- BLOCOS ----------
+        bloco_laranja/.style={
+            rectangle, fill=orange!45,
+            minimum width=4.4cm, text width=4.1cm, minimum height=1.2cm,
+            text centered, rounded corners=4pt,
+            font=\sffamily\small\bfseries},
+        bloco_azul/.style={
+            rectangle, fill=cyan!75!black,
+            minimum width=4.4cm, text width=4.1cm, minimum height=1.2cm,
+            text centered, rounded corners=4pt,
+            font=\sffamily\small\bfseries},
+        bloco_roxo/.style={
+            rectangle, fill=violet!55,
+            minimum width=4.4cm, text width=4.1cm, minimum height=1.2cm,
+            text centered, rounded corners=4pt,
+            font=\sffamily\small\bfseries},
+        bloco_cinza/.style={
+            rectangle, fill=gray!55,
+            minimum width=4.4cm, text width=4.1cm, minimum height=1.2cm,
+            text centered, rounded corners=4pt,
+            font=\sffamily\small\bfseries},
+        bloco_verde/.style={
+            rectangle, fill=green!55,
+            minimum width=4.4cm, text width=4.1cm, minimum height=1.2cm,
+            text centered, rounded corners=4pt,
+            font=\sffamily\small\bfseries},
+        % ---------- TEXTOS ----------
+        txt_in/.style={font=\sffamily\footnotesize, align=right, text width=2.4cm},
+        txt_out/.style={font=\sffamily\footnotesize, align=left,  text width=3.2cm},
+        txt_label/.style={font=\sffamily\footnotesize, align=left, text width=2.7cm},
+        txt_fase/.style={font=\sffamily\small\bfseries, rotate=90, align=center},
+        txt_hdr/.style={font=\sffamily\small\bfseries},
+        % ---------- SETAS ----------
+        seta/.style={->,  draw=gray!65, line width=3.2pt},
+        seta_loop/.style={->, draw=gray!55, line width=1.4pt},
+    ]
+ 
+    % ==============================================
+    % LAYOUT DE COLUNAS (coordenadas X)
+    %   col_fase_txt = -8.5   texto vertical fase
+    %   col_lim_esq  = -7.5   limite esq. das linhas
+    %   col_div_vert = -6.2   divisória vertical
+    %   col_lbl      = -6.1   início rótulos (A1, A4…)
+    %   col_in_east  = -0.3   âncora east das entradas
+    %   col_proc     =  3.2   centro dos processos
+    %   col_out_west =  6.6   âncora west das saídas
+    %   col_lim_dir  = 10.5   limite dir. das linhas
+    % ==============================================
+ 
+    % ==============================================
+    % TÍTULO
+    % ==============================================
+    \node[font=\sffamily\bfseries\normalsize] at (3.2, 2) {TAIPA DE PILÃO};
+ 
+    % ==============================================
+    % CABEÇALHO
+    % ==============================================
+    \node[txt_hdr] at ( -1.5, 1.0) {ENTRADAS};
+    \node[txt_hdr] at ( 3.2, 1.0) {PROCESSOS};
+    \node[txt_hdr] at ( 7.5, 1.0) {SAÍDAS};
+ 
+    \draw[thick] (-6, 0.5) -- (10.5, 0.5);
+ 
+    % ==============================================
+    % DIVISÓRIA VERTICAL DE FASES
+    % ==============================================
+    %\draw[thick] (-6.2, 0.4) -- (-6.2, -21.0);
+ 
+    % ==============================================
+    % RÓTULOS VERTICAIS DAS FASES
+    % ==============================================
+    \node[txt_fase] at (-7.0, -0.5)  {Produto};
+    \node[txt_fase] at (-7.0, -6.5)  {Construção};
+    \node[txt_fase] at (-7.0, -14.5)  {Uso};
+    \node[txt_fase] at (-7.0, -19.5) {Fim da Vida Útil};
+ 
+    % ==============================================
+    % A1 — RAW MATERIALS SUPPLY  y = -1.0
+    % ==============================================
+    \node[txt_label, anchor=north west] at (-6.1,  0)
+        {\textbf{A1}\\[-2pt]Fornecimento de matéria-prima};
+ 
+    \node[txt_in,  anchor=east] (inA1) at (-0.3, -0.5) {Combustível};
+    \node[bloco_laranja]        (prA1) at ( 3.2, -0.5)
+        {Fornecimento de matérias-primas\\(extração)};
+    \node[txt_out, anchor=west] (ouA1) at ( 6.6, -0.5)
+        {Solo orgânico e rochas\\Emissões para o ar};
+ 
+    \draw[seta] (inA1.east) -- (prA1.west);
+    \draw[seta] (prA1.east) -- (ouA1.west);
+ 
+    % Separador Product / A4
+    \draw[thick] (-6, -1.5) -- (10.5, -1.5);
+ 
+    % ==============================================
+    % A4 — TRANSPORT OF MATERIALS  y = -3.1
+    % ==============================================
+    \node[txt_label, anchor=north west] at (-6.1, -2)
+        {\textbf{A4}\\[-2pt]Transporte};
+ 
+    \node[txt_in,  anchor=east] (inA4) at (-0.3, -2.4) {Combustível};
+    \node[bloco_azul]           (prA4) at ( 3.2, -2.4)
+        {Transporte de materiais e equipamentos};
+    \node[txt_out, anchor=west] (ouA4) at ( 6.6, -2.4) {Emissões para o ar};
+ 
+    \draw[seta] (inA4.east) -- (prA4.west);
+    \draw[seta] (prA4.east) -- (ouA4.west);
+    \draw[seta] (prA1.south) -- (prA4.north);
+ 
+    % Separador leve A4 / Construção
+    \draw[gray!40, thin] (-6, -3.25) -- (10.5, -3.3);
+ 
+    % ==============================================
+    % A5 — CONSTRUCTION
+    % ==============================================
+    \node[txt_label, anchor=north west] at (-6.1, -7)
+        {\textbf{A5}\\[-2pt]Instalação/\\Construção};
+ 
+    % --- Formwork assembly  y = -5.1 ---
+    \node[txt_in, anchor=east] (inFA) at (-0.3, -4.2) {Solo\\Cal};
+    \node[bloco_azul]          (prFA) at ( 3.2, -4.2) {Montagem de fôrmas};
+ 
+    \draw[seta] (inFA.east) -- (prFA.west);
+    \draw[seta] (prA4.south) -- (prFA.north);
+ 
+    % --- Mixing  y = -6.6 ---
+    \node[txt_in,  anchor=east] (inMX) at (-0.3, -6)
+        {Solo\\Cal\\Água\\Combustível};
+    \node[bloco_azul]           (prMX) at ( 3.2, -6) {Mistura};
+    \node[txt_out, anchor=west] (ouMX) at ( 6.6, -6)
+        {Resíduos de embalagens de cal\\Emissões para o ar};
+ 
+    \draw[seta] (inMX.east) -- (prMX.west);
+    \draw[seta] (prMX.east) -- (ouMX.west);
+
+    \draw[seta] (prFA.south) -- (prMX.north);
+    % --- Filling the formwork  y = -8.1 ---
+    \node[txt_in,  anchor=east] (inFF) at (-0.3, -7.8) {Combustível};
+    \node[bloco_azul]           (prFF) at ( 3.2, -7.8) {Preenchimento da fôrma};
+    \node[txt_out, anchor=west] (ouFF) at ( 6.6, -7.8)
+        {Resíduos de material misto\\Emissões para o ar};
+ 
+    \draw[seta] (inFF.east) -- (prFF.west);
+    \draw[seta] (prFF.east) -- (ouFF.west);
+    \draw[seta] (prMX.south) -- (prFF.north);
+ 
+    % Loop retorno (base de Mixing de volta para as entradas)
+    \draw[seta_loop]
+        ($(ouFF)+(0,0.7)$) -- ($(ouFF.north west)+(1.72,0.1)$) -- ($(prFF.north west)+(-1,0.2)$) -- ($(prMX.south west)+(-1,0.2)$) -- ($(prMX.south west)+(0,0.2)$);
+ 
+    % --- Ramming  y = -9.5 ---
+    \node[txt_in,  anchor=east] (inRM) at (-0.3, -9.7) {Combustível};
+    \node[bloco_azul]           (prRM) at ( 3.2, -9.7) {Apiloamento};
+    \node[txt_out, anchor=west] (ouRM) at ( 6.6, -9.7) {Emissões para o ar};
+ 
+    \draw[seta] (inRM.east) -- (prRM.west);
+    \draw[seta] (prRM.east) -- (ouRM.west);
+    \draw[seta] (prFF.south) -- (prRM.north);
+ 
+    % --- Formwork disassembly  y = -10.8 ---
+    \node[bloco_azul] (prFD) at (3.2, -11.6) {Desmontagem da fôrma};
+    \draw[seta] (prRM.south) -- (prFD.north);
+ 
+    % Caixa tracejada verde — A5
+    %\draw[dashed, green!55!black, line width=1.2pt, rounded %corners=5pt]
+    %    (-4.5, -4.45) rectangle (5.7, -11.45);
+ 
+    % Separador Construção / Use
+    \draw[thick] (-6, -12.5) -- (10.5, -12.5);
+ 
+    % ==============================================
+    % B2 — USE / MAINTENANCE
+    % ==============================================
+    \node[txt_label, anchor=north west] at (-6.1, -14)
+        {\textbf{B2}\\[-2pt]Manutenção};
+ 
+    % --- Transport (Use)  y = -13.1 ---
+    \node[txt_in,  anchor=east] (inTU) at (-0.3, -13.5) {Combustível};
+    \node[bloco_roxo]           (prTU) at ( 3.2, -13.5) {Transporte};
+    \node[txt_out, anchor=west] (ouTU) at ( 6.6, -13.5) {Emissões para o ar};
+ 
+    \draw[seta] (inTU.east) -- (prTU.west);
+    \draw[seta] (prTU.east) -- (ouTU.west);
+    \draw[seta] (prFD.south) -- (prTU.north);
+ 
+    % --- Whitewashing  y = -14.5 ---
+    \node[txt_in,  anchor=east] (inWS) at (-0.3, -15.5) {Água de\\cal};
+    \node[bloco_roxo]           (prWS) at ( 3.2, -15.5)
+        {Caiação/\\tratamento de superfície};
+    \node[txt_out, anchor=west] (ouWS) at ( 6.6, -15.5)
+        {Resíduos de embalagens de cal};
+ 
+    \draw[seta] (inWS.east) -- (prWS.west);
+    \draw[seta] (prWS.east) -- (ouWS.west);
+    \draw[seta] (prTU.south) -- (prWS.north);
+ 
+    % Separador Use / End-of-life
+    \draw[thick] (-6, -16.7) -- (10.5, -16.7);
+ 
+    % ==============================================
+    % END-OF-LIFE
+    % ==============================================
+ 
+    % --- C1 Demolition  y = -16.55 ---
+    \node[txt_label, anchor=north west] at (-6.1, -17.2)
+        {\textbf{C1}\\[-2pt]Demolição};
+ 
+    \node[txt_in,  anchor=east] (inDM) at (-0.3, -17.7) {Combustível};
+    \node[bloco_cinza]          (prDM) at ( 3.2, -17.7) {Demolição};
+    \node[txt_out, anchor=west] (ouDM) at ( 6.6, -17.7) {Emissões para o ar};
+ 
+    \draw[seta] (inDM.east) -- (prDM.west);
+    \draw[seta] (prDM.east) -- (ouDM.west);
+    \draw[seta] (prWS.south) -- (prDM.north);
+ 
+    % Separador C1 / C3
+    \draw[gray!40, thin] (-6, -18.5) -- (10.5, -18.5);
+ 
+    % --- C3 Milling/Sieving  y = -18.1 ---
+    \node[txt_label, anchor=north west] at (-6.1, -18.7)
+        {\textbf{C3}\\[-2pt]Processamento de resíduos};
+ 
+    \node[txt_in,  anchor=east] (inML) at (-0.3, -19.5) {Eletricidade};
+    \node[bloco_cinza]          (prML) at ( 3.2, -19.5) {Moagem/Peneiramento};
+ 
+    \draw[seta] (inML.east) -- (prML.west);
+    \draw[seta] (prDM.south) -- (prML.north);
+ 
+    % Separador C3 / C4
+    \draw[gray!40, thin] (-6, -20.3) -- (10.5, -20.3);
+ 
+    % --- C4 Disposal on site  y = -19.5 ---
+    \node[txt_label, anchor=north west] at (-6.1, -20.7)
+        {\textbf{C4}\\[-2pt]Descarte};
+ 
+    \node[bloco_cinza] (prDS) at (5.4, -21.2) {Descarte no local};
+
+    \draw[seta, dashed] (prDM.south east) -- (prDS);
+ 
+    % Separador C4 / D
+    \draw[thick] (-6, -22.1) -- (10.5, -22.1);
+ 
+    % --- D Recovery/Recycling  y = -20.85 ---
+    \node[txt_label, anchor=north west] at (-6.1, -22.2)
+        {\textbf{D}\\[-2pt]Reutilização, Recuperação\\Reciclagem};
+ 
+    \node[bloco_verde] (prRR) at (3.2, -23) {Recuperação / Reciclagem};
+    \draw[seta] (prML.south west) -- (prRR.north west);
+ 
+    % Seta triângulo verde Formwork → Mixing
+    \draw[->, draw=green!55!black, line width=3.2pt,
+          >={Triangle[length=4mm,width=2mm]}]
+        (prFA.south west |- -5,-5.3) -- (-5,-5.5 -| prMX.north west);
+ 
+    % Linha tracejada verde larga (contorno A4 → D, lado esquerdo)
+    \draw[dashed, green!55!black, line width=1.2pt]
+        (prMX.north west)
+        -- (prFA.south west |- prFA.south west)
+        -- (-2.5, -4.8 |- prFA.south west)
+        -- (-2.5, -23)
+        -- (prRR.west |- 0,-23)
+        -- (prRR.west);
+ 
+    % Linha final
+    \draw[thick] (-6, -24) -- (10.5, -24);
+ 
+    \end{tikzpicture}%
+    }% fim do resizebox
+ 
+    \vspace{0.2cm}
+    \fonte{\citeonline[p. 9, adaptado pelo autor]{Fernandes2019}.}
+\end{figure}

@@ -1,0 +1,187 @@
+\begin{figure}[htbp]
+\centering
+    \caption{\label{fig:perfil-intemperismo} Visão simplificada de um perfil de intemperismo de rochas ígneas intemperizadas em clima tropical}
+
+    \begin{tikzpicture}[x=1cm, y=1cm]
+    
+    % ── Posições verticais (y cresce para cima) ──────────────────────────────────
+    \pgfmathsetmacro{\yRochaBot}{0}
+    \pgfmathsetmacro{\yRochaTop}{\yRochaBot + \hRocha}
+    \pgfmathsetmacro{\yModTop}{\yRochaTop + \hMod}
+    \pgfmathsetmacro{\yAltaTop}{\yModTop + \hAlta}
+    \pgfmathsetmacro{\yCompTop}{\yAltaTop + \hComp}
+    \pgfmathsetmacro{\ySoloTop}{\yCompTop + \hSolo}
+    
+    % ── x do bloco ───────────────────────────────────────────────────────────────
+    \pgfmathsetmacro{\xL}{0}
+    \pgfmathsetmacro{\xR}{\xL + \CW}
+    \pgfmathsetmacro{\xM}{(\xL+\xR)/2}
+    
+    % ════════════════════════════════════════════════════════════════════════════
+    %  CAMADAS
+    % ════════════════════════════════════════════════════════════════════════════
+    
+    % ── 5. Solo ──────────────────────────────────────────────────────────────────
+    \fill[soloColor]
+    (\xL, \yCompTop) rectangle (\xR, \ySoloTop);
+    
+    % ── 4. Completamente intemperizado ───────────────────────────────────────────
+    \fill[completColor]
+    (\xL, \yAltaTop) rectangle (\xR, \yCompTop);
+    
+    % ── 3. Altamente intemperizado ────────────────────────────────────────────────
+    \fill[altaColor]
+    (\xL, \yModTop) rectangle (\xR, \yAltaTop);
+    
+    % ── 2. Moderadamente intemperizado ───────────────────────────────────────────
+    \fill[modColor]
+    (\xL, \yRochaTop) rectangle (\xR, \yModTop);
+    
+    % ── 1. Rocha fresca ──────────────────────────────────────────────────────────
+    \fill[rochaColor]
+    (\xL, \yRochaBot) rectangle (\xR, \yRochaTop);
+    
+    % ════════════════════════════════════════════════════════════════════════════
+    %  TEXTURAS INTERNAS
+    % ════════════════════════════════════════════════════════════════════════════
+    
+    %% --- Solo: pequena mancha de matéria orgânica oval
+    %\nodulo{\xM-0.1}{\yCompTop+0.9}{0.28}{0.16}{-20}{brown!60!black}{brown!80!black}
+    
+    %% --- Completamente intemperizado: fragmentos maiores, pouco definidos
+    \nodulo{\xM-0.55}{\yAltaTop+0.6}{0.45}{0.30}{10}{altaColor!60!brown}{brown!50!black}
+    %\nodulo{\xM+0.45}{\yAltaTop+1.1}{0.35}{0.22}{-5}{altaColor!60!brown}{brown!50!black}
+    %\nodulo{\xM-0.1}{\yAltaTop+1.55}{0.38}{0.24}{15}{altaColor!60!brown}{brown!50!black}
+    
+    %% --- Altamente intemperizado: blocos maiores com cor mais escura
+    \nodulo{\xM-1}{\yModTop+0.55}{0.55}{0.35}{-10}{brown!50!black!70}{brown!30!black}
+    \nodulo{\xM+0.45}{\yModTop+0.70}{0.48}{0.32}{12}{brown!50!black!70}{brown!30!black}
+    \nodulo{\xM-0.15}{\yModTop+1.55}{0.50}{0.33}{-8}{brown!50!black!70}{brown!30!black}
+    \nodulo{\xM+1.30}{\yModTop+1.25}{0.42}{0.28}{20}{brown!50!black!70}{brown!30!black}
+    
+    %% --- Moderadamente intemperizado: blocos sub-angulosos mais definidos
+    \nodulo{\xM-0.7}{\yRochaTop+0.38}{0.52}{0.33}{-5}{brown!40!black!60}{gray!40!black}
+    \nodulo{\xM+0.30}{\yRochaTop+0.42}{0.48}{0.30}{ 8}{brown!40!black!60}{gray!40!black}
+    \nodulo{\xM-0.15}{\yRochaTop+1.00}{0.55}{0.35}{-12}{brown!40!black!60}{gray!40!black}
+    \nodulo{\xM+0.50}{\yRochaTop+1.10}{0.42}{0.27}{15}{brown!40!black!60}{gray!40!black}
+    \nodulo{\xM-0.55}{\yRochaTop+1.50}{0.40}{0.26}{ 5}{brown!40!black!60}{gray!40!black}
+    
+    %% --- Rocha fresca: blocos angulosos cinza separados por fraturas vermelhas
+    % blocos
+    \fill[rochaColor!90!white, draw=gray!60, line width=0.5pt]
+    (\xL+0.15, \yRochaBot+0.15) rectangle (\xL+1.10, \yRochaBot+0.80);
+    \fill[rochaColor!90!white, draw=gray!60, line width=0.5pt]
+    (\xL+1.20, \yRochaBot+0.15) rectangle (\xL+2.15, \yRochaBot+0.80);
+    \fill[rochaColor!90!white, draw=gray!60, line width=0.5pt]
+    (\xL+2.25, \yRochaBot+0.15) rectangle (\xR-0.15, \yRochaBot+0.80);
+    \fill[rochaColor!90!white, draw=gray!60, line width=0.5pt]
+    (\xL+0.15, \yRochaBot+0.90) rectangle (\xL+1.35, \yRochaTop-0.15);
+    \fill[rochaColor!90!white, draw=gray!60, line width=0.5pt]
+    (\xL+1.45, \yRochaBot+0.90) rectangle (\xR-0.15, \yRochaTop-0.15);
+    
+    % veios vermelhos entre blocos
+    \draw[linhaVerm, line width=1.8pt]
+    (\xL+0.0, \yRochaBot+0.82) -- (\xR, \yRochaBot+0.82);
+    \draw[linhaVerm, line width=1.8pt]
+    (\xL+1.15, \yRochaBot) -- (\xL+1.15, \yRochaBot+0.82);
+    \draw[linhaVerm, line width=1.8pt]
+    (\xL+2.20, \yRochaBot) -- (\xL+2.20, \yRochaBot+0.82);
+    \draw[linhaVerm, line width=1.8pt]
+    (\xL+1.40, \yRochaBot+0.82) -- (\xL+1.40, \yRochaTop);
+    
+    % ════════════════════════════════════════════════════════════════════════════
+    %  LINHAS DIVISÓRIAS ENTRE CAMADAS (onduladas / rosa)
+    % ════════════════════════════════════════════════════════════════════════════
+    \foreach \yy/\amp/\freq in {
+    \yCompTop/0.06/5,
+    \yAltaTop/0.05/6,
+    \yModTop/0.07/5,
+    \yRochaTop/0.04/4
+    }{
+    \draw[linhaPink, line width=1.4pt,
+            decoration={snake, amplitude=\amp cm, segment length=0.55cm},
+            decorate]
+        (\xL, \yy) -- (\xR, \yy);
+    }
+    
+    % ════════════════════════════════════════════════════════════════════════════
+    %  BARRA DO TOPO (roxa/azul-escura)
+    % ════════════════════════════════════════════════════════════════════════════
+    \fill[topBar] (\xL, \ySoloTop) rectangle (\xR, \ySoloTop+0.18);
+    
+    % ════════════════════════════════════════════════════════════════════════════
+    %  CONTORNO GERAL DO BLOCO
+    % ════════════════════════════════════════════════════════════════════════════
+    \draw[black, line width=1.2pt]
+    (\xL, \yRochaBot) rectangle (\xR, \ySoloTop+0.18);
+    
+    % ════════════════════════════════════════════════════════════════════════════
+    %  RÓTULOS DAS CAMADAS (lado esquerdo)
+    % ════════════════════════════════════════════════════════════════════════════
+    \pgfmathsetmacro{\xLabel}{\xL - 0.25}
+    \pgfmathsetmacro{\fSize}{9}
+    
+    \node[anchor=east, font=\fontsize{\fSize}{11}\selectfont]
+    at (\xLabel, {\ySoloTop/2 + \yCompTop/2})   {Solo};
+    \node[anchor=east, font=\fontsize{\fSize}{11}\selectfont]
+    at (\xLabel, {\yCompTop/2 + \yAltaTop/2})   {Completamente intemperizado};
+    \node[anchor=east, font=\fontsize{\fSize}{11}\selectfont]
+    at (\xLabel, {\yAltaTop/2 + \yModTop/2})    {Altamente intemperizado};
+    \node[anchor=east, font=\fontsize{\fSize}{11}\selectfont]
+    at (\xLabel, {\yModTop/2 + \yRochaTop/2})   {Moderadamente intemperizado};
+    \node[anchor=east, font=\fontsize{\fSize}{11}\selectfont]
+    at (\xLabel, {\yRochaTop/2 + \yRochaBot/2}) {Rocha fresca};
+    
+    % ════════════════════════════════════════════════════════════════════════════
+    %  RÓTULOS DE GRAU (lado direito)
+    % ════════════════════════════════════════════════════════════════════════════
+    \pgfmathsetmacro{\xGrade}{\xR + 0.25}
+    
+    \node[anchor=west, font=\fontsize{\fSize}{11}\selectfont]
+    at (\xGrade, {\ySoloTop/2 + \yCompTop/2})   {Grau VI};
+    \node[anchor=west, font=\fontsize{\fSize}{11}\selectfont]
+    at (\xGrade, {\yCompTop/2 + \yAltaTop/2})   {Grau V};
+    \node[anchor=west, font=\fontsize{\fSize}{11}\selectfont]
+    at (\xGrade, {\yAltaTop/2 + \yModTop/2})    {Grau IV};
+    \node[anchor=west, font=\fontsize{\fSize}{11}\selectfont]
+    at (\xGrade, {\yModTop/2 + \yRochaTop/2})   {Grau III};
+    \node[anchor=west, font=\fontsize{\fSize}{11}\selectfont]
+    at (\xGrade, {\yRochaTop*0.65})             {Grau II};
+    \node[anchor=west, font=\fontsize{\fSize}{11}\selectfont]
+    at (\xGrade, {\yRochaBot + 0.20})           {Grau I};
+    
+    % ════════════════════════════════════════════════════════════════════════════
+    %  CHAVES DE ZONA com setas verticais (lado direito, após os graus)
+    % ════════════════════════════════════════════════════════════════════════════
+    \pgfmathsetmacro{\xArrow}{\xGrade + 1.55}
+    \pgfmathsetmacro{\xText}{\xArrow + 0.28}
+    
+    % ---- Zona Superior (Grau V + VI) ----
+    \draw[<->, >=stealth, line width=0.8pt]
+    (\xArrow, \yCompTop) -- (\xArrow, \ySoloTop+0.18);
+    \node[rotate=90, anchor=center, font=\fontsize{8}{9}\selectfont]
+    at (\xText, {(\yCompTop + \ySoloTop+0.18)/2}) {Zona superior};
+    
+    % ---- Zona Intermediária (Grau III + IV) ----
+    \draw[<->, >=stealth, line width=0.8pt]
+    (\xArrow, \yRochaTop) -- (\xArrow, \yCompTop);
+    \node[rotate=90, anchor=center, font=\fontsize{8}{9}\selectfont]
+    at (\xText, {(\yRochaTop + \yCompTop)/2}) {Zona intermediária};
+    
+    % ---- Zona Inferior (Grau I + II) ----
+    \draw[<->, >=stealth, line width=0.8pt]
+    (\xArrow, \yRochaBot) -- (\xArrow, \yRochaTop);
+    \node[rotate=90, anchor=center, font=\fontsize{8}{9}\selectfont]
+    at (\xText, {(\yRochaBot + \yRochaTop)/2}) {Zona inferior};
+    
+    % ---- linhas horizontais de limite de zona (tracejadas) ----
+    \draw[black, dashed, line width=0.6pt]
+    (\xR, \yCompTop)  -- (\xArrow, \yCompTop);
+    \draw[black, dashed, line width=0.6pt]
+    (\xR, \yRochaTop) -- (\xArrow, \yRochaTop);
+    
+    \end{tikzpicture}
+ 
+    \vspace{0.2cm}
+    \fonte{\cite[p. 2, adaptado pelo autor]{Zhang2019}.}
+\end{figure}

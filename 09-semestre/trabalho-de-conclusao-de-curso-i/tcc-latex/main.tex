@@ -32,14 +32,49 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
+
+%\usepackage{arial}
+%\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{graphicx}
 
 % Pacotes essenciais para o diagrama
 \usepackage{tikz}
-\usetikzlibrary{matrix, calc, shapes.geometric, arrows, positioning, arrows.meta}
+\usetikzlibrary{patterns, matrix, calc, shapes.geometric, arrows, positioning, arrows.meta, decorations.pathmorphing}
 
 \usepackage{lmodern}
+
+\usepackage{placeins}
+\usepackage{xcolor}
+\usepackage{geometry}
+
+% ── Cores do perfil de intemperismo ──────────────────────────────────────────
+\definecolor{soloColor}{RGB}{61, 39, 10}      % Solo
+\definecolor{completColor}{RGB}{82, 54, 17}   % Completamente intemperizado
+\definecolor{altaColor}{RGB}{133, 95, 45}      % Altamente intemperizado
+\definecolor{modColor}{RGB}{158, 117, 63}       % Moderadamente intemperizado
+\definecolor{rochaColor}{RGB}{180, 180, 190}     % Rocha fresca
+\definecolor{linhaPink}{RGB}{220,  80, 160}      %linhas divisórias
+\definecolor{linhaVerm}{RGB}{148, 141, 141}      % vermelho-escuro – veios de rocha
+\definecolor{topBar}{RGB}{ 2,  96, 20}         % verde escuro – barra do topo
+ 
+% ── Parâmetros globais ────────────────────────────────────────────────────────
+% Largura do cilindro e alturas de cada camada (em cm)
+\newcommand{\CW}{3.5}   % largura total
+\newcommand{\hSolo}{1.5}
+\newcommand{\hComp}{1.5}
+\newcommand{\hAlta}{2.0}
+\newcommand{\hMod}{1.5}
+\newcommand{\hRocha}{3}
+ 
+% ── Macro: nódulo oval inclinado ──────────────────────────────────────────────
+% #1 cx  #2 cy  #3 rx  #4 ry  #5 angle  #6 fill  #7 draw
+\newcommand{\nodulo}[7]{%
+  \begin{scope}[shift={(#1,#2)}, rotate=#5]
+    \fill[#6] (0,0) ellipse (#3 and #4);
+    \draw[#7, line width=0.5pt] (0,0) ellipse (#3 and #4);
+  \end{scope}
+}
 
 % --- DOCUMENTO ---
 \begin{document}
