@@ -1,0 +1,75 @@
+\documentclass[
+    12pt,
+    openright,
+    oneside,
+    a4paper,
+    brazilian,
+    chapter=TITLE,
+    section=TITLE,
+    sumario=abnt-6027-2012
+]{abntex2}
+
+\usepackage{packages/abnt}
+
+\newcommand{\discente}{Rayssa Carolina Gomes dos Santos}
+\newcommand{\discenteemail}{rayssacgomess@gmail.com}
+\newcommand{\rga}{202211741025}
+\newcommand{\discentecpf}{707.989.051-90}
+
+\newcommand{\empresa}{Leve Engenharia LTDA}
+\newcommand{\supervisordoestagio}{Vitor Hugo dos Santos}
+\newcommand{\supervisordoestagioemail}{contato@leveengenharia.com}
+\newcommand{\supervisordoestagiotelefone}{(66) 99208-1763}
+\newcommand{\supervisordoestagiocidade}{Barra do Garças/MT}
+
+\newcommand{\docenteestagio}{Susana Dalila Dolejal Berte}
+
+\newcommand{\dataentrega}{00 de xxx de \the\year}
+\newcommand{\dataestagioinicio}{22/04/2026}
+\newcommand{\dataestagiofim}{14/05/2026}
+\newcommand{\processosei}{23108.031922/2026-11}
+\newcommand{\estagio}{Curricular Obrigatório I}
+\newcommand{\unidadecurso}{ICET/EC/UFMT}
+
+% Metadados da capa e da folha de rosto.
+\titulo{Relatório de Estágio Curricular Supervisionado I}
+\autor{\discente}
+\orientador{\docenteestagio}
+\preambulo{Projeto de pesquisa apresentado ao Curso de Engenharia Civil, Universidade Federal de Mato Grosso, Campus Universitário do Araguaia, como pré-requisito para obtenção do título de Bacharel em Engenharia Civil.}
+\instituicao{Universidade Federal de Mato Grosso \\ Campus Universitário do Araguaia \\ Instituto de Ciências Exatas e da Terra \\ Curso de Engenharia Civil}
+\local{Barra do Garças}
+\data{\the\year}
+
+\usepackage[xindy={language=portuguese},nonumberlist=true,style=index, acronym]{glossaries}
+\makeglossaries
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+%\usepackage{arial}
+%\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{graphicx}
+
+% Pacotes essenciais para o diagrama
+\usepackage{tikz}
+\usetikzlibrary{patterns, matrix, calc, shapes.geometric, arrows, positioning, arrows.meta, decorations.pathmorphing}
+
+\usepackage{lmodern}
+
+\usepackage{placeins}
+\usepackage{xcolor}
+\usepackage{geometry}
+
+\usepackage{colortbl} % Permite manipular as cores da tabela
+\usepackage{arydshln} % Cria os comandos de linhas pontilhadas/tracejadas
+
+% --- DOCUMENTO ---
+\begin{document}
+    % Idioma padrão do documento
+    \selectlanguage{brazilian}
+    
+    % Conteúdo
+    \input{elements/index.tex}
+\end{document}
