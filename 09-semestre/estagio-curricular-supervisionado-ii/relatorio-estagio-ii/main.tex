@@ -9,20 +9,15 @@
     sumario=abnt-6027-2012
 ]{abntex2}
 
-% FORMATAÇÃO SEGUNDO AS NORMAS ABNT
 \usepackage{packages/abnt}
 
-% METADADOS DO RELATÓRIO
 \newcommand{\discente}{Rayssa Carolina Gomes dos Santos}
 \newcommand{\discenteemail}{rayssacgomess@gmail.com}
 \newcommand{\rga}{202211741025}
 \newcommand{\discentecpf}{707.989.051-90}
 
 \newcommand{\empresa}{Leve Engenharia LTDA}
-\newcommand{\anofundacao}{2019}
-\newcommand{\localempresa}{Rua do Lazer, 410, Lote 10, Setor Jardim Domingos Mariano, Barra do Garças, Mato Grosso, 78603-188}
 \newcommand{\supervisordoestagio}{Vitor Hugo dos Santos}
-\newcommand{\supervisordoestagiodois}{Lauro Sandro dos Santos }
 \newcommand{\supervisordoestagioemail}{contato@leveengenharia.com}
 \newcommand{\supervisordoestagiotelefone}{(66) 99208-1763}
 \newcommand{\supervisordoestagiocidade}{Barra do Garças/MT}
@@ -36,7 +31,7 @@
 \newcommand{\estagio}{Curricular Obrigatório I}
 \newcommand{\unidadecurso}{ICET/EC/UFMT}
 
-% CAPA E FOLHA DE ROSTO
+% Metadados da capa e da folha de rosto.
 \titulo{Relatório de Estágio Curricular Supervisionado I}
 \autor{\discente}
 \orientador{\docenteestagio}
@@ -45,52 +40,30 @@
 \local{Barra do Garças}
 \data{\the\year}
 
-% PACOTES
-
 \usepackage[xindy={language=portuguese},nonumberlist=true,style=index, acronym]{glossaries}
 \makeglossaries
+
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
+%\usepackage{arial}
+%\renewcommand{\familydefault}{\sfdefault}
+
 \usepackage{graphicx}
 
+% Pacotes essenciais para o diagrama
 \usepackage{tikz}
-\usetikzlibrary{patterns, matrix, calc, shapes.geometric, arrows, positioning, arrows.meta, decorations.pathmorphing, shadows, trees, shapes.symbols}
+\usetikzlibrary{patterns, matrix, calc, shapes.geometric, arrows, positioning, arrows.meta, decorations.pathmorphing}
 
 \usepackage{lmodern}
 
 \usepackage{placeins}
-
 \usepackage{xcolor}
-
 \usepackage{geometry}
 
 \usepackage{colortbl} % Permite manipular as cores da tabela
-
 \usepackage{arydshln} % Cria os comandos de linhas pontilhadas/tracejadas
-
-\usepackage{booktabs}
-
-\usepackage{enumitem} % Permite customizar listas facilmente
-
-% Macro para Caixa Marcada (Concluída)
-\newcommand{\checkedbox}{%
-    \tikz[baseline=-0.1cm]{
-        \node[draw=gray, thick, minimum size=0.4cm, inner sep=0pt] (box) {};
-        \draw[ultra thick, green!60!black] 
-            ([xshift=1.5pt, yshift=3pt]box.west) -- 
-            ([yshift=1.5pt]box.south) -- 
-            ([xshift=-1.5pt, yshift=-1.5pt]box.north east);
-    }%
-}
-
-% Macro para Caixa Vazia (Pendente)
-\newcommand{\emptybox}{%
-    \tikz[baseline=-0.1cm]{
-        \node[draw=gray, thick, minimum size=0.4cm, inner sep=0pt] (box) {};
-    }%
-}
 
 % --- DOCUMENTO ---
 \begin{document}
