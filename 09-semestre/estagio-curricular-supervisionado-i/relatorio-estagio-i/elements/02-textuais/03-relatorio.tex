@@ -2,6 +2,79 @@
 
 \input{assets/table/log.tex}
 
+Conforme \citeonline[item 6.6]{nbr9050}, a inclinação de uma rampa pode ser calculada: 
+
+\begin{equation}
+    i = \frac{h}{c}\ 100
+\end{equation}
+
+Onde:
+\begin{itemize}
+    \item[$i$] é a inclinação, expressa em porcentagem (\%);
+    \item[$h$] é a altura do desnível;
+    \item[$c$] é o comprimento da projeção horizontal.
+\end{itemize}
+
+Esse cálculo permite verificar se a rampa atende aos limites de acessibilidade estabelecidos pela norma.
+
+\begin{table}[htbp]
+    \centering
+    \caption{\label{tab:dimensionamento_rampas} Classificação de rampas segundo a inclinação.}
+
+    \begin{tabularx}{\textwidth}{ X X X }
+        \hline
+        \textbf{Desníveis máximos de cada segmento de rampa} $h$ (m) & \textbf{Inclinação admissível em cada segmento de rampa i (\%)} & \textbf{Acessível} \\
+        \hline
+        $1,50$ & $5,00 (1:20)$ & Sem limite \\
+        $1,00$ & $5,00 (1:20) < i \leq 6,25 (1:16)$ & Sem limite \\
+        $0,80$ & $6,25 (1:16) < i \leq 8,33 (1:12)$ & $150$ \\
+        \hline
+    \end{tabularx}
+
+    \vspace{1em}
+    \fonte{Adaptado de \citeonline[item 6.6.2.1]{nbr9050}.}
+\end{table}
+
+De acordo com a \citeonline[item 6.8]{nbr9050}, as escadas devem seguir algumas medidas para garantir conforto e segurança durante o uso:
+
+\begin{alineas}
+    \item $0,63 \leq p + 2e \leq 0,65$
+    \item pisos ($p$): $0,28\ m \leq p \leq 0,32\ m$
+    \item espelhos ($e$): $0,16\ m \leq e \leq 0,18\ m$
+\end{alineas}
+
+Para determinar a quantidade de degraus necessária para vencer um determinado desnível: 
+
+\begin{equation}
+    \text{degraus} = \frac{h}{e}
+\end{equation}
+
+Onde:
+\begin{itemize}
+    \item[$h$] é a altura do desnível;
+    \item[$e$] é a altura do espelho.
+\end{itemize}
+
+O resultado corresponde ao número de degraus da escada. Após definir a quantidade de degraus, a altura exata de cada espelho pode ser obtida:
+
+\begin{equation}
+    e = \frac{h}{\text{degraus}}
+\end{equation}
+
+Por fim, a profundidade do piso pode ser determinada utilizando a relação estabelecida pela norma:
+
+\begin{equation}
+    p \leq 0,64 - 2e
+\end{equation}
+
+
+
+
+
+
+
+\newpage
+
 Durante o estágio, as atividades desenvolvidas no escritório foram distribuídas em diferentes frentes de atuação, permitindo a integração entre os conhecimentos teóricos adquiridos ao longo da graduação e a prática profissional relacionada à gestão, elaboração e desenvolvimento de projetos. A seguir, são apresentadas as principais atividades realizadas durante esse período.
 
 \section{Elaboração e Revisão de Projetos Arquitetônicos e Elétricos}
@@ -16,7 +89,7 @@ Além dos projetos arquitetônicos, foram desenvolvidos e revisados projetos el�
 
 As atividades relacionadas ao setor de custos exigiram elevado grau de precisão técnica para garantir a viabilidade econômica dos empreendimentos. Entre as principais tarefas desenvolvidas, destacaram-se a extração de informações dos projetos para levantamento de quantitativos e a realização de correções orçamentárias.
 
-Uma das atividades mais relevantes consistiu na atualização de um orçamento solicitado por Wilmar Gonçalves, que demandou a exclusão dos serviços de gesso e a revisão completa dos custos com base nos referenciais da tabela SINAPI, utilizando como data-base março de 2026. Ao final do período de estágio, também foi realizado o levantamento orçamentário dos projetos elétricos elaborados pelo escritório.
+Uma das atividades mais relevantes consistiu na atualização de um orçamento, que demandou a exclusão dos serviços de gesso e a revisão completa dos custos com base nos referenciais da tabela SINAPI, utilizando como data-base março de 2026. Ao final do período de estágio, também foi realizado o levantamento orçamentário dos projetos elétricos elaborados pelo escritório.
 
 \section{Elaboração de Documentações Técnicas e Processos de Legalização}
 
@@ -26,8 +99,8 @@ Também foram organizadas documentações necessárias para a solicitação de H
 
 \section{Gestão de Suprimentos, Almoxarifado e Rotinas Administrativas}
 
-A vivência na área de gestão permitiu o acompanhamento contínuo dos processos de aquisição e controle de suprimentos indispensáveis ao funcionamento do escritório e à execução das obras. Foram realizadas diversas cotações e correções de pedidos, abrangendo materiais de construção, equipamentos e itens de escritório, incluindo os lotes KG037, KG043 e HT009, além da aquisição de monitor, pneus e materiais administrativos.
+A vivência na área de gestão permitiu o acompanhamento contínuo dos processos de aquisição e controle de suprimentos indispensáveis ao funcionamento do escritório e à execução das obras. Foram realizadas diversas cotações e correções de pedidos, abrangendo materiais de construção, equipamentos e itens de escritório.
 
-Para assegurar a organização dessas atividades, foi realizado o cadastramento e a atualização constante de informações em planilhas de controle de pedidos e acompanhamento de projetos, bem como a elaboração de checklists e fichas de manutenção de veículos.
+Para assegurar a organização dessas atividades, foi realizado o cadastramento e a atualização constante de informações em planilhas de controle de pedidos, acompanhamento de projetos e elaboração de \textit{checklists}.
 
-No âmbito financeiro, as atividades envolveram a conferência e a vinculação de notas fiscais aos respectivos pedidos, além da apropriação das notas recebidas, relacionando-as de forma criteriosa aos respectivos pedidos, obras, etapas de execução e responsáveis. Complementarmente, foi realizado o levantamento, a organização e o controle dos materiais armazenados no almoxarifado e na sala de arquivos, contribuindo para a melhoria da gestão interna e do controle patrimonial da empresa.
+No âmbito financeiro, as atividades envolveram a conferência e a vinculação de notas fiscais aos respectivos pedidos, além da apropriação das notas recebidas, relacionando-as de forma criteriosa aos respectivos pedidos, obras, etapas de execução e responsáveis.
