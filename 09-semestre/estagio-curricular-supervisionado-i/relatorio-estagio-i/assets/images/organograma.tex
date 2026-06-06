@@ -3,7 +3,7 @@
     \centering
     \caption{\label{organograma:unidade_concedente} Organograma da unidade concedente.}
 
-    \scalebox{0.6}{%
+    \scalebox{0.4}{%
     \begin{tikzpicture}[
         % Estilo global das caixinhas do organograma
         caixa/.style={
@@ -16,32 +16,52 @@
         % Força o estilo de linhas retas (ortogonais) de organograma
         edge from parent fork down,
         % Define o espaçamento entre as camadas (vertical) e entre irmãos (horizontal)
-        level 1/.style={sibling distance=14cm, level distance=2cm, font=\Large},
-        level 2/.style={sibling distance=4.5cm, level distance=2cm, font=\Large},
-        level 3/.style={sibling distance=3cm, level distance=2cm, font=\large}
+        level 1/.style={sibling distance=20cm, level distance=3cm, font=\huge},
+        level 2/.style={sibling distance=4cm, level distance=3cm, font=\LARGE},
+        level 3/.style={sibling distance=3cm, level distance=3cm, font=\LARGE},
+        level 4/.style={sibling distance=3cm, level distance=3cm, font=\LARGE}
     ]
 
     % --- RAIZ DO ORGANOGRAMA ---
-    \node[caixa, font=\Large] {Presidência}
-        child { node[caixa] {Administração}
-            child { node[caixa] {Compras}}
-            child { node[caixa] {Marketing} }
-            child { node[caixa] {Vendas} }
+    \node[caixa, font=\huge] {Presidência}
+        child { node[caixa] {Diretor Executivo}
+            child { node[caixa] {Projetos}
+                child { node[caixa] {Estagiário}}
+            }
+            child { node[caixa] {Fábrica}
+                child { node[caixa] {Sub-gerente\\ de Fábrica}
+                    child { node[caixa] {Colaborador}}
+                }
+            }
+            child { node[caixa] {Obras}
+                child { node[caixa] {Colaborador}}
+            }
+            child { node[caixa] {Piso de\\granitina}
+                child { node[caixa] {Ajudante}}
+            }
+            child { node[caixa] {Laboratório}
+                child { node[caixa] {Ajudante}}
+            }
+            child { node[caixa] {Sondagem}
+                child { node[caixa] {Ajudante}}
+            }
         }
-        child { node[caixa] {Produção} 
-            child { node[caixa] {Projetista}
-                child { node[caixa] {Estagiário} }
+        child { node[caixa] {Diretor Processos} 
+            child { node[caixa] {Administrativo}
+                child { node[caixa] {RH/Financeiro}
+                    child { node[caixa] {Auxiliar\\ Administrativo}}
+                }
             }
-            child { node[caixa] {Engenheiro\\ de Obras}
-                child { node[caixa] {Técnico em\\Edificações} }
-                %child { node[caixa] {Mestre\\de Obras} }
+            child { node[caixa] {Compras e\\ logística}
+                child { node[caixa] {Gestor de\\ Compras}
+                    child { node[caixa] {Motorista}}
+                }
             }
-            child { node[caixa] {Fabricação} 
-                child { node[caixa] {Operador\\ de Máquinas} }
-                child { node[caixa] {Marmorista} }
+            child { node[caixa] {Marketing}
+                child { node[caixa] {Gestor de\\ Marketing}}
             }
-            child { node[caixa] {Laboratorista} 
-                child { node[caixa] {Sondador} }
+            child { node[caixa] {Comercial}
+                child { node[caixa] {Vendedor}}
             }
         };
 
@@ -49,5 +69,5 @@
     }
  
     \vspace{0.2cm}
-    \fonte{Autoria própria.}
+    \fonte{Autoria própria (2026).}
 \end{figure}

@@ -1,5 +1,7 @@
 \chapter[RELATÓRIO DE ATIVIDADES DESENVOLVIDAS]{Relatório de atividades desenvolvidas}
 
+Neste capítulo são descritas as atividades práticas desenvolvidas durante o estágio curricular supervisionado obrigatório I, realizado no período de 22 de abril a 14 de maio de 2026, sob a supervisão do engenheiro \supervisordoestagio e orientação da professora \docenteestagio. As funções exercidas tiveram como objetivo a aplicação dos conhecimentos teóricos na rotina do escritório, abrangendo o desenvolvimento de projetos arquitetônicos e elétricos, levantamentos, legalização e orçamentação. Para uma melhor compreensão cronológica e estrutural do trabalho realizado, as demandas foram organizadas inicialmente na Tabela \ref{tab:resumo_atividades} a seguir e, posteriormente, detalhadas de forma minuciosa.
+
 \input{assets/table/log.tex}
 
 Conforme \citeonline[item 6.6]{nbr9050}, a inclinação de uma rampa pode ser calculada: 
@@ -19,9 +21,9 @@ Esse cálculo permite verificar se a rampa atende aos limites de acessibilidade 
 
 \begin{table}[htbp]
     \centering
-    \caption{\label{tab:dimensionamento_rampas} Classificação de rampas segundo a inclinação.}
+    \caption{\label{tab:dimensionamento_rampas} Dimensionamento de rampas.}
 
-    \begin{tabularx}{\textwidth}{ X X X }
+    \begin{tabularx}{\textwidth}{ X X l }
         \hline
         \textbf{Desníveis máximos de cada segmento de rampa} $h$ (m) & \textbf{Inclinação admissível em cada segmento de rampa i (\%)} & \textbf{Acessível} \\
         \hline
@@ -32,7 +34,24 @@ Esse cálculo permite verificar se a rampa atende aos limites de acessibilidade 
     \end{tabularx}
 
     \vspace{1em}
-    \fonte{Adaptado de \citeonline[item 6.6.2.1]{nbr9050}.}
+    \fonte{\citeonline[item 6.6.2.1]{nbr9050}.}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \caption{\label{tab:dimensionamento_rampas} Dimensionamento de rampas para situações excepcionais.}
+
+    \begin{tabularx}{\textwidth}{ p{5cm} X p{3.5cm} }
+        \hline
+        \textbf{Desníveis máximos de cada segmento de rampa} $h$ (m) & \textbf{Inclinação admissível em cada segmento de rampa i (\%)} & \textbf{Número máximo de segmentos de rampas} \\
+        \hline
+        $0,200$ & $8,33 (1:12) < i \leq 10,00 (1:10)$ & 4 \\
+        $0,075$ & $10,00 (1:10) < i \leq 12,5 (1:8)$ & 1 \\
+        \hline
+    \end{tabularx}
+
+    \vspace{1em}
+    \fonte{\citeonline[item 6.6.2.2]{nbr9050}.}
 \end{table}
 
 De acordo com a \citeonline[item 6.8]{nbr9050}, as escadas devem seguir algumas medidas para garantir conforto e segurança durante o uso:
@@ -64,7 +83,7 @@ O resultado corresponde ao número de degraus da escada. Após definir a quantid
 Por fim, a profundidade do piso pode ser determinada utilizando a relação estabelecida pela norma:
 
 \begin{equation}
-    p \leq 0,64 - 2e
+    0,63 \leq p + 2e \leq 0,65 \longleftrightarrow p \leq 0,64 - 2e
 \end{equation}
 
 
@@ -87,9 +106,7 @@ Além dos projetos arquitetônicos, foram desenvolvidos e revisados projetos el�
 
 \section{Orçamentação e Levantamento de Quantitativos}
 
-As atividades relacionadas ao setor de custos exigiram elevado grau de precisão técnica para garantir a viabilidade econômica dos empreendimentos. Entre as principais tarefas desenvolvidas, destacaram-se a extração de informações dos projetos para levantamento de quantitativos e a realização de correções orçamentárias.
-
-Uma das atividades mais relevantes consistiu na atualização de um orçamento, que demandou a exclusão dos serviços de gesso e a revisão completa dos custos com base nos referenciais da tabela SINAPI, utilizando como data-base março de 2026. Ao final do período de estágio, também foi realizado o levantamento orçamentário dos projetos elétricos elaborados pelo escritório.
+O setor de custos exigiu precisão técnica para viabilizar as obras. As tarefas envolveram a extração de dados dos projetos para o levantamento de quantitativos e correções orçamentárias. Uma das atividades documentadas consistiu na atualização de um orçamento que demandou a exclusão dos serviços de gesso e a revisão completa de todos os custos utilizando os referenciais do \gls{sinapi}, adotando como data-base o mês de março de 2026. Ao final do período de estágio, também foi realizado o levantamento orçamentário específico para os projetos elétricos elaborados.
 
 \section{Elaboração de Documentações Técnicas e Processos de Legalização}
 
