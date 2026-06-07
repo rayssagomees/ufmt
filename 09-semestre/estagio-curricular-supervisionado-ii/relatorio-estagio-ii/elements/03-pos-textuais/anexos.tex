@@ -146,37 +146,37 @@
             \multicolumn{5}{l}{} \\ 
             \hline
             \textbf{Data} & \textbf{Entrada (h)} & \textbf{Saída (h)} & \textbf{Carga \newline Horária (h)} & \textbf{Assinatura do Estagiário(a)} \\ \hline
-            22/04/2026 & 08:00 & 14:00 & 6 &  \\
+            15/05/2026 & 12:00 & 18:00 & 6 &  \\ 
             \arrayrulecolor{gray!40} \cdashline{1-5}
-            23/04/2026 & 12:00 & 18:00 & 6 &  \\ 
+            18/05/2026 & 08:00 & 14:00 & 6 &  \\ 
             \arrayrulecolor{gray!40} \cdashline{1-5}
-            24/04/2026 & 12:00 & 18:00 & 6 &  \\ 
+            19/05/2026 & 08:00 & 14:00 & 6 &  \\ 
             \arrayrulecolor{gray!40} \cdashline{1-5}
-            27/04/2026 & 08:00 & 14:00 & 6 &  \\ 
+            20/05/2026 & 08:00 & 14:00 & 6 &  \\ 
             \arrayrulecolor{gray!40} \cdashline{1-5}
-            28/04/2026 & 08:00 & 14:00 & 6 &  \\ 
+            21/05/2026 & 12:00 & 18:00 & 6 &  \\ 
             \arrayrulecolor{gray!40} \cdashline{1-5}
-            29/04/2026 & 08:00 & 14:00 & 6 &  \\ 
+            22/05/2026 & 12:00 & 18:00 & 6 &  \\ 
             \arrayrulecolor{gray!40} \cdashline{1-5}
-            30/04/2026 & 12:00 & 18:00 & 6 &  \\ 
+            25/05/2026 & 08:00 & 14:00 & 6 &  \\ 
             \arrayrulecolor{gray!40} \cdashline{1-5}
-            04/05/2026 & 08:00 & 14:00 & 6 &  \\ 
+            26/05/2026 & 08:00 & 14:00 & 6 &  \\ 
             \arrayrulecolor{gray!40} \cdashline{1-5}
-            05/05/2026 & 08:00 & 14:00 & 6 &  \\ 
+            27/05/2026 & 08:00 & 14:00 & 6 &  \\ 
             \arrayrulecolor{gray!40} \cdashline{1-5}
-            06/05/2026 & 08:00 & 14:00 & 6 &  \\ 
+            28/05/2026 & 12:00 & 18:00 & 6 &  \\ 
             \arrayrulecolor{gray!40} \cdashline{1-5}
-            07/05/2026 & 12:00 & 18:00 & 6 &  \\ 
+            29/05/2026 & 12:00 & 18:00 & 6 &  \\ 
             \arrayrulecolor{gray!40} \cdashline{1-5}
-            08/05/2026 & 12:00 & 18:00 & 6 &  \\
+            01/06/2026 & 08:00 & 14:00 & 6 &  \\ 
             \arrayrulecolor{gray!40} \cdashline{1-5}
-            11/05/2026 & 08:00 & 14:00 & 6 &  \\ 
+            02/06/2026 & 08:00 & 14:00 & 6 &  \\ 
             \arrayrulecolor{gray!40} \cdashline{1-5}
-            12/05/2026 & 08:00 & 14:00 & 6 &  \\ 
+            03/06/2026 & 08:00 & 14:00 & 6 &  \\ 
             \arrayrulecolor{gray!40} \cdashline{1-5}
-            13/05/2026 & 08:00 & 14:00 & 6 &  \\ 
+            04/06/2026 & 12:00 & 18:00 & 6 &  \\ 
             \arrayrulecolor{gray!40} \cdashline{1-5}
-            14/05/2026 & 12:00 & 18:00 & 6 &  \\ 
+            05/06/2026 & 12:00 & 18:00 & 6 &  \\ 
             \arrayrulecolor{black} 
             \hline
         \end{tabularx}
@@ -188,5 +188,580 @@
     \noindent \imprimirlocal, \rule{1cm}{0.1pt} de \rule{2.5cm}{0.1pt} de \rule{1.5cm}{0.1pt}
 
     \assinatura{Supervisor(a) do Estágio}
+
+    \begin{comment}
+
+    \chapter{\textit{Checklist}: levantamento}
+
+    \section{Medição}
+
+    \noindent
+    % Iniciamos uma lista customizada, controlando a margem esquerda e o espaço entre tarefas
+    \begin{itemize}[leftmargin=0.4cm, itemsep=0cm]
+
+    % O laço foreach varre a sua lista normalmente
+    \foreach \status/\texto in {
+        0/Indicar norte,
+        0/Área externa - Dimensões do terreno,
+        0/Área externa - Altura e comprimentos dos muros,
+        0/Área externa - Locação de árvores importantes (se forem poucas),
+        0/Ambientes - Geral e cada segmento de parede (seguir sentido horário a partir da porta),
+        0/Ambientes - Pilares aparentes (largura e profundidade),
+        0/Ambientes - Vigas (altura e profundidade),
+        0/Ambientes - Altura muretas / paredes mais baixas / batentes / guarda-corpos,
+        0/Ambientes - Triangulação das medidas,
+        0/Ambientes - Desníveis,
+        0/Ambientes - Tamanho das peças grandes de revestimento do piso e parede,
+        0/Ambientes - Escada (largura e altura degraus e patamares; guarda-corpo),
+        0/Ambientes - Rampas (largura; altura; comprimento e guarda-corpo),
+        0/Ambientes - Pés-direitos (observar rebaixos),
+        0/Ambientes - Verificar se o teto é laje ou forro,
+        0/Ambientes - Sancas e cortineiros; quando houver,
+        0/Ambientes - Altura cumeeiras; calhas; tesouras e outros elementos (e suas projeções),
+        0/Esquadrias - Largura e altura interna do vão e medida das folhas,
+        0/Esquadrias - Alizares,
+        0/Esquadrias - Sentido aberturas,
+        0/Esquadrias - Peitoril,
+        0/Esquadrias - Caixas de Ar condicionado (altura; largura e peitoril),
+        0/Esquadrias - Abertura Shafts (altura; largura e peitoril),
+        0/Cozinha; Área de Serviço e Banheiros - Balcões (largura; profundidade; altura e locação),
+        0/Cozinha; Área de Serviço e Banheiros - Cubas (largura e comprimento),
+        0/Cozinha; Área de Serviço e Banheiros - Eixos de Registros,
+        0/Cozinha; Área de Serviço e Banheiros - Eixos de Ralos,
+        0/Cozinha; Área de Serviço e Banheiros - Eixos de Pontos de máquina de lavar,
+        0/Cozinha; Área de Serviço e Banheiros - Eixos de Peças Sanitárias e Chuveiros,
+        0/Cozinha; Área de Serviço e Banheiros - Eixos de outros pontos (ducha; aquecedor),
+        0/Cozinha; Área de Serviço e Banheiros - Diviboxes e outras divisórias,
+        0/Instalações - Identificação dos Pontos de Instalações (interruptor; tomada; antena),
+        0/Instalações - Eixos de Pontos Elétricos (horizontal e vertical),
+        0/Instalações - Eixos de Pontos de Iluminação,
+        0/Instalações - Identificação das seções dos Pontos de Iluminação (caso existam),
+        0/Instalações - Eixos dos Pontos de Gás,
+        0/Instalações - Eixos de Pontos de Campainha (horizontal e vertical),
+        0/Instalações - Eixos de Pontos de Antena (horizontal e vertical),
+        0/Instalações - Eixos de Pontos de Telefone e Dados (horizontal e vertical),
+        0/Instalações - Eixos de Quadros de Energia e Conectividade (horizontal e vertical),
+        0/Instalações - Dimensões de Quadros de Energia e Conectividade,
+        0/Instalações - Eixos de Pontos de Ar condicionado (horizontal e vertical),
+        0/Instalações - Dimensões dos aparelhos de Ar condicionado instalados,
+        0/Dimensões dos móveis que serão mantidos,
+        0/Dimensões dos eletrodomésticos que serão mantidos,
+        0/Dimensões de outros itens importantes que serão mantidos%
+    } {
+        % Para cada item, checamos o status e chamamos o \item com o ícone correspondente
+        \ifnum\status=1
+            \item[\checkedbox] 
+        \else
+            \item[\emptybox] 
+        \fi
+        
+        % Imprime o texto da tarefa
+        \texto
+    }
+    \end{itemize}
+
+    \section{Fotos}
+
+    \noindent
+    % Iniciamos uma lista customizada, controlando a margem esquerda e o espaço entre tarefas
+    \begin{itemize}[leftmargin=0.4cm, itemsep=0cm]
+
+    % O laço foreach varre a sua lista normalmente
+    \foreach \status/\texto in {
+        0/Geral do ambiente a partir de todos os cantos (seguir sentido horário a partir da porta),
+        0/Vídeo passeando pelos ambientes internos,
+        0/Piso,
+        0/Teto (mostrando pontos de iluminação),
+        0/Pilares,
+        0/Vigas,
+        0/Pontos de Instalações escondidos,
+        0/Detalhes e gerais da fachada,
+        0/Entorno,
+        0/Outros detalhes,
+        0/Outros itens importantes a serem mantidos,
+        0/Eletrodomésticos a serem mantidos,
+        0/Móveis a serem mantidos,
+        0/Revestimentos a serem mantidos,
+        0/Danos e itens a serem reparados%,
+        } {
+        % Para cada item, checamos o status e chamamos o \item com o ícone correspondente
+        \ifnum\status=1
+            \item[\checkedbox] 
+        \else
+            \item[\emptybox] 
+        \fi
+        
+        % Imprime o texto da tarefa
+        \texto
+    }
+    \end{itemize}
+
+    \section{Digitalização}
+
+    \noindent
+    % Iniciamos uma lista customizada, controlando a margem esquerda e o espaço entre tarefas
+    \begin{itemize}[leftmargin=0.4cm, itemsep=0cm]
+
+    % O laço foreach varre a sua lista normalmente
+    \foreach \status/\texto in {
+        0/Representar planta (paredes; desníveis; escadas; rampas…),
+        0/Inserir balcões,
+        0/Inserir portas; janelas; bacias e cubas; divibox; e outros,
+        0/Conferir medidas,
+        0/Conferir triangulações,
+        0/Corte de detalhes (peitoris de varanda; diferenças de níveis; sancas…),
+        0/Nomear ambientes,
+        0/Inserir texto com pés direitos dos ambientes,
+        0/Nomear projeções (sancas; vigas; forros…),
+        0/Inserir texto com pés direitos das vigas,
+        0/Inserir pontos elétricos (quadro; pontos…),
+        0/Inserir pontos de iluminação,
+        0/Identificar seções de iluminação,
+        0/Inserir pontos de hidro (cubas; bacias; ralos; registros e duchas),
+        0/Inserir pontos de gás,
+        0/Inserir pontos de climatização,
+        0/Inserir pontos de campainha,
+        0/Inserir pontos de conectividade,
+        0/Indicar sentidos e tipos de abertura das esquadrias,
+        0/Inserir cotas de esquadria (folha e fora a fora do alizar),
+        0/Inserir cotas de nível,
+        0/Inserir indicação de subida e numerar degraus da escada,
+        0/Inserir indicação de subida e inclinação da rampa,
+        0/Desenhar ou listar medidas ($L\times A\times P$) dos móveis e eletros a serem reaproveitados,
+        0/Listar tamanho dos revestimentos dos ambientes%,,
+        } {
+        % Para cada item, checamos o status e chamamos o \item com o ícone correspondente
+        \ifnum\status=1
+            \item[\checkedbox] 
+        \else
+            \item[\emptybox] 
+        \fi
+        
+        % Imprime o texto da tarefa
+        \texto
+    }
+    \end{itemize}
+
+    \chapter{\textit{Checklist}: projeto legal}
+
+    \section{Planta de Situação}
+
+    \noindent
+    % Iniciamos uma lista customizada, controlando a margem esquerda e o espaço entre tarefas
+    \begin{itemize}[leftmargin=0.4cm, itemsep=0cm]
+
+    % O laço foreach varre a sua lista normalmente
+    \foreach \status/\texto in {
+        0/Representar a quadra completa onde se localiza o terreno,
+        0/Representar terreno em linha grossa,
+        0/Indicar terreno com hachura,
+        0/Inserir nome dos logradouros,
+        0/Identificar lotes com número do imóvel,
+        0/Cotar medidas gerais e ângulos do terreno,
+        0/Cotar ruas e calçadas do terreno,
+        0/Indicar norte,
+        0/Identificar título e escala do desenho,
+        0/Revisar informações do(s) carimbo(s)%,,
+        } {
+        % Para cada item, checamos o status e chamamos o \item com o ícone correspondente
+        \ifnum\status=1
+            \item[\checkedbox] 
+        \else
+            \item[\emptybox] 
+        \fi
+        
+        % Imprime o texto da tarefa
+        \texto
+    }
+    \end{itemize}
+
+    \section{Planta de Locação e Cobertura}
+
+    \noindent
+    % Iniciamos uma lista customizada, controlando a margem esquerda e o espaço entre tarefas
+    \begin{itemize}[leftmargin=0.4cm, itemsep=0cm]
+
+    % O laço foreach varre a sua lista normalmente
+    \foreach \status/\texto in {
+        0/Inserir curvas de nível,
+        0/Inserir e identificar limites e recuos do terreno,
+        0/Representar planos de coberta,
+        0/Se reforma; indicar elementos a construir e demolir,
+        0/Representar agenciamento,
+        0/Inserir e identificar muro e cerca viva e suas alturas,
+        0/Inserir e identificar rebaixamento de meio-fio para acesso de veículos e PNE,
+        0/Identificar logradouros; calçadas e terrenos confrontantes,
+        0/Inserir vegetação,
+        0/Inserir e identificar depósito de lixo; central de gás; reservatórios inferior e superior com capacidade; poste com medidor; caixa de passagem elétrica; hidrômetro,
+        0/Inserir piso tátil e direcional,
+        0/Indicar e identificar acessos veículos e pedestres,
+        0/Identificar bancos; jardineiras; muretas…,
+        0/Identificar vagas de estacionamento com numeração,
+        0/Indicar subida em escadas e rampas e de vazios com “X” e nome “vazio”,
+        0/Indicar inclinação de rampa e numeração dos degraus da escada,
+        0/Indicar solo natural e sua área,
+        0/Indicar escada de marinheiro e abertura reservatórios,
+        0/Indicar tipo de telha; inclinações; direção da descida da água; calhas; algerozes; exaustão; domus; chapim…,
+        0/Cotar medidas gerais e ângulos do terreno,
+        0/Cotar afastamentos (sempre perpendicular as faces do terreno),
+        0/Cotar ruas e calçadas,
+        0/Cotar planos de coberta,
+        0/Cotar medidas gerais do(s) edifício(s),
+        0/Se nova edificação; cotar locação dos vértices (triangulares)%,
+        } {
+        % Para cada item, checamos o status e chamamos o \item com o ícone correspondente
+        \ifnum\status=1
+            \item[\checkedbox] 
+        \else
+            \item[\emptybox] 
+        \fi
+        
+        % Imprime o texto da tarefa
+        \texto
+    }
+    \end{itemize}
+
+    \section{Plantas Baixas}
+
+    \noindent
+    % Iniciamos uma lista customizada, controlando a margem esquerda e o espaço entre tarefas
+    \begin{itemize}[leftmargin=0.4cm, itemsep=0cm]
+
+    % O laço foreach varre a sua lista normalmente
+    \foreach \status/\texto in {
+        0/Inserir curvas de nível,
+        0/Inserir e identificar limites e recuos do terreno,
+        0/Se reforma; indicar elementos a construir (diferenciando o material das paredes; se alvenaria ou gesso),
+        0/Se reforma; indicar elementos a demolir,
+        0/Indicar o sentido se for esquadria de correr,
+        0/Representar agenciamento,
+        0/Inserir e identificar muro e cerca viva e suas alturas,
+        0/Inserir e identificar rebaixamento de meio-fio para acesso de veículos e PNE,
+        0/Identificar logradouros; calçadas e terrenos confrontantes,
+        0/Inserir e identificar depósito de lixo; central de gás; reservatórios inferior e superior com capacidade; poste com medidor; caixa de passagem elétrica; hidrômetro,
+        0/Inserir vegetação,
+        0/Desligar layer layout de mobiliário%,
+        } {
+        % Para cada item, checamos o status e chamamos o \item com o ícone correspondente
+        \ifnum\status=1
+            \item[\checkedbox] 
+        \else
+            \item[\emptybox] 
+        \fi
+        
+        % Imprime o texto da tarefa
+        \texto
+    }
+    \end{itemize}
+
+    \section{Cortes}
+
+    \noindent
+    % Iniciamos uma lista customizada, controlando a margem esquerda e o espaço entre tarefas
+    \begin{itemize}[leftmargin=0.4cm, itemsep=0cm]
+
+    % O laço foreach varre a sua lista normalmente
+    \foreach \status/\texto in {
+        0/Representar cortes (devem passar sempre pelo menos nas escadas e reservatórios superior e inferior),
+        0/Inserir e identificar muro e cerca viva e suas alturas%,
+        } {
+        % Para cada item, checamos o status e chamamos o \item com o ícone correspondente
+        \ifnum\status=1
+            \item[\checkedbox] 
+        \else
+            \item[\emptybox] 
+        \fi
+        
+        % Imprime o texto da tarefa
+        \texto
+    }
+    \end{itemize}
+
+    \section{Fachadas}
+
+    \noindent
+    % Iniciamos uma lista customizada, controlando a margem esquerda e o espaço entre tarefas
+    \begin{itemize}[leftmargin=0.4cm, itemsep=0cm]
+
+    % O laço foreach varre a sua lista normalmente
+    \foreach \status/\texto in {
+        0/Indicar planos de fachada com diferenciação de espessuras,
+        0/Inserir muro e cerca viva e suas alturas%,
+        } {
+        % Para cada item, checamos o status e chamamos o \item com o ícone correspondente
+        \ifnum\status=1
+            \item[\checkedbox] 
+        \else
+            \item[\emptybox] 
+        \fi
+        
+        % Imprime o texto da tarefa
+        \texto
+    }
+    \end{itemize}
+
+    \section{Tarefas Finais da Etapa}
+
+    \noindent
+    % Iniciamos uma lista customizada, controlando a margem esquerda e o espaço entre tarefas
+    \begin{itemize}[leftmargin=0.4cm, itemsep=0cm]
+
+    % O laço foreach varre a sua lista normalmente
+    \foreach \status/\texto in {
+        0/Fazer pranchas (lembrar das legendas),
+        0/Assinar pranchas%,
+        } {
+        % Para cada item, checamos o status e chamamos o \item com o ícone correspondente
+        \ifnum\status=1
+            \item[\checkedbox] 
+        \else
+            \item[\emptybox] 
+        \fi
+        
+        % Imprime o texto da tarefa
+        \texto
+    }
+    \end{itemize}
+
+    \chapter{Projeto Executivo}
+
+    \section{Arquitetura}
+
+    \subsection{Plantas Baixas}
+
+    \noindent
+    % Iniciamos uma lista customizada, controlando a margem esquerda e o espaço entre tarefas
+    \begin{itemize}[leftmargin=0.4cm, itemsep=0cm]
+
+    % O laço foreach varre a sua lista normalmente
+    \foreach \status/\texto in {
+        0/Inserir curvas de nível,
+        0/Inserir e identificar limites e recuos do terreno,
+        0/Representar elementos construtivos (paredes; desníveis; projeções; escadas; rampas…),
+        0/Se reforma; indicar elementos a construir (diferenciando o material das paredes; se alvenaria ou gesso),
+        0/Indicar o sentido se for esquadria de correr,
+        0/Representar agenciamento,
+        0/Inserir e identificar muro e cerca viva e suas alturas,
+        0/Inserir e identificar rebaixamento de meio-fio para acesso de veículos e PNE,
+        0/Identificar logradouros; calçadas e terrenos confrontantes,
+        0/Inserir e identificar depósito de lixo; central de gás e reservatórios inferior e superior com capacidade,
+        0/Inserir vegetação,
+        0/Desligar layer layout de mobiliário,
+        0/Inserir piso tátil e direcional,
+        0/Indicar e identificar acessos veículos e pedestres,
+        0/Identificar bancos; jardineiras; muretas (com altura) …,
+        0/Identificar vagas de estacionamento com numeração,
+        0/Indicar inclinação de rampa e numeração dos degraus da escada,
+        0/Indicar subida em escadas e rampas e de vazios com “X” e nome “vazio”,
+        0/Indicar solo natural e sua área,
+        0/Inserir nome e área dos ambientes,
+        0/Indicar projeções com identificações de coberta; pavimentos; saques da volumetria; reservatórios…,
+        0/Indicar abertura nichos de produtos; com cota de esquadria e texto com seta,
+        0/Indicar abertura acesso shafts; com cota de esquadrias e texto com seta,
+        0/Indicar suportes de carga; caso haja paredes de drywall (suportes para móveis; bancadas; tvs; quadros…),
+        0/Indicar barrotes (com dimensões) em madeira no teto onde houver portas de correr ou elementos que precisem de sustentação pelo teto ,
+        0/Identificar elementos e materiais utilizados para esclarecer o desenho,
+        0/Se reforma; indicar demolição de vergas,
+        0/Se reforma; indicar nivelamento entre pisos (em caso de integração de varanda; subtração de área molhada…),
+        0/Se reforma; indicar se revestimento do piso será retirado ou se será "piso sobre piso",
+        0/Se reforma; indicar áreas com revestimento mantido (colocar observação: ver detalhamento em ESP),
+        0/Se reforma; indicar descascamento de pilares; vigas e paredes; se houver,
+        0/Se reforma; indicar com texto esquadrias retiradas/relocadas e novas,
+        0/Se reforma; indicar com texto peças sanitárias retiradas/relocadas e novas,
+        0/Cotar medidas gerais e ângulos do terreno,
+        0/Cotar afastamentos (sempre perpendicular as faces do terreno),
+        0/Cotar ruas e calçadas,
+        0/Cotar ambientes e medidas gerais do edifício,
+        0/Se reforma; cotar paredes a construir e em alguns casos; a demolir,
+        0/Inserir cotas de nível,
+        0/Inserir cotas de esquadria,
+        0/Indicar fachadas,
+        0/Inserir marcação dos cortes com indicação das pranchas onde se encontram,
+        0/Indicar e desenhar detalhes construtivos,
+        0/Inserir hachuras áreas molhadas; áreas de solo natural; jardineiras…,
+        0/Indicar norte,
+        0/Identificar título e escala do desenho,
+        0/Se reforma; indicar legenda de construir e demolir,
+        0/Revisar informações do(s) carimbo(s),
+        0/Se reforma; indicar elementos a demolir%,,
+        } {
+        % Para cada item, checamos o status e chamamos o \item com o ícone correspondente
+        \ifnum\status=1
+            \item[\checkedbox] 
+        \else
+            \item[\emptybox] 
+        \fi
+        
+        % Imprime o texto da tarefa
+        \texto
+    }
+    \end{itemize}
+
+    \subsection{Cortes}
+
+    \noindent
+    % Iniciamos uma lista customizada, controlando a margem esquerda e o espaço entre tarefas
+    \begin{itemize}[leftmargin=0.4cm, itemsep=0cm]
+
+    % O laço foreach varre a sua lista normalmente
+    \foreach \status/\texto in {
+        0/Indicar e identificar perfil natural do terreno,
+        0/Identificar escadas; rampas; lajes; forros; chapim; calhas; algerozes; bancos; jardineiras…,
+        0/Identificar ambientes; área verde; logradouros; calçadas e confrontantes,
+        0/Cotar alturas dos pavimentos (pé direito; forro e platibanda),
+        0/Inserir e identificar depósito de lixo; central de gás e reservatórios inferior e superior com capacidade,
+        0/Representar o limite do terreno e afastamentos (na vertical),
+        0/Inserir peças sanitárias,
+        0/Inserir hachuras áreas molhadas e área verde,
+        0/Cotar alturas totais,
+        0/Inserir cotas de nível (as gerais; dos pavimentos; devem estar fora do desenho; já outras; devem estar no ambiente),
+        0/Revisar informações do(s) carimbo(s),
+        0/Se reforma; indicar legenda de construir e demolir,
+        0/Identificar título e escala do desenho,
+        0/Indicar cortes com indicação das pranchas onde se encontram,
+        0/Indicar e desenhar detalhes construtivos,
+        0/Se reforma; cotar paredes a construir e em alguns casos; a demolir,
+        0/Indicar o sentido se for esquadria de correr,
+        0/Se reforma; indicar elementos a demolir,
+        0/Inserir vegetação,
+        0/Se reforma; indicar elementos a construir (diferenciando o material das paredes; se alvenaria ou gesso),
+        0/Inserir e identificar muro e cerca viva e suas alturas,
+        0/Representar cortes%,
+        } {
+        % Para cada item, checamos o status e chamamos o \item com o ícone correspondente
+        \ifnum\status=1
+            \item[\checkedbox] 
+        \else
+            \item[\emptybox] 
+        \fi
+        
+        % Imprime o texto da tarefa
+        \texto
+    }
+    \end{itemize}
+
+    \subsection{Fachadas}
+
+    \noindent
+    % Iniciamos uma lista customizada, controlando a margem esquerda e o espaço entre tarefas
+    \begin{itemize}[leftmargin=0.4cm, itemsep=0cm]
+
+    % O laço foreach varre a sua lista normalmente
+    \foreach \status/\texto in {
+        0/Identificar genericamente elementos e materiais utilizados,
+        0/Inserir muro e cerca viva e suas alturas,
+        0/Indicar planos de fachada com diferenciação de espessuras,
+        0/Revisar informações do(s) carimbo(s),
+        0/Identificar título e escala do desenho,
+        0/Hachurar planos da fachada e área verde,
+        0/Inserir vegetação,
+        0/Inserir projeção de muro caso represente a fachada sem ele%,,
+        } {
+        % Para cada item, checamos o status e chamamos o \item com o ícone correspondente
+        \ifnum\status=1
+            \item[\checkedbox] 
+        \else
+            \item[\emptybox] 
+        \fi
+        
+        % Imprime o texto da tarefa
+        \texto
+    }
+    \end{itemize}
+
+    \section{Layout de Instalações}
+
+    \subsection{Elétrica}
+
+    \noindent
+    % Iniciamos uma lista customizada, controlando a margem esquerda e o espaço entre tarefas
+    \begin{itemize}[leftmargin=0.4cm, itemsep=0cm]
+
+    % O laço foreach varre a sua lista normalmente
+    \foreach \status/\texto in {
+        0/Manter ligada a layer do layout de mobiliário; para melhor compreensão da locação e utilidade dos pontos,
+        0/Diferenciar pontos que vão ser instalados no mobiliário,
+        0/Indicar rabichos com alturas (fitas de led; cabideiros iluminados; etc.),
+        0/Indicar número de sessões nos interruptores,
+        0/Indicar deslocamento do quadro elétrico/conectividade; se houver,
+        0/Inserir legenda; editando conteúdo,
+        0/Indicar; com texto auxiliar; a altura do ponto quando não for padrão,
+        0/Revisar informações do(s) carimbo(s),
+        0/Cotar sempre pelo eixo,
+        0/Representar elevações quando houver luminárias/fitas de led na parede,
+        0/Indicar tomadas instaladas na horizontal; se houver (por padrão; é na vertical),
+        0/Indicar; com texto auxiliar; nome dos eletros nas respectivas tomadas,
+        0/Inserir pontos; diferenciando se é existente; proposto; modificado ou a demolir%,,
+        } {
+        % Para cada item, checamos o status e chamamos o \item com o ícone correspondente
+        \ifnum\status=1
+            \item[\checkedbox] 
+        \else
+            \item[\emptybox] 
+        \fi
+        
+        % Imprime o texto da tarefa
+        \texto
+    }
+    \end{itemize}
+
+    \subsection{Iluminação}
+
+    \noindent
+    % Iniciamos uma lista customizada, controlando a margem esquerda e o espaço entre tarefas
+    \begin{itemize}[leftmargin=0.4cm, itemsep=0cm]
+
+    % O laço foreach varre a sua lista normalmente
+    \foreach \status/\texto in {
+        0/Manter ligada a layer do layout de mobiliário; para melhor compreensão da locação e utilidade dos pontos,
+        0/Indicar local das fontes das fitas de led,
+        0/Inserir legenda; editando conteúdo,
+        0/Inserir legenda de modelos; com fotos e descrição das luminárias,
+        0/Indicar; com texto auxiliar; as seções nos interruptores; com número e letras das seções (identificar aquelas seções que são paralelas),
+        0/Representar elevações quando houver luminárias/fitas de led,
+        0/Revisar informações do(s) carimbo(s),
+        0/Cotar sempre pelo eixo; com exceção das fitas e perfis de led,
+        0/Indicar; com texto auxiliar; as seções de iluminação nos pontos,
+        0/Indicar altura de instalação de arandelas e pendentes,
+        0/Diferenciar pontos que vão ser instalados no mobiliário,
+        0/Indicar lâmpada; potência; temperatura; fluxo luminoso,
+        0/Inserir pontos; diferenciando se é existente; proposto; modificado ou a demolir (representar os propostos com blocos diferentes para cada tipo de luminária)%,
+        } {
+        % Para cada item, checamos o status e chamamos o \item com o ícone correspondente
+        \ifnum\status=1
+            \item[\checkedbox] 
+        \else
+            \item[\emptybox] 
+        \fi
+        
+        % Imprime o texto da tarefa
+        \texto
+    }
+    \end{itemize}
+
+    \subsection{Tarefas Finais da Etapa}
+
+    \noindent
+    % Iniciamos uma lista customizada, controlando a margem esquerda e o espaço entre tarefas
+    \begin{itemize}[leftmargin=0.4cm, itemsep=0cm]
+
+    % O laço foreach varre a sua lista normalmente
+    \foreach \status/\texto in {
+        0/Fazer pranchas,
+        0/Fazer pdfs%,
+        } {
+        % Para cada item, checamos o status e chamamos o \item com o ícone correspondente
+        \ifnum\status=1
+            \item[\checkedbox] 
+        \else
+            \item[\emptybox] 
+        \fi
+        
+        % Imprime o texto da tarefa
+        \texto
+    }
+    \end{itemize}
+    
+    \end{comment}
 
 \end{anexosenv}

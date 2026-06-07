@@ -1,32 +1,113 @@
 \chapter[RELATÓRIO DE ATIVIDADES DESENVOLVIDAS]{Relatório de atividades desenvolvidas}
 
-\begin{table}[htb]
-    \centering
-    \caption{\label{tab:tabularx} Resumo das atividades desenvolvidas durante o estágio.}
+Neste capítulo são descritas as atividades práticas desenvolvidas durante o estágio curricular supervisionado obrigatório II, realizado no período de 15 de maio a 05 de junho de 2026. As funções exercidas mantiveram o foco na aplicação dos conhecimentos teóricos na rotina do escritório, com ênfase em alterações de projetos arquitetônicos, e orçamentação. Para uma melhor compreensão cronológica, as demandas foram organizadas inicialmente na Tabela \ref{tab:resumo_atividades} a seguir e, posteriormente, detalhadas em subseções.
 
-    \begin{tabularx}{\textwidth}{ l X }
+\input{assets/table/log.tex}
+
+\begin{comment}
+
+Conforme \citeonline[item 6.6]{nbr9050}, a inclinação de uma rampa pode ser calculada: 
+
+\begin{equation}
+    i = \frac{h}{c}\ 100
+\end{equation}
+
+Onde:
+\begin{itemize}
+    \item[$i$] é a inclinação, expressa em porcentagem (\%);
+    \item[$h$] é a altura do desnível;
+    \item[$c$] é o comprimento da projeção horizontal.
+\end{itemize}
+
+Esse cálculo permite verificar se a rampa atende aos limites de acessibilidade estabelecidos pela norma.
+
+\begin{table}[htbp]
+    \centering
+    \caption{\label{tab:dimensionamento_rampas} Dimensionamento de rampas.}
+
+    \begin{tabularx}{\textwidth}{ X X l }
         \hline
-        \textbf{Semana} & \textbf{Atividades} \\ \hline
-        22-24/abril & Acompanhamento de pedidos \\ 
-        27-30/abril & Revisão de projetos arquitetônicos da prefeitura \\ 
-        04-08/maio & Orçamentos \\ 
-        11-14/maio & Modelagem 3D \\ 
+        \textbf{Desníveis máximos de cada segmento de rampa} $h$ (m) & \textbf{Inclinação admissível em cada segmento de rampa i (\%)} & \textbf{Acessível} \\
+        \hline
+        $1,50$ & $5,00 (1:20)$ & Sem limite \\
+        $1,00$ & $5,00 (1:20) < i \leq 6,25 (1:16)$ & Sem limite \\
+        $0,80$ & $6,25 (1:16) < i \leq 8,33 (1:12)$ & $150$ \\
         \hline
     \end{tabularx}
-    
+
     \vspace{1em}
-    \fonte{Elaborado pelo autor.}
+    \fonte{\citeonline[item 6.6.2.1]{nbr9050}.}
 \end{table}
 
-**Descrição Minuciosa das Atividades:**
-Durante os 57 dias de estágio, as atividades foram divididas em três frentes principais de atuação no escritório:
+\begin{table}[htbp]
+    \centering
+    \caption{\label{tab:dimensionamento_rampas} Dimensionamento de rampas para situações excepcionais.}
 
-*   **Elaboração e Revisão de Projetos:**
-    Fui responsável por auxiliar na elaboração, correção e revisão de projetos arquitetônicos e elétricos, lidando diretamente com as revisões solicitadas por clientes e exigências de aprovação da prefeitura (como o projeto do cliente José Henrique e projetos sob responsabilidade de Nelson Realce e Vicktor). As ferramentas utilizadas incluíram o software SketchUp para modelagem e a inserção de informações em plantas no AutoCAD (como na planta Padre Pio). Também atuei na parte de legalização e documentação técnica, elaborando Memoriais Descritivos, processos de Habite-se, Termos de Compromisso (incluindo termo de calçada) e organizando a dobragem de folhas A1 de projeto para entrega. 
+    \begin{tabularx}{\textwidth}{ p{5cm} X p{3.5cm} }
+        \hline
+        \textbf{Desníveis máximos de cada segmento de rampa} $h$ (m) & \textbf{Inclinação admissível em cada segmento de rampa i (\%)} & \textbf{Número máximo de segmentos de rampas} \\
+        \hline
+        $0,200$ & $8,33 (1:12) < i \leq 10,00 (1:10)$ & 4 \\
+        $0,075$ & $10,00 (1:10) < i \leq 12,5 (1:8)$ & 1 \\
+        \hline
+    \end{tabularx}
 
-*   **Orçamentação e Levantamento de Quantitativos:**
-    Na área de custos, realizei o levantamento de quantitativos e a correção de orçamentos, incluindo a orçamentação de lajes e alterações de tipos de cobertura para cerâmica. Uma atividade de destaque foi o ajuste de orçamentos com a exclusão de serviços de gesso e a atualização sistemática dos valores utilizando a base de referência do SINAPI, atualizada para o mês 03/2026.
-    
-*   **Gestão de Suprimentos, Cotações e Rotinas Administrativas:**
+    \vspace{1em}
+    \fonte{\citeonline[item 6.6.2.2]{nbr9050}.}
+\end{table}
 
-    No suporte à gestão, realizei o controle de materiais preenchendo planilhas de acompanhamento de pedidos e de projetos, além de realizar *checklists*. Efetuei diversas cotações e pedidos de insumos diretos e indiretos para as obras e escritório, tais como: tintas, serviços de pintor, cascalho, pneus, filtros para enceradeira, polias de sondagem, telas e tanques para compactador/sapo. Fui encarregada também do controle financeiro básico, colocando notas fiscais nos pedidos, faturando pedidos de fornecedores (como Construlares) e fazendo a apropriação das NFs recebidas, vinculando-as corretamente ao pedido, etapa da obra e responsável.
+De acordo com a \citeonline[item 6.8]{nbr9050}, as escadas devem seguir algumas medidas para garantir conforto e segurança durante o uso:
+
+\begin{alineas}
+    \item $0,63 \leq p + 2e \leq 0,65$
+    \item pisos ($p$): $0,28\ m \leq p \leq 0,32\ m$
+    \item espelhos ($e$): $0,16\ m \leq e \leq 0,18\ m$
+\end{alineas}
+
+Para determinar a quantidade de degraus necessária para vencer um determinado desnível: 
+
+\begin{equation}
+    \text{degraus} = \frac{h}{e}
+\end{equation}
+
+Onde:
+\begin{itemize}
+    \item[$h$] é a altura do desnível;
+    \item[$e$] é a altura do espelho.
+\end{itemize}
+
+O resultado corresponde ao número de degraus da escada. Após definir a quantidade de degraus, a altura exata de cada espelho pode ser obtida:
+
+\begin{equation}
+    e = \frac{h}{\text{degraus}}
+\end{equation}
+
+Por fim, a profundidade do piso pode ser determinada utilizando a relação estabelecida pela norma:
+
+\begin{equation}
+    0,63 \leq p + 2e \leq 0,65 \longleftrightarrow p \leq 0,64 - 2e
+\end{equation}
+
+
+
+
+%\newpage
+
+Durante o estágio, as atividades desenvolvidas no escritório foram distribuídas em diferentes frentes de atuação, permitindo a integração entre os conhecimentos teóricos adquiridos ao longo da graduação e a prática profissional relacionada à gestão, elaboração e desenvolvimento de projetos. A seguir, são apresentadas as principais atividades realizadas durante esse período.
+\end{comment}
+
+\section{Elaboração e Revisão de Projetos Arquitetônicos e Elétricos}
+
+O desenvolvimento gráfico de projetos continuou sendo uma demanda essencial no estágio. As tarefas envolveram a revisão e a alteração técnica de projetos arquitetônicos em andamento. Destaca-se a modificação estética de um projeto, onde foi necessária a substituição do tipo de cobertura original para um sistema de cobertura em cerâmica. 
+
+Além disso, atuou-se ativamente na complementação gráfica de desenhos técnicos utilizando a ferramenta AutoCAD, com a inserção de informações normativas e detalhamentos na planta do projeto. Ao final do mês de maio, também foram realizados levantamentos físicos e o desenvolvimento de um novo projeto arquitetônico.
+
+\section{Orçamentação e Levantamento de Quantitativos}
+
+Em total alinhamento com as modificações realizadas nos desenhos arquitetônicos, o setor de custos exigiu o reajuste imediato do planejamento financeiro. A principal atividade documentada consistiu na atualização do orçamento da cobertura, adequando os quantitativos e valores para o novo telhado cerâmico adotado. Em paralelo a esta atividade, efetuou-se o levantamento quantitativo e a elaboração do orçamento específico para a execução de uma laje, garantindo o controle rigoroso dos custos da estrutura.
+
+\section{Gestão de Suprimentos, Almoxarifado e Rotinas Administrativas}
+
+A vivência no departamento de gestão administrativa se intensificou, focando fortemente no controle financeiro e logístico para o abastecimento ininterrupto das obras e do próprio escritório. Na esfera financeira, as atividades englobaram o faturamento de pedidos críticos e a rigorosa apropriação de \gls{nfs} recebidas, vinculando os custos de forma rastreável. 
+
+A área de suprimentos exigiu a realização diária de cotações para uma vasta gama de insumos e equipamentos. Destacam-se as cotações e aquisições de materiais para infraestrutura e acabamento, tais como: tintas, contratação de serviços de pintor, aquisição de cascalho e telas. No tocante à manutenção de equipamentos pesados e de escritório, realizaram-se orçamentos para a compra de um tanque para o compactador, polias para o equipamento de sondagem e filtros para enceradeira. Por fim, houve o acompanhamento logístico pontual, monitorando rotinas de transporte como a coleta de materiais na fornecedora pela transportadora.
