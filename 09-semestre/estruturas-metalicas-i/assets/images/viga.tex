@@ -1,0 +1,72 @@
+
+    
+    \begin{tikzpicture}[
+        % 1. DEFINIÇÃO DO SEU LIMITADOR CUSTOMIZADO (+ com /)
+        cota customizada/.style={
+            decoration={
+            markings,
+            mark=at position 0 with {
+                \draw[thick] (-3.5pt, 0) -- (3.5pt, 0);          % Linha horizontal do +
+                \draw[thick] (0, -3.5pt) -- (0, 3.5pt);          % Linha vertical do +
+                \draw[thick] (-3.5pt, -3.5pt) -- (3.5pt, 3.5pt); % Linha diagonal
+            },
+            mark=at position 1 with {
+                \draw[thick] (-3.5pt, 0) -- (3.5pt, 0);          % Linha horizontal do +
+                \draw[thick] (0, -3.5pt) -- (0, 3.5pt);          % Linha vertical do +
+                \draw[thick] (-3.5pt, -3.5pt) -- (3.5pt, 3.5pt); % Linha diagonal
+            }
+            },
+            postaction={decorate} % Aplica o desenho nas pontas da linha
+        }
+        ]
+        
+        % VARIÁVEIS
+        \def\L{12} % Comprimento total da viga
+
+        % DESENHO DA VIGA
+        \draw[thick] (0, 0) rectangle (\L, 0);
+
+        % APOIOS
+        % Apoio A (Fixo)
+        \draw[thick] (0, 0) -- (-0.3, -0.5) -- (0.3, -0.5) -- cycle;
+        \draw[thick] (-0.5, -0.6) -- (0.5, -0.6);
+        %\foreach \x in {-0.4, -0.2, 0, 0.2, 0.4}
+        %    \draw (\x, -0.5) -- (\x-0.2, -0.7);
+
+        % Apoio B (Fixo)
+        \draw[thick] (\L, 0) -- (\L-0.3, -0.5) -- (\L+0.3, -0.5) -- cycle;
+        \draw[thick] (\L-0.5, -0.6) -- (\L+0.5, -0.6);
+        %\foreach \x in {\L-0.4, \L-0.2, \L, \L+0.2, \L+0.4}
+        %    \draw (\x, -0.5) -- (\x-0.2, -0.7);
+
+        % Apoio B (Móvel)
+        %\draw[thick] (\L, 0) -- (\L-0.3, -0.4) -- (\L+0.3, -0.4) -- cycle;
+        %\draw[thick] (\L-0.5, -0.5) -- (\L+0.5, -0.5);
+        
+        % Rótulos
+        \node[above] at (0, 0.2) {$A$};
+        \node[above] at (\L, 0.2) {$B$};
+
+        % CARGA CONCENTRADA (P)
+        \draw[-{Latex[length=4mm]}, ultra thick, azul] (3, 1.5) -- (3, 0.1) 
+            node[at start, above, text=black] {$6882 \ kN$};
+
+        \draw[-{Latex[length=4mm]}, ultra thick, azul] (7, 1.5) -- (7, 0.1) 
+            node[at start, above, text=black] {$2550 \ kN$};
+
+
+        % Cota total
+        \draw[cota customizada] (0, -2.5) -- (\L, -2.5) 
+            node[midway, fill=white] {$12 \ m$};
+            
+        % Cotas parciais
+        \draw[cota customizada] (0, -1.5) -- (3, -1.5) 
+            node[midway, fill=white] {$3 \ m$};
+            
+        \draw[cota customizada] (3, -1.5) -- (7, -1.5) 
+            node[midway, fill=white] {$4 \ m$};
+            
+        \draw[cota customizada] (7, -1.5) -- (\L, -1.5) 
+            node[midway, fill=white] {$5 \ m$};
+
+    \end{tikzpicture}
