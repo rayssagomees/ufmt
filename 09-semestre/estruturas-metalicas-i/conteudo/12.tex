@@ -29,7 +29,30 @@
     \newpage
 
     \item Qual é o máximo momento fletor e cortante que uma viga de 20 \ m suporta? Com perfis justapostos. Carga? Considere carga pontual; 2 (VS 500 x 61).
-    
-    II
+
+    \begin{tikzpicture}[
+    % Aumenta a espessura para dar aparência estrutural
+    very thick
+]
+
+    % ==========================================
+    % 1. PRIMEIRO PERFIL (Esquerda)
+    % ==========================================
+    \draw (-0.5, 0) -- (0.5, 0); % Linha da mesa inferior
+    \draw (0, 0) -- (0, 3);  % Linha da alma central
+    \draw (-0.5, 3) -- (0.5, 3); % Linha da mesa superior
+
+    % ==========================================
+    % 2. SEGUNDO PERFIL (Direita)
+    % ==========================================
+    % O braço direito do primeiro perfil termina em x=1. 
+    % Ao deslocar o eixo do segundo perfil para x=2, os braços se colam.
+    \begin{scope}[xshift=1cm]
+        \draw (-0.5, 0) -- (0.5, 0); % Linha da mesa inferior
+        \draw (0, 0) -- (0, 3);  % Linha da alma central
+        \draw (-0.5, 3) -- (0.5, 3); % Linha da mesa superior
+    \end{scope}
+
+\end{tikzpicture}
 
 \end{enumerate}
