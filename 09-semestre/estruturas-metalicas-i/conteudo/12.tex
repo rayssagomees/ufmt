@@ -4,7 +4,7 @@
 
 \begin{enumerate}
 
-    \item Verificar $FLA$, $FLM$, $FLT$ para a viga birrotulada VSM 450 x 68, aço USICIVIL 350.
+    \item Verificar $FLA$, $FLM$, $FLT$ para a viga birrotulada VSM 450 x 68, aço USICIVIL 350. Considere já os valores já majorados.
     
     \input{assets/images/viga2.tex}
 
@@ -15,6 +15,112 @@
     Dimensões em $mm$.
 
     $A_g = 86,8 \ cm^2 \newline I_y = 31,26 \ cm^4 \newline r_y = 6 \ cm \newline I_x = 30691 \ cm^4 \newline C_w = 1332250 \ cm^6 \newline W_{xs} = W_{xc} = 1125 \ cm^3 \newline W_{xi} = W_{xc} = 1732 \ cm^3 \newline Z = 1445 \ cm^3 \newline J = 42 \ cm^4$
+
+    FLA - tabela D1 p. 144
+
+    $\lambda = \frac{h_c}{t_w} = \frac{2 \times 264,82}{6,3} = 84,06$
+
+    $\lambda_p = \frac{\frac{h_c}{h_p} \sqrt{\frac{E}{f_y}}}{(0,54 \frac{M_{pl}}{M_r}-0,09)^2} \leq \lambda_r \newline \lambda_p = \frac{\frac{52,96}{74,34} \sqrt{\frac{20000}{35}}}{(0,54 \frac{50575}{39375}-0,09)^2} \leq \lambda_r \newline \lambda_r = 46,74 \leq \lambda_r$
+
+    $\lambda_r = 5,70 \sqrt{\frac{E}{f_y}} = 5,70 \sqrt{\frac{20000}{35}} = 136,25$
+
+    $y_{CG}=\frac{\sum Ay}{\sum A}$
+
+    $A_1 = 8 \times 250 = 2000 \ mm^2$
+
+    $A_2 = 6,3 \times 426 = 2683,8 \ mm^2$
+
+    $A_3 = 16 \times 250 = 4000 \ mm^2$
+
+    $y_1 = 16+426 + 8/2 = 445 \ mm$
+
+    $y_2 = 16+426/2 = 229 \ mm$
+
+    $y_3 = 16/2 = 8$
+
+    $y_{CG} = \frac{A_1y_1+A_2y_2+A-2y_3}{A_1+A_2+A_3} = 177,179 \ mm$
+
+    $h_p=2\times 37,17 = 74,34 \ cm$
+
+    $M_{pl} = Z \times f_y = 1445 \times 35 = 50575 \ kNcm$
+
+    $M_r = W\times f_y = 1125 \times 35 = 39375 \ kNcm$
+
+    Compacto $\lambda$
+
+    Semi $\lambda_p$
+
+    Esbelto $\lambda_r$
+
+    D 2.2
+
+    $M_{Rd} = \frac{1}{\gamma_{a1}}\Big(M_{pl}-(M_{pl}-M_r)\frac{\lambda-\lambda_p}{\lambda_r-\lambda_p} \Big) = 41732,09 \ kNcm$
+
+    $M_{Sd} = \frac{0,112 \times 1000^2}{8}= 14000\ kNcm$
+
+    FLA OK
+
+    $M_{Sd}\leq M_{Rd} \to 14000 \leq 41732$
+
+    FLM - tabela D.1 p. 144
+
+    $\lambda = \frac{b}{t} = \frac{\frac{250}{2}}{8} = 15,62$ ver D.2.8-h
+
+    $\lambda_p = 0,38 \sqrt{\frac{E}{f_y}} = 0,38 \sqrt{\frac{20000}{35}}=9,08$
+
+    D2.8f - perfis soldados
+
+    $\lambda_r = 0,95 \frac{E \times K_c}{70\%f_y}= 0,95 \sqrt{\frac{20000\times 0,48}{0,7 \times 35}} = 18,8$
+
+    $k_c = \frac{4}{\sqrt{\frac{h}{t_w}}} = \frac{4}{\sqrt{\frac{4,26}{0,63}}}=0,48$
+
+    $\lambda_p \leq \lambda < \lambda_r$
+
+    $M_{Rd} = \frac{1}{1,1}\Big(50575 -(50575 - 39375) \frac{15,62-9,08}{18,8-9,08} \Big)=39126,54 \ kNcm$
+
+    FLM OK 
+
+    $M_{Sd}\leq M_{Rd}$
+
+    FLT tabela D.1
+
+    $\lambda = \frac{L_b}{r_{ytc}} = \frac{1000}{4,9} = 204,08$
+
+    $\lambda_p = 1,76 \sqrt{\frac{E}{f_y}} = 42,07$
+
+    D.2.8b
+
+    $\lambda_r=\frac{1,38C_b\sqrt{I_yJ}}{r_{ytc}JB_1}\sqrt{B_2+\sqrt{B^2_2+\frac{27C_wB_1^2}{C_b^2I_y}}}$
+
+    $I_{Tcy} = \frac{(0,8\times 25^3)+(37,17 \times 0,63^3)}{12} = 1042,44 \ cm^4$
+
+    $A_{gt} = (8\times 25)+(63 \times 37,17) = 43,4171$
+
+    $r_{ytc} = \sqrt{\frac{I_{Tcy}}{A_g}} = 4,9 \ cm$
+
+    $C_b = \frac{12,5 \ M_{máx}}{2,5 M_{máx}+3M_A+4M_B+3M_C}R_m$
+
+    $M_{max}=M_B = \frac{ql^2}{8} = \frac{11,2\ kN/m \times 10^2}{8} = 14000 \ kNcm$
+
+    $M_A=M_C = \frac{3ql^2}{32}=\frac{qlx}{2}-\frac{qx^2}{2}=\frac{3 \times 0,112 \times 1000^2}{32} = 10500 \ kN$
+
+    $R_m = 0,5 +2(\frac{I_{ym}}{I_y})^2 = 0,5+2(\frac{\frac{8,25^3}{12}}{3126})^2=0,72$
+
+    $C_b = 0,82$
+
+    $B_1 = \frac{(0,7f_y)w_c}{EJ}\leq \frac{f_yw_c}{EJ} \to B_1 = 0,0328 \leq 0,0072$
+
+    $B_3 = 0,45 (d-\frac{t_{fs}+t_{fi}}{2})(2\alpha_y-1)=0,45(45-\frac{0,8+1,6}{2})(2\times0,33-1)=-6,70$
+
+    $\alpha_y=\frac{I_{ytc}}{I_y}=0,33$
+
+    $\beta_2 = \frac{5,2\beta_1\beta_3}{C_b}+1=-0,3938$
+
+    $\lambda_r=119,63$
+
+    $M_{cr}=11833,82$
+
+    $M_{Rd}=\frac{1}{\gamma_{a1}}M_{cr}=10758\ kNcm$
 
 
 
