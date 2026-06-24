@@ -26,11 +26,21 @@
     % Nota: Para desenhar o momento positivo para BAIXO, multiplicamos as equações por -1.
     % Equação vão A-B (x de 0 a 4): M(x) = 1.5x - 0.5x^2  --> y = - (1.5x - 0.5x^2)
     % Equação balanço (x de 4 a 6): M(x) = 6x - 0.5x^2 - 18 --> y = - (6x - 0.5x^2 - 18)
-    \filldraw[diagrama] 
-      (0,0) 
-      -- plot[domain=0:10, samples=50] (\x, {-3*\x + 1*\x*\x}) 
-      -- plot[domain=10:14.4, samples=50] (\x, {-3*\x + 1*\x*\x + 36}) 
-      -- (14.4,0) -- cycle;
+    % yscale=0.015 mantém o gráfico dentro da tela (108.4 vira ~1.6 cm)
+    % xscale=0.8 ajusta a largura para caber no slide 16:9
+    \begin{scope}[xscale=1, yscale=0.02]
+        
+        \filldraw[diagrama] 
+        (0,0) 
+        % 1. Parábola do vão (atinge o vértice em y=-91 e termina em y=108.4)
+        -- plot[domain=0:10, samples=50] (\x, {-45.141*\x + 5.5981*\x*\x}) 
+        
+        % 2. Parábola do balanço (começa no y=108.4 e zera perfeitamente no 14.4)
+        -- plot[domain=10:14.4, samples=50] (\x, {5.5981*(14.4-\x)*(14.4-\x)}) 
+        
+        -- (14.4,0) -- cycle;
+      
+    \end{scope}
 
     % Rótulos dos valores notáveis de Momento
     
@@ -53,18 +63,3 @@
   \end{scope}
 
 \end{tikzpicture}
-
-\begin{comment}
-    Perfil caixão
-    Duplo perfil I
-
-    Exercícios propostos
-
-    FLEXÃO      CORTE
-    6.2.4       7.2.1
-    6.2.5       7.3.1
-    6.3.1       7.3.3
-    6.3.4       7.
-
-    Três questões da acima, e são três questões na prova
-\end{comment}
