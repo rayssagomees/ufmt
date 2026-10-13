@@ -1,0 +1,78 @@
+%\begin{multicols}{2}
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[
+        scale=1.5,
+        cota/.style={<->, >=stealth, thin, gray!80!black},
+        chamada/.style={gray!60, thin, dashed},
+        linhaInferior/.style={thick, red!80!black},
+        curvaMomento/.style={thick, draw=black, fill=orange!15}
+    ]
+    
+        % --- Parâmetros ---
+        \def\L{4.0}             % Comprimento total lx
+        \def\Lhalf{2.0}         % Meio do vão (lx / 2)
+        \def\yInf{-0.75}        % Posição da linha de armadura inferior
+        \def\offsetCota{0.8}    % Posição do eixo de cotas
+    
+        % --- Coordenadas ---
+        \coordinate (A) at (0, 0);          % Apoio esquerdo (x=0)
+        \coordinate (B) at (\L, 0);         % Apoio direito (x=lx)
+        \coordinate (Mid) at (\Lhalf, 0);   % Centro do vão (x = lx/2)
+    
+        % 1. Parábola do Diagrama de Momento M(x) (Carga Distribuída)
+        % Preenchimento da área sob a curva
+        %\path[fill=orange!15] 
+            %plot[domain=0:\L, samples=60] (\x, {-0.6 * \x * (\L - \x) / 4})
+            %-- (\L, 0) -- (0, 0) -- cycle;
+    
+        % Linha contínua da parábola de momento fletor
+        \draw[thick, black] 
+            plot[domain=0:\L, samples=60] (\x, {-0.6 * \x * (\L - \x) / 4});
+    
+        % Rótulo do Momento Máximo no centro do vão
+        \node[font=\small, black] at (\Lhalf, 0.15) {$M_y$};
+    
+        % 2. Linha Principal da Viga
+        \draw[line width=1pt, gray!80!black] (A) -- (B);
+    
+        % 3. Apoio de 2º Gênero (Fixo / Articulado) em A (x = 0)
+        \draw[thick] (A) -- (-0.25, -0.4) -- (0.25, -0.4) -- cycle;
+        %\draw[thick] (-0.35, -0.4) -- (0.35, -0.4);
+        %\path[pattern={Lines[angle=45, distance=4pt, line width=0.5pt]}, pattern color=gray!60] 
+        %    (-0.35, -0.6) rectangle (0.35, -0.4);
+        %\node[left=6pt, font=\small\bfseries] at (A) {A};
+    
+        % 4. Apoio de 1º Gênero (Móvel / Roletes) em B (x = lx)
+        \draw[thick] (B) -- ($(B) + (-0.25, -0.4)$) -- ($(B) + (0.25, -0.4)$) -- cycle;
+        %\draw[thick] ($(B) + (-0.25, -0.37)$) circle (2pt);
+        %\draw[thick] ($(B) + (0.25, -0.37)$) circle (2pt);
+        %\draw[thick] ($(B) + (-0.35, -0.44)$) -- ($(B) + (0.35, -0.44)$);
+        %\path[pattern={Lines[angle=45, distance=4pt, line width=0.5pt]}, pattern color=gray!60] 
+        %    ($(B) + (-0.35, -0.64)$) rectangle ($(B) + (0.35, -0.44)$);
+        %\node[right=6pt, font=\small\bfseries] at (B) {B};
+    
+        % 5. Linha Inferior de Armadura (Asx) - De A a B
+        \draw[linhaInferior] (0, \yInf) -- (\L, \yInf);
+        \node[below, font=\small, red!80!black] at (\Lhalf, \yInf) {$A_{sy}$};
+    
+        % 6. Eixo de Comprimento e Cotas
+        %\draw[chamada] (A) -- (0, -\offsetCota - 0.7);
+        %\draw[chamada] (Mid) -- (\Lhalf, -\offsetCota - 0.3);
+        %\draw[chamada] (B) -- (\L, -\offsetCota - 0.7);
+    
+        % Cotas parciais (lx / 2)
+        %\draw[cota] (0, -\offsetCota - 0.2) -- (\Lhalf, -\offsetCota - 0.2)
+        %    node[midway, below=2pt, font=\small] {$\frac{l_x}{2}$};
+    
+        %\draw[cota] (\Lhalf, -\offsetCota - 0.2) -- (\L, -\offsetCota - 0.2)
+        %    node[midway, below=2pt, font=\small] {$\frac{l_x}{2}$};
+    
+        % Cota total (lx)
+        \draw[cota] (0, -\offsetCota - 0.4) -- (\L, -\offsetCota - 0.4)
+            node[midway, below=2pt, font=\small] {$l_y$};
+    
+    \end{tikzpicture}
+    %\caption{Caption}
+    %\label{fig:placeholder}
+\end{figure}

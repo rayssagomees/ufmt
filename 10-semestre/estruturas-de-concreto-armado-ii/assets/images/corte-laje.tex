@@ -1,0 +1,76 @@
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[
+    scale=1.5,
+    cota/.style={<->, >=stealth, thin, black},
+    chamada/.style={gray!80, thin},
+    setaCarga/.style={->, >=stealth, black, thick},
+    texto/.style={font=\small\sffamily}
+]
+
+    % --- Parâmetros de Geometria ---
+    \def\vao{6.0}         % Comprimento do vão da laje
+    \def\espPiso{0.25}    % Espessura da camada de piso
+    \def\espLaje{0.80}    % Espessura da laje de concreto
+    \def\espForro{0.15}   % Espessura da camada de forro
+
+    % --- Coordenadas das Camadas (Origem na face inferior da laje) ---
+    \coordinate (F_E_Inf) at (0, -\espForro);
+    \coordinate (F_D_Sup) at (\vao, 0);
+    
+    \coordinate (L_E_Inf) at (0, 0);
+    \coordinate (L_D_Sup) at (\vao, \espLaje);
+    
+    \coordinate (P_E_Inf) at (0, \espLaje);
+    \coordinate (P_D_Sup) at (\vao, \espLaje + \espPiso);
+
+    % --- 1. Camada de Forro / Acabamento Inferior ---
+    \fill[gray!10!white] (F_E_Inf) rectangle (F_D_Sup);
+    \draw[thick, black] (F_E_Inf) rectangle (F_D_Sup);
+
+    % --- 2. Laje de Concreto Armado ---
+    \fill[white] (L_E_Inf) rectangle (L_D_Sup);
+    % Textura em hachura de concreto
+    %\pattern[pattern=dots, pattern color=black!60] (L_E_Inf) rectangle (L_D_Sup);
+    \draw[thick, black] (L_E_Inf) rectangle (L_D_Sup);
+
+    % Representação das barras de armadura de aço (superior e inferior)
+    %\draw[red!60!black, ultra thick] (0.2, 0.15) -- (\vao-0.2, 0.15);
+    %\draw[red!60!black, ultra thick] (0.2, \espLaje-0.15) -- (\vao-0.2, \espLaje-0.15);
+
+    % --- 3. Camada de Piso / Revestimento ---
+    \fill[white] (P_E_Inf) rectangle (P_D_Sup);
+    % Textura em hachura de concreto
+    \pattern[pattern=vertical lines, pattern color=black!60]  (P_E_Inf) rectangle (P_D_Sup);
+    \draw[thick, black] (P_E_Inf) rectangle (P_D_Sup);
+
+    % --- Apóios da Laje nas extremidades (Vigas) ---
+    %\draw[thick, fill=gray!50] (-0.5, -\espForro) rectangle (0, \espLaje);
+    %\draw[thick, fill=gray!50] (\vao, -\espForro) rectangle (\vao+0.5, \espLaje);
+
+    % --- 4. Carga de Uso Distribuída (Setas no Topo do Piso) ---
+    \def\yPiso{\espLaje + \espPiso}
+    \def\alturaSetas{0.7}
+    \def\yTopoSetas{\yPiso + \alturaSetas}
+
+    \draw[black, thick] (0, \yTopoSetas) -- (\vao, \yTopoSetas);
+
+    \foreach \x in {0, 1, 2, 3, 4, 5, 6} {
+        \draw[setaCarga] (\x, \yTopoSetas) -- (\x, \yPiso);
+    }
+    \node[texto, black, font=\bfseries\small, above] at (\vao/2, \yTopoSetas) {Carga de uso};
+
+    % --- 5. Linhas de Chamada e Rótulos das Camadas ---
+    \draw[chamada, ->, >=stealth] (\vao + 0.8, \yPiso - 0.12) -- (\vao - 0.5, \yPiso - 0.12);
+    \node[texto, right] at (\vao + 0.8, \yPiso - 0.12) {Piso + Revestimento};
+
+    \draw[chamada, ->, >=stealth] (\vao + 0.8, \espLaje/2) -- (\vao - 0.5, \espLaje/2);
+    \node[texto, right] at (\vao + 0.8, \espLaje/2) {\begin{tabular}{l} Laje ($h=10\ cm$)) \end{tabular}};
+
+    \draw[chamada, ->, >=stealth] (\vao + 0.8, -\espForro/2) -- (\vao - 0.5, -\espForro/2);
+    \node[texto, right] at (\vao + 0.8, -\espForro/2) {Forro};
+
+\end{tikzpicture}
+    %\caption{Corte longitudinal da laje.}
+    %\label{fig:corte-laje}
+\end{figure}

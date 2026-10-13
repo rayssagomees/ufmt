@@ -1,0 +1,96 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{capa}[Capa ABNT]
+
+% =========================================================================
+% REQUISITOS DE PACOTES
+% =========================================================================
+\RequirePackage{ifxetex}
+\RequirePackage{indentfirst}
+\RequirePackage{microtype}
+
+% =========================================================================
+% CONFIGURAÇÃO DE FONTES (Arial / Helvetica)
+% =========================================================================
+\ifxetex
+  \RequirePackage{fontspec}
+  \defaultfontfeatures{Ligatures={TeX}}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+\else
+  \RequirePackage[scaled]{helvet}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% =========================================================================
+% DEFINIÇÃO DAS VARIÁVEIS DA UFMT
+% =========================================================================
+\newcommand{\universidade}[1]{\gdef\@universidade{#1}}
+\newcommand{\campus}[1]{\gdef\@campus{#1}}
+\newcommand{\instituto}[1]{\gdef\@instituto{#1}}
+\newcommand{\curso}[1]{\gdef\@curso{#1}}
+\newcommand{\discente}[1]{\gdef\@discente{#1}}
+\newcommand{\titulotrabalho}[1]{\gdef\@titulotrabalho{#1}}
+\newcommand{\cidade}[1]{\gdef\@cidade{#1}}
+\newcommand{\ano}[1]{\gdef\@ano{#1}}
+\newcommand{\docente}[1]{\gdef\@docente{#1}}
+
+% Valores padrão para evitar erros caso o usuário esqueça de definir algum campo
+\universidade{Insira a Universidade}
+\campus{Insira o Campus}
+\instituto{Insira o Instituto}
+\curso{Insira o Curso}
+
+\discente{Insira o Discente}
+
+\titulotrabalho{Insira o Título}
+
+\cidade{Insira o Cidade}
+\ano{\the\year}
+
+\docente{Insira o Docente}
+
+% =========================================================================
+% MAPEAMENTO DE VARIÁVEIS INTERNAS DO ABNTEX2
+% =========================================================================
+\instituicao{\@universidade\par\@campus\par\@instituto\par\@curso}
+\autor{\@discente}
+\titulo{\@titulotrabalho}
+\local{\@cidade}
+\data{\@ano}
+\orientador{\@docente}
+
+
+
+
+
+\renewcommand{\imprimircapa}{%
+  \begin{capa}%
+    \center
+    % Cabeçalho da instituição
+    {\ABNTEXchapterfont\bfseries\MakeUppercase\@universidade}\par
+    {\ABNTEXchapterfont\bfseries\MakeUppercase\@campus}\par
+    {\ABNTEXchapterfont\bfseries\MakeUppercase\@instituto}\par
+    {\ABNTEXchapterfont\bfseries\MakeUppercase\@curso}
+    
+    \vspace*{2cm}
+    %\vfill
+    
+    % Autor
+    {\ABNTEXchapterfont\bfseries\MakeUppercase\@discente}
+    
+    \vfill
+    
+    % Título
+    \begin{center}
+      \ABNTEXchapterfont\bfseries\MakeUppercase\@titulotrabalho
+    \end{center}
+    
+    \vfill
+    
+    % Rodapé (Local e Ano)
+    {\ABNTEXchapterfont\bfseries\MakeUppercase\@cidade}\par
+    {\ABNTEXchapterfont\bfseries\MakeUppercase\@ano}
+  \end{capa}
+}
+
+\endinput

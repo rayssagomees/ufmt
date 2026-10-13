@@ -1,0 +1,41 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{folha-de-rosto}[Folha de Rosto ABNT]
+
+\renewcommand{\imprimirfolhaderosto}[1][\folhaderostonomes]{%
+  \begin{folhaderosto}{#1}
+    \center
+    % Cabeçalho da instituição
+    {\ABNTEXchapterfont\bfseries\MakeUppercase\@universidade}\par
+    {\ABNTEXchapterfont\bfseries\MakeUppercase\@campus}\par
+    {\ABNTEXchapterfont\bfseries\MakeUppercase\@instituto}\par
+    {\ABNTEXchapterfont\bfseries\MakeUppercase\@curso}
+
+    \vspace*{2cm}
+    %\vfill
+    
+    {\ABNTEXchapterfont\bfseries\MakeUppercase\@discente}
+    
+    \vspace*{\fill}
+    \begin{center}
+      \ABNTEXchapterfont\bfseries\MakeUppercase\@titulotrabalho
+    \end{center}
+    \vspace*{\fill}
+    
+    \abntex@ifnotempty{\imprimirpreambulo}{%
+      \hspace{.45\textwidth}
+      \begin{minipage}{.5\textwidth}
+        \SingleSpacing
+        \imprimirpreambulo
+        \smallskip
+        \par
+        {\orientadorname: \imprimirorientador}%
+      \end{minipage}%
+      \vspace*{\fill}
+    }%
+    
+    {\ABNTEXchapterfont\bfseries\MakeUppercase\@cidade}\par
+    {\ABNTEXchapterfont\bfseries\MakeUppercase\@ano}
+  \end{folhaderosto}
+}
+
+\endinput

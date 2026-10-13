@@ -1,0 +1,71 @@
+\begin{figure}[H]
+    \centering
+\begin{tikzpicture}[
+    scale=1.5,
+    cota/.style={<->, >=stealth, thin, gray!80!black},
+    chamada/.style={gray!60, thin, dashed},
+    seta/.style={->, >=stealth, thick},
+    cargaDist/.style={->, >=stealth, thin, black}
+]
+
+    % --- Parâmetros ---
+    \def\L{4.0}       % Comprimento da viga (lx)
+    \def\hArm{1.1}    % Altura do braço na ponta em balanço
+    \def\qHeight{0.6} % Altura da representação da carga distribuída
+
+    % --- Coordenadas principais ---
+    \coordinate (A) at (0, 0);          % Extremidade livre (ponta em balanço)
+    \coordinate (B) at (\L, 0);         % Engaste (direita)
+    \coordinate (ArmTop) at (0, \hArm); % Topo do braço vertical de altura 1,1
+
+    % 1. Desenho do Corpo da Viga
+    \draw[line width=3pt, gray!80!black] (A) -- (B);
+
+    % 2. Engaste na Direita (Parede Hachurada em x = lx)
+    \draw[thick] (\L, -0.8) -- (\L, 0.8);
+    \path[pattern={Lines[angle=45, distance=5pt, line width=0.5pt]}, pattern color=gray!60] 
+        (\L, -0.8) rectangle (\L + 0.3, 0.8);
+
+    % 3. Haste/Braço Vertical na Ponta em Balanço (Altura 1,1)
+    %\draw[line width=2pt, gray!80!black] (A) -- (ArmTop);
+
+    % 4. Carga Distribuída Uniforme (q)
+    \draw[thick, black] (0, \qHeight) -- (\L, \qHeight);
+    \node[above, font=\small, black] at (\L/2, \qHeight) {$g+q$};
+    \foreach \x in {0, 0.5, ..., \L} {
+        \draw[cargaDist] (\x, \qHeight) -- (\x, 0.05);
+    }
+
+    % 5. Cargas Verticais na Ponta em Balanço
+    \draw[seta, black, line width=1.2pt] (0, 2.25) -- (0, 1.25)  
+        node[above left, font=\small] {$q_v$};
+    \draw[seta, black, line width=1.2pt] (0, \hArm) -- (0, 0) 
+        node[above left, font=\small] {$q_m$};
+
+    % 6. Carga Horizontal a 1,1 de Altura
+    \draw[seta, black, line width=1.2pt] (1.05, \hArm) -- (0.05, \hArm) 
+        node[midway, above, font=\small] {$q_h$};
+
+    % 7. Força Vertical V no Engaste
+    \draw[seta, black, line width=1.2pt] (\L, -0.8) -- (\L, -0.05) 
+        node[midway, right, font=\small] {$V'_x$};
+
+    % 8. Cotas de Dimensão
+    % Cota de Altura (1,1)
+    \def\offsetArm{0.5}
+    %\draw[chamada] (0, 0) -- (-\offsetArm, 0);
+    %\draw[chamada] (0, \hArm) -- (-\offsetArm, \hArm);
+    \draw[cota] (-\offsetArm, 0) -- (-\offsetArm, \hArm)
+        node[midway, left=2pt, font=\small] {$1{,}1 \ m$};
+
+    % Cota de Comprimento (lx)
+    \def\offsetL{1.2}
+    %\draw[chamada] (0, 0) -- (0, -\offsetL);
+    %\draw[chamada] (\L, 0) -- (\L, -\offsetL);
+    \draw[cota] (0, -\offsetL) -- (\L, -\offsetL)
+        node[midway, below=2pt, font=\small] {$l_x$};
+
+\end{tikzpicture}
+    \caption{Corte AA.}
+    \label{fig:viga_engastada}
+\end{figure}

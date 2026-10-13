@@ -1,0 +1,229 @@
+\aula{04a}{09}{setembro}{2026}
+
+\begin{resposta}
+    \begin{enumerate}[start=8]
+
+        \item Dimensionamento armadura positiva
+        
+        \input{assets/images/L0-7-R2.tex}
+
+        \fbox{L1}
+
+        \begin{enumerate}
+            \item Momento de projeto
+            
+            $\gamma_c = 1,4$ \cite[tabela 12.1]{nbr6118} \newline
+            
+            $M_{d,x} = \gamma_c M_x = 1,4 \times 2,43 = 340,2 \ kN cm/m$
+            
+            $M_{d,y} = \gamma_c M_y = 1,4 \times 0,76 = 106,4 \ kN cm/m$ \newline
+
+            \item Altura útil
+            
+            CAA-I = 20 mm  (laje) \cite[tabela 7.2]{nbr6118}
+            
+            $d = h - c -\phi_e - \frac{\phi_\ell}{2} = 10 \cdot 10^{-2} + \Big(-20 - 10 - \frac{10}{2}\Big)\cdot 10^{-3} = 6,5 \ cm$ \newline
+
+            \item Taxa mínima de armadura
+            
+            $\rho_s = \frac{A_s}{A_c} \to A_c = bh$ \cite[tabela 19.1]{nbr6118}
+            
+            $\rho_{min} = 0,179\%$ \cite[tabela 17.3]{nbr6118} \newline
+            
+            $\rho_s \geq 0,67 \rho_{min} \text{\cite[tabela 19.1]{nbr6118}} \newline A_{s,min} \geq 0,67 \ \frac{0,179 \times 100 \times 10}{100} \newline A_{s,min} \geq 1,2 \ cm^2$ \newline
+            
+            \item Área de aço
+            
+            $K_{c,x} = \frac{b \ d^2}{M_d} = \frac{100 \times 6,5^2}{340,2} = 12,42 \ cm^2/kN$
+            
+            $K_{c,y} = \frac{b \ d^2}{M_d} = \frac{100 \times 6,5^2}{106,4} = 39,71 \ cm^2/kN$ \newline
+
+            $\beta_{x,x} = 0,06 \leq 0,45 \to$ armadura simples, domínio 2 \cite[tabela 1.1a]{tabelaskcks}
+
+            $\beta_{x,y} = 0,02 \leq 0,45 \to$ armadura simples, domínio 2 \cite[tabela 1.1a]{tabelaskcks} \newline
+
+            \begin{observacao}
+                $\begin{cases}
+                    A_s \geq A_{s,min} \to A_s \\
+                    A_s < A_{s,min} \to A_{s,min}
+                \end{cases}$
+            \end{observacao}
+
+            $K_{s,x} = \frac{A_s \ d}{M_d} \longleftrightarrow A_s = \frac{K_s \ Md}{d} = \frac{0,024 \times 340,2}{6,5} = 1,26 \ cm^2/m$
+
+            $K_{s,y} = \frac{A_s \ d}{M_d} \longleftrightarrow A_s = \frac{K_s \ Md}{d} = \frac{0,023 \times 106,4}{6,5} = 0,38\ cm^2/m$ \newline
+
+            \item Determinação da bitola e do espaçamento
+            
+            $\phi_\ell \leq \frac{h}{8} = \frac{10}{8} = 1,25 \ cm = 12,5 \ mm$ \cite[item 20.1]{nbr6118} \newline
+
+            \cite[item 20.1]{nbr6118}
+
+            \begin{multicols}{2}
+                $S_x \leq \begin{cases}
+                    2h = 2 \times 10 = 20 \ cm \\
+                    20 \ cm
+                \end{cases}$
+
+                $S_y \leq 33 \ cm$
+            \end{multicols}
+
+            $A_{\phi,x} = \pi\Big(\frac{D}{2}\Big)^2 = \pi \Big(\frac{5\cdot 10^{-3}}{2}\Big)^2 = 0,196 \ cm^2$ 
+
+            \begin{observacao}
+                O espaçamento deve ser arredondado para baixo.
+            \end{observacao}
+            
+            $S_{\phi,x} = \frac{A_{\phi}}{A_s}\ 100 = \frac{0,196}{1,26} \ 100 = 15,58 \approx 15 \ cm$
+
+            $\phi_{\ell,x} = 5 \ mm$ c/ $15 \ cm$ \newline
+
+            %$A_{\phi,y} = \pi\Big(\frac{D}{2}\Big)^2 = \pi \Big(\frac{5\cdot 10^{-3}}{2}\Big)^2 = 0,196 \ cm^2$ 
+            
+            $S_{\phi,y} = \frac{A_{\phi}}{A_s}\ 100 = \frac{0,196}{1,2} \ 100 = 16,36 \approx 16 \ cm$ 
+
+            $\phi_{\ell,y} = 5 \ mm$ c/ $16 \ cm$\newline
+        \end{enumerate}
+
+        \fbox{L2}
+
+        \begin{enumerate}
+            \item Momento de projeto
+            
+            %$\gamma_c = 1,4$ \cite[tabela 12.1]{nbr6118} \newline
+            
+            $M_{d,x} = \gamma_c M_x = 1,4 \times 7,80 = 1092 \ kN cm/m$
+            
+            $M_{d,y} = \gamma_c M_y = 1,4 \times 2,24 = 313,6 \ kN cm/m$ \newline
+
+            %\item Altura útil
+            
+            %CAA-I = 20 mm  (laje) \cite[tabela 7.2]{nbr6118}
+            
+            %$d = h - c -\phi_e - \frac{\phi_\ell}{2} = 10 \cdot 10^{-2} + \Big(-20 - 10 - \frac{10}{2}\Big)\cdot 10^{-3} = 6,5 \ cm$ \newline
+
+            %\item Taxa mínima de armadura
+            
+            %$\rho_s = \frac{A_s}{A_c} \to A_c = bh$ \cite[tabela 19.1]{nbr6118}
+            
+            %$\rho_{min} = 0,179\%$ \cite[tabela 17.3]{nbr6118} \newline
+            
+            %$\rho_s \geq 0,67 \rho_{min} \text{\cite[tabela 19.1]{nbr6118}} \newline A_{s,min} \geq 0,67 \ \frac{0,179 \times 100 \times 10}{100} \newline A_{s,min} \geq 1,2 \ cm^2$ \newline
+            
+            \item Área de aço
+            
+            $K_{c,x} = \frac{b \ d^2}{M_d} = \frac{100 \times 6,5^2}{1092} = 3,87 \ cm^2/kN$
+            
+            $K_{c,y} = \frac{b \ d^2}{M_d} = \frac{100 \times 6,5^2}{313,6} = 13,47 \ cm^2/kN$ \newline
+
+            $\beta_{x,x} = 0,14 \leq 0,45 \to$ armadura simples, domínio 2 \cite[tabela 1.1a]{tabelaskcks}
+
+            $\beta_{x,y} = 0,02 \leq 0,45 \to$ armadura simples, domínio 2 \cite[tabela 1.1a]{tabelaskcks} \newline
+
+            $K_{s,x} = \frac{A_s \ d}{M_d} \longleftrightarrow A_s = \frac{K_s \ Md}{d} = \frac{0,025 \times 1092}{6,5} = 4,20 \ cm^2/m$
+
+            $K_{s,y} = \frac{A_s \ d}{M_d} \longleftrightarrow A_s = \frac{K_s \ Md}{d} = \frac{0,023 \times 313,6}{6,5} = 1,11\ cm^2/m$ \newline
+
+            \item Determinação da bitola e do espaçamento
+            
+            %$\phi_\ell \leq \frac{h}{8} = \frac{10}{8} = 1,25 \ cm = 12,5 \ mm$ \cite[item 20.1]{nbr6118} \newline
+
+            %\cite[item 20.1]{nbr6118}
+
+            %\begin{multicols}{2}
+                %$S_x \leq \begin{cases}
+                 %   2h = 2 \times 10 = 20 \ cm \\
+                 %   20 \ cm
+                %\end{cases}$
+
+                %$S_y \leq 33 \ cm$
+            %\end{multicols}
+
+            $A_{\phi,x} = \pi\Big(\frac{D}{2}\Big)^2 = \pi \Big(\frac{8\cdot 10^{-3}}{2}\Big)^2 = 0,5 \ cm^2$ 
+            
+            $S_{\phi,x} = \frac{A_{\phi}}{A_s}\ 100 = \frac{0,5}{4,2} \ 100 = 11,98 \approx 11 \ cm$
+
+            $\phi_{\ell,x} = 8 \ mm$ c/ $11 \ cm$ \newline
+
+            %$A_{\phi,y} = \pi\Big(\frac{D}{2}\Big)^2 = \pi \Big(\frac{5\cdot 10^{-3}}{2}\Big)^2 = 0,196 \ cm^2$ 
+            
+            $S_{\phi,y} = \frac{A_{\phi}}{A_s}\ 100 = \frac{0,196}{1,2} \ 100 = 16,36 \approx 16 \ cm$ 
+
+            $\phi_{\ell,y} = 5 \ mm$ c/ $16 \ cm$\newline
+        \end{enumerate}
+
+        \fbox{L3}
+
+        \begin{observacao}
+            Corrigir
+        \end{observacao}
+
+        \fbox{L4}
+
+        \begin{enumerate}
+            \item Momento de projeto
+            
+            %$\gamma_c = 1,4$ \cite[tabela 12.1]{nbr6118} \newline
+            
+            $M_{d,x} = \gamma_c M_x = 1,4 \times 5,36 = 750,4 \ kN cm/m$
+            
+            $M_{d,y} = \gamma_c M_y = 1,4 \times 4,04 = 565,6 \ kN cm/m$ \newline
+
+            %\item Altura útil
+            
+            %CAA-I = 20 mm  (laje) \cite[tabela 7.2]{nbr6118}
+            
+            %$d = h - c -\phi_e - \frac{\phi_\ell}{2} = 10 \cdot 10^{-2} + \Big(-20 - 10 - \frac{10}{2}\Big)\cdot 10^{-3} = 6,5 \ cm$ \newline
+
+            %\item Taxa mínima de armadura
+            
+            %$\rho_s = \frac{A_s}{A_c} \to A_c = bh$ \cite[tabela 19.1]{nbr6118}
+            
+            %$\rho_{min} = 0,179\%$ \cite[tabela 17.3]{nbr6118} \newline
+            
+            %$\rho_s \geq 0,67 \rho_{min} \text{\cite[tabela 19.1]{nbr6118}} \newline A_{s,min} \geq 0,67 \ \frac{0,179 \times 100 \times 10}{100} \newline A_{s,min} \geq 1,2 \ cm^2$ \newline
+            
+            \item Área de aço
+            
+            $K_{c,x} = \frac{b \ d^2}{M_d} = \frac{100 \times 6,5^2}{750,4} = 5,63 \ cm^2/kN$
+            
+            $K_{c,y} = \frac{b \ d^2}{M_d} = \frac{100 \times 6,5^2}{565,6} = 7,47 \ cm^2/kN$ \newline
+
+            $\beta_{x,x} = 0,10 \leq 0,45 \to$ armadura simples, domínio 2 \cite[tabela 1.1a]{tabelaskcks}
+
+            $\beta_{x,y} = 0,08 \leq 0,45 \to$ armadura simples, domínio 2 \cite[tabela 1.1a]{tabelaskcks} \newline
+
+            $K_{s,x} = \frac{A_s \ d}{M_d} \longleftrightarrow A_s = \frac{K_s \ Md}{d} = \frac{0,024 \times 750,4}{6,5} = 2,77 \ cm^2/m$
+
+            $K_{s,y} = \frac{A_s \ d}{M_d} \longleftrightarrow A_s = \frac{K_s \ Md}{d} = \frac{0,024 \times 565,6}{6,5} = 2,09\ cm^2/m$ \newline
+
+            \item Determinação da bitola e do espaçamento
+            
+            %$\phi_\ell \leq \frac{h}{8} = \frac{10}{8} = 1,25 \ cm = 12,5 \ mm$ \cite[item 20.1]{nbr6118} \newline
+
+            %\cite[item 20.1]{nbr6118}
+
+            %\begin{multicols}{2}
+                %$S_x \leq \begin{cases}
+                 %   2h = 2 \times 10 = 20 \ cm \\
+                 %   20 \ cm
+                %\end{cases}$
+
+                %$S_y \leq 33 \ cm$
+            %\end{multicols}
+
+            $A_{\phi,x} = \pi\Big(\frac{D}{2}\Big)^2 = \pi \Big(\frac{8\cdot 10^{-3}}{2}\Big)^2 = 0,5 \ cm^2$ 
+            
+            $S_{\phi,x} = \frac{A_{\phi}}{A_s}\ 100 = \frac{0,5}{2,77} \ 100 = 18,05 \approx 18 \ cm$
+
+            $\phi_{\ell,x} = 8 \ mm$ c/ $18,05 \ cm$ \newline
+
+            %$A_{\phi,y} = \pi\Big(\frac{D}{2}\Big)^2 = \pi \Big(\frac{5\cdot 10^{-3}}{2}\Big)^2 = 0,196 \ cm^2$ 
+            
+            $S_{\phi,y} = \frac{A_{\phi}}{A_s}\ 100 = \frac{0,5}{2,09} \ 100 = 23,92 \approx 23 \ cm$ 
+
+            $\phi_{\ell,y} = 8 \ mm$ c/ $23 \ cm$\newline
+        \end{enumerate}
+        
+    \end{enumerate}
+\end{resposta}

@@ -1,0 +1,128 @@
+\usepackage[utf8]{inputenc} % Codificação do documento
+\usepackage[T1]{fontenc} % Seleção de códigos de fonte
+\usepackage{lmodern} % Usa a fonte Latin Modern
+\usepackage[brazil]{babel} % Traduz termos para o português
+\usepackage{microtype} % Melhora a paginação/justificação do texto
+\usepackage{indentfirst} % Indenta o primeiro parágrafo de cada seção
+
+\usepackage[alf]{abntex2cite}
+
+\pagestyle{empty}
+
+\usepackage{multicol}
+
+\usepackage[tmargin=1cm, bmargin=3cm, lmargin=2.5cm, rmargin=2.5cm]{geometry}
+\usepackage{multicol,multirow}
+\setlength{\columnsep}{.75cm}
+\usepackage{xcolor}
+
+
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+
+
+% ESPAÇAMENTO ENTRE PARAGRÁFOS
+\usepackage{parskip}
+\setlength{\parskip}{1em}
+
+% RECUO
+\setlength{\parindent}{1.25cm}
+
+\usepackage{textcomp}
+
+\usepackage{graphicx}
+
+\usepackage{setspace}
+\usepackage{float} 
+
+\usepackage{array}
+\usepackage{colortbl}
+
+%\pgfplotsset{compat=1.18}
+
+\usepackage{tikz}
+\usepackage{pgfplots} % Pacote para plotagem de gráficos
+\pgfplotsset{compat=1.18} % Configurações opcionais
+%\usetkzobj{all}
+\usepackage{adjustbox}
+\usepackage{enumitem} % Pacote para personalizar listas
+\usepackage{pifont} % Pacote para símbolos adicionais
+\usepackage{array}
+
+\setlength{\parindent}{0pt}
+
+\usepackage{amssymb,amsmath,amsfonts,amsthm,mathtools,bm,siunitx,empheq,gensymb}
+
+%\usepackage{ntheorem}
+
+%\usepackage{fancyhdr}
+
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{patterns,arrows.meta,shapes.geometric,positioning,calc,decorations.pathreplacing,shadows}
+
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{angles,quotes,calc,arrows.meta}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, patterns.meta, calc, arrows.meta}
+
+\usetikzlibrary{angles, quotes} 
+
+\everymath{\displaystyle}
+
+\newcommand{\aula}[4]{%
+  \noindent \textbf{Aula #1} --- #2 de #3 de #4%
+}
+
+% 1. Remove a quebra de página automática dos capítulos [2]
+\renewcommand{\clearforchapter}{\vspace{1.5cm}}
+
+% 2. Opcional: reduz o espaço em branco grande acima do título do capítulo [3]
+\setlength{\beforechapskip}{1em}
+
+\newcommand{\paracasa}{%
+    \vspace{16pt} %
+    \textcolor{blue!80!black}{Continuação - para casa} %
+}
+
+\usetikzlibrary{patterns.meta}
+
+\usepackage{cancel}
+
+\usepackage{environ}
+
+% Chave liga/desliga (true para mostrar respostas, false para ocultar)
+\newif\ifmostrarrespostas
+\mostrarrespostastrue % <- Altere para \mostrarrespostasfalse para gerar a versão do aluno!
+
+\NewEnviron{resposta}{%
+  \ifmostrarrespostas
+    %\par\addvspace{0.5em}
+    \color{gray!80!black}
+    \noindent \BODY
+    %\par\addvspace{0.5em}
+  \fi
+}
+
+\NewEnviron{duvida}{%
+  \ifmostrarrespostas
+    %\par\addvspace{0.5em}
+    \color{red!80!black}
+    \noindent \BODY
+    %\par\addvspace{0.5em}
+  \fi
+}
+
+\NewEnviron{observacao}{%
+  \ifmostrarrespostas
+    %\par\addvspace{0.5em}
+    \color{orange!80!black}
+    \noindent \BODY
+    %\par\addvspace{0.5em}
+  \fi
+}
+
+\endinput

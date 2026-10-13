@@ -1,0 +1,120 @@
+\begin{figure}[H]
+    \centering
+
+    \begin{tikzpicture}[
+        scale=1.25,
+        pilar/.style={draw=black, thick, fill=white},
+        viga/.style={line width=1pt, gray!70!black},
+        linhaOriginal/.style={thick, gray!80!black},
+        linhaCompat/.style={line width=1.3pt, black},
+        cota/.style={<->, >=stealth, thin, black},
+        chamada/.style={gray!50, thin, dashed}
+    ]
+    
+        % --- Parâmetros de Geometria ---
+        \def\L{4.5} % Comprimento de cada vão
+    
+        % Coordenadas dos Apoios/Pilares
+        \coordinate (P1) at (0, 0);
+        \coordinate (P2) at (\L, 0);
+        \coordinate (P3) at (2*\L, 0);
+    
+        % 1. Desenho dos 3 Pilares (P1, P2, P3)
+        \def\wP{0.45}
+        \def\hP{1.25}
+    
+        % Pilar 1 (x = 0)
+        \draw[pilar] (-\wP/2, -\hP) rectangle (\wP/2, 0);
+        \node[below=2pt, font=\small\bfseries] at (0, -\hP) {$V3$};
+    
+        % Pilar 2 (x = L)
+        \draw[pilar] (\L-\wP/2, -\hP) rectangle (\L+\wP/2, 0);
+        \node[below=2pt, font=\small\bfseries] at (\L, -\hP) {$V2$};
+    
+        % Pilar 3 (x = 2L)
+        \draw[pilar] (2*\L-\wP/2, -\hP) rectangle (2*\L+\wP/2, 0);
+        \node[below=2pt, font=\small\bfseries] at (2*\L, -\hP) {$V1$};
+    
+        % Hachura sob a base dos pilares (Fundação)
+        %\foreach \x in {0, \L, 2*\L} {
+         %   \path[pattern={Lines[angle=45, distance=3pt, line width=0.4pt]}, pattern color=gray!60]
+          %      (\x-\wP/2, -\hP-0.15) rectangle (\x+\wP/2, -\hP);
+           % \draw[thick] (\x-\wP/2, -\hP) -- (\x+\wP/2, -\hP);
+        %}
+    
+        % 2. Eixo das Vigas (V1 e V2)
+        \draw[viga] (0, 0) -- (2*\L, 0);
+    
+        % Rótulos das Vigas no Centro de Cada Vão (Parte Inferior)
+        \node[below=2pt, font=\small\bfseries, fill=white, inner sep=1.5pt] at (\L/2, -\hP) {$L4$};
+        \node[below=2pt, font=\small\bfseries, fill=white, inner sep=1.5pt] at (1.5*\L, -\hP) {$L1$};
+        
+        \node[right, font=\small\bfseries, fill=white, inner sep=1.5pt] at (2*\L, -\hP-0.8) {$kN \ m/m$};
+
+    % CHAMADA MEIO
+
+    % --- C. LINHA VERTICAL SAINDO DO PILAR P2 CONECTANDO OS TRÊS PONTOS ---
+    \coordinate (Pt1) at (\L, 1.2);   % Ponto do diagrama original V1
+    \coordinate (Pt2) at (\L, 1.65);  % Ponto do diagrama compatibilizado
+    \coordinate (Pt3) at (\L, 2.1);   % Ponto do diagrama original V2
+
+    % Linha vertical contínua que sai do topo do pilar P2 (x=L, y=0) e conecta os 3 pontos
+    \draw[line width=1pt, gray!80!black] (\L, 0) -- (Pt3);
+
+    % 3. DIAGRAMA DE MOMENTOS FLETORES
+
+    % --- A. Linha Original (Antes da Compatibilização) ---
+    % Vão 1 (0 a L): Original fica ACIMA da compatibilizada (menos profunda)
+    \draw[linhaOriginal] 
+        plot[domain=0:\L, samples=60] (\x, {-1.0 * sin(\x * 180 / \L) + 2.1 * (\x/\L)^2});
+
+    % Vão 2 (L a 2L): Original fica ABAIXO da compatibilizada (mais profunda)
+    \draw[linhaOriginal] 
+        plot[domain=\L:2*\L, samples=60] (\x, {-1.4 * sin((\x-\L) * 180 / \L) + 1.2 * ((2*\L-\x)/\L)^2});
+
+    % --- B. Linha Compatibilizada (Após a Compatibilização) ---
+    % Vão 1: Compatibilizada fica ABAIXO da original no meio do vão
+    \draw[linhaCompat] 
+        plot[domain=0:\L, samples=60] (\x, {-1.5 * sin(\x * 180 / \L) + 1.65 * (\x/\L)^2});
+
+    % Vão 2: Compatibilizada fica ACIMA da original no meio do vão
+    \draw[linhaCompat] 
+        plot[domain=\L:2*\L, samples=60] (\x, {-1.05 * sin((\x-\L) * 180 / \L) + 1.65 * ((\x-\L)/\L - 1)^2});
+
+    % 4. RÓTULOS DOS MOMENTOS MÁXIMOS (LOCALIZADOS NOS PRÓPRIOS PONTOS, SEM SETAS)
+
+    % Sobre o Pilar P2 (Momentos Negativos):
+        \node[above=3pt, font=\sffamily\footnotesize\bfseries, gray!80!black, fill=white, inner sep=1pt] 
+        at (\L+0.45, 1) {$5,12$};
+    \node[above=3pt, font=\sffamily\footnotesize\bfseries, gray!80!black, fill=white, inner sep=1pt] 
+        at (\L+0.45, 1.9) {$11,54$};
+
+    \node[above=3pt, font=\sffamily\footnotesize\bfseries, black, fill=white, inner sep=1pt] 
+        at (\L+0.45, 1.5) {$9,23$};
+
+    % No Vão 1 (V1):
+    \node[below=1pt, font=\sffamily\footnotesize\bfseries, gray!80!black, fill=white, inner sep=1pt] 
+        at (0.42*\L, -0.3) {$4,04$};
+    \node[below=1pt, font=\sffamily\footnotesize\bfseries, black, fill=white, inner sep=1pt] 
+        at (0.42*\L, -0.8) {$5,20$};
+
+    % No Vão 2 (V2) - Maior que no vão V1:
+    \node[below=1pt, font=\sffamily\footnotesize\bfseries, gray!80!black, fill=white, inner sep=1pt] 
+        at (1.55*\L, -0.8) {$2,43$};
+    \node[below=1pt, font=\sffamily\footnotesize\bfseries, black, fill=white, inner sep=1pt] 
+        at (1.55*\L, -0.3) {$2,43$};
+
+    
+        % 5. LEGENDA
+        \begin{scope}[shift={(0, 3)}]
+            \draw[thick, fill=white, draw=white] (-0.1, -0.55) rectangle (3.3, 0.55);
+            \draw[linhaOriginal] (0.1, 0.25) -- (0.85, 0.25);
+            \node[right, font=\sffamily\footnotesize] at (0.9, 0.25) {Diagrama original};
+            \draw[linhaCompat] (0.1, -0.25) -- (0.85, -0.25);
+            \node[right, font=\sffamily\footnotesize] at (0.9, -0.25) {Diagrama compatibilizado};
+        \end{scope}
+    \end{tikzpicture}
+    
+    %\caption{Caption}
+    %label{fig:placeholder}
+\end{figure}

@@ -1,0 +1,55 @@
+\chapter{Desenvolvimento}
+
+\section{Ensaio de compactação}
+
+A compactação é um processo mecânico instantâneo de redução de vazios pela expulsão do ar do solo sob condições não saturadas. Padronizado pela \citeonline{nbr7182}, o ensaio de Proctor aplica energia dinâmica de impacto sobre amostras com diferentes teores de umidade para obter a correlação entre a umidade ($w$) e o peso específico aparente seco ($\gamma_d$). Conforme as exigências de projeto, utilizam-se três energias padronizadas (Tabela \ref{tab:energias-de-compactacao}).
+
+\input{assets/images/energias-de-compactacao}
+
+\subsection{Curva de compactação e saturação}
+
+Os dados obtidos geram a Figura \ref{fig:compactacao}, cujo ponto de máximo define o peso específico seco máximo ($\gamma_{d,max}$) e a umidade ótima ($w_{ot}$). A curva de saturação teórica (S=100\%) delimita fisicamente o estado do solo onde todo o ar foi expulso dos poros (Equação \ref{eq:curva-de-saturacao-teorica}), onde $G_s$ é a massa específica dos grãos e $\rho_w$ a da água:
+
+$$\rho_d=\frac{G_s \cdot \rho_w}{1+\frac{w\cdot G_s}{S}}$$
+\label{eq:curva-de-saturacao-teorica}
+
+\input{assets/images/curva-de-compactacao}
+
+
+
+
+
+
+
+
+
+\section{Ensaio de adensamento}
+
+%O conceito de adensamento (compressibilidade ao longo do tempo, dissipação de poro-pressão, especialmente em solos finos).
+
+%Ensaio Oedométrico: Descrever como é realizado, quais equipamentos são utilizados e as etapas de carregamento e descarregamento.
+
+%Explicar a importância dos parâmetros obtidos (como o Índice de Compressão, Coeficiente de Adensamento e a Tensão de Pré-adensamento) para a previsão de recalques nas estruturas.
+
+O adensamento é um processo hidromecânico lento e progressivo de redução de volume de solos finos, argilosos e altamente saturados, pela expulsão gradual da água sob carga permanente. O ensaio odométrico \cite{mb33336} simula essa deformação confinando lateralmente a amostra em um anel rígido de aço e permitindo drenagem dupla vertical (pedras porosas superior e inferior). Aplicam-se incrementos sucessivos de carga vertical, mantidos por 24h cada para dissipação do poro-pressão ($u$) e registro das deformações ao longo do tempo.
+
+\subsection{Parâmetros de projeto obtidos}
+
+\begin{itemize}
+    
+    \item Coeficiente de adensamento ($C_v$): mede a velocidade de consolidação sob carga \ref{eq:coeficiente-adensamento}, obtido via ajuste logarítmico (Casagrande) ou raiz do tempo (Taylor):
+
+        $$C_v=\frac{T_{50}\cdot H^2_{50}}{t_{50}} \quad (T_{50}=0,197)$$
+        \label{eq:coeficiente-adensamento}
+        
+    \item Índice de compressão ($C_c$): inclinação do trecho virgem na curva $ e \times \log \sigma'$, representando a compressibilidade do solos \ref{eq:indice-compressao}.
+
+        $$C_c=\frac{e_1-e_2}{\log \sigma'_2-\log \sigma'_1}$$
+        \label{eq:indice-compressao}
+        
+    \item Índice de expansão ($C_r$): inclinação da curva de descarregamento e recarregamento elástico (geralmente $1/5$ a $1/10$ de $C_c$).
+    
+    \item Pressão de pré-adensamento ($\sigma'_c$): a máxima tensão efetiva que o solo já suportou em sua história geológica, determinada graficamente por Casagrande (Figura \ref{fig:casagrande})
+\end{itemize}
+
+\input{assets/images/tensao-de-pre-adensamento}

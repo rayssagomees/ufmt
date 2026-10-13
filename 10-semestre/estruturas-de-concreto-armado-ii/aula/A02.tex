@@ -1,0 +1,260 @@
+
+
+\aula{02}{26}{agosto}{2026}
+
+\begin{resposta}
+    \begin{enumerate}[start=2]
+        \item Determinação do carregamento nas lajes
+
+        \begin{observacao}
+            É preciso calcular o carregamento permanente para cada laje, mas como h = 10 cm para todos não precisou repetir.
+        \end{observacao}
+
+        \input{assets/images/corte-laje}
+
+        $g_{PP} = \gamma_{ap} \cdot h = 25 \times 10 \cdot 10^{-2} = 2,5 \ kN/m^2 \to \gamma_{ap}=25 \ kN/m^3$ \cite[tabela 1]{nbr6120}
+
+        $g_{P+R} = 1 \ kN/m^2$ \cite[tabela 4]{nbr6120}
+
+        $g_{forro}= 0,25 \ kN/m^2$ \cite[tabela 8]{nbr6120} \newline
+
+        $g= g_{PP}+g_{P+R}+g_{forro} = 2,5+1+0,25=3,75 \ kN/m^2$
+
+        $q= 3 \ kN/m^2$ \cite[tabela 10]{nbr6120} \newline
+
+        $g+q=3,75+3=6,75\ kN/m^2$ \newline
+
+        \item Vinculação das lajes
+
+        \begin{observacao}
+            Multiplica por três por causa da recomendação do livro IBRACON.
+        \end{observacao}
+
+        \fbox{L1}
+
+            \begin{enumerate}
+                \item Vizinhança V5
+
+                \input{assets/images/L1-3-1}
+    
+                $\ell_1 < 3\ell_2 \newline 476 < 3 \times 446 \newline 476 < 1338 \to$ ambas engastadas
+                
+                \item Vizinhança V2
+
+                \input{assets/images/L1-3-2}
+    
+                $\ell_1 < 3\ell_2 \newline 556 < 3 \times 256 \newline 556 < 768 \to$ ambas engastadas
+                
+            \end{enumerate}
+    
+            \fbox{L2}
+    
+            \begin{enumerate}
+                \item Vizinhança V5
+
+                \input{assets/images/L2-3}
+    
+                $\ell_1 < 3\ell_2 \newline 476 < 3 \times 446 \newline 476 < 1138 \to$ ambas engastadas
+                
+            \end{enumerate}
+
+            \newpage
+    
+            \fbox{L3}
+    
+            \begin{observacao}
+                Por ser uma laje em balanço precisa de engaste.
+            \end{observacao}
+    
+            \begin{enumerate}
+                \item Vizinhança V4
+
+                \input{assets/images/L3-3}
+    
+                $\ell_1 < 3\ell_2 \newline 476 < 3 \times 153 \newline 476 < 459 \to$ ambas engastadas
+    
+            \begin{observacao}
+                Maior laje fica apoiada e a menor fica engastada.
+            \end{observacao}
+                
+            \end{enumerate}            
+        %\end{enumerate}
+
+        \item Reações verticais nas lajes
+
+        \begin{enumerate}
+            \item Charneiras plásticas
+
+            \fbox{L1}
+    
+            \input{assets/images/L1-4-C} \newpage
+
+            \begin{multicols}{2}
+
+                \input{assets/images/L1-4-T1}
+    
+                $\cancelto{1}{\tan 45}=\frac{b}{a} \longleftrightarrow b=a$ \newline
+    
+                $\tan 30=\frac{a}{256-a} \newline \frac{\sqrt{3}}{3} (256-a)=a \newline \frac{256\sqrt{3}}{3}=(1+\frac{\sqrt{3}}{3})a \newline a \approx 93,70 \ cm$ \newline
+    
+                $L=256-a\newline L\approx256-93,70 \newline L\approx 162,30 \ cm$ \newline
+            \end{multicols}
+
+            $A_y= \frac{bh}{2}\approx\frac{256\times 93,7}{2}\approx1,2 \ m^2$ \newline
+
+            $V_y = \frac{(g+q)A_y}{\ell_x}\approx\frac{6,75 \times 1,2}{2,56}\approx3,16 \ kN/m$ \newline
+
+            \begin{multicols}{2}
+
+                \input{assets/images/L1-4-T2}
+
+                $\tan 60 =\frac{c}{256-c} \newline 256 \sqrt{3}=(1+\sqrt{3})c \newline c \approx 162,30 \ cm$ \newline
+    
+                $L=256-c\newline\approx256-162,30\newline \approx93,70 \ cm$ \newline
+                
+            \end{multicols}
+
+            $A'_y=\frac{bh}{2}\approx\frac{256\times162,30}{2}\approx2,08 \ m^2$ \newline
+
+            $V'_y=\frac{(g+q)A'_y}{\ell_x}=\frac{6,75\times 2,08}{2,56} \approx5,48 \ kN/m$ \newline
+
+            %\begin{multicols}{2}
+            %\end{multicols}
+
+            \input{assets/images/L1-4-T3}
+
+            $b=476-2c\approx476-93,7-162,3=220 \ cm$ \newline
+
+            $A_x=\frac{(B+b)h}{2}\approx\frac{(476+220)93,7}{2}\approx3,26 \ m^2$ \newline
+
+            $V_x=\frac{(g+q)A_x}{\ell_y}\approx\frac{6,75\times 3,26}{4,76}\approx4,62 \ kN/m$ \newline
+
+            \input{assets/images/L1-4-T4}
+
+            $A'_x=\frac{(B+b)h}{2}\approx\frac{(476+220)162,3}{2}\approx6,65 \ m^2$ \newline
+
+            $V'_x=\frac{(g+q)A_x}{\ell_y}\approx\frac{6,75\times 5,65}{4,76}\approx8,01 \ kN/m$ \newline
+
+            \paracasa
+
+            \fbox{L2}
+
+            \fbox{L3}
+
+            \input{assets/images/L4-4-C}
+
+            \input{assets/images/L3-4-T1}
+
+            $\tan 30 = \frac{a}{1,53} \newline a\approx0,88 \ m$ \newline
+
+            $A_y=\frac{bh}{2}\approx\frac{1,53\times0,88}{2}\approx0,68\ m^2$ \newline
+
+            $V_y=\frac{(g+q)A_y}{\ell_x}\approx\frac{6,75\times0,68}{1,53}\approx2,98\ kN/m$ \newline
+
+            \input{assets/images/L3-4-viga-balanco}
+
+            $g_m = 1 \ kN/m$ Valor estimado da mureta \cite[item 6.3]{nbr6120} 
+
+            $q_v = 2 \ kN/m$ carga acidental \cite[tabela 10, índice j]{nbr6120} 
+
+            $q_h = 1 \ kN/m$ \cite[tabela 12]{nbr6120} \newline
+
+            $V'_x=(g+q)\ell_x+g_m+q\to g_m=1,1 \ h_m\newline V'_x\approx6,75\times1,53+1,1\times 1 +2\newline V'_x\approx13,43\ kN/m$ \newline
+
+            \fbox{L4}
+
+            \item Método tabelado
+
+            \fbox{L1}
+    
+            \input{assets/images/L1-4}
+
+            Laje tipo 3 \cite[tabela 2.2b]{tabelalajes}
+
+            Por interpolação linear:
+
+            \begin{table}[h]
+                \centering
+                \color{gray!80!black} 
+                \begin{tabular}{l l l l l}
+                    $\lambda$ & $v_x$ & $v'_x$ & $v_y$ & $v'_y$ \\
+                    1,86 & 3,17 & 4,64 & 2,17 & 2,17
+                \end{tabular}
+                %\caption{Caption}
+                %\label{tab:placeholder}
+            \end{table}
+
+            $V_x = v_x(g+q)\frac{l_x}{10}= 3,17 (6,75) \frac{2,56}{10}= 5,47 \ kN/m$
+
+            $V'_x = v'_x(g+q)\frac{l_x}{10}= 8,01 \ kN/m$
+
+            $V_y = v_y(g+q)\frac{l_x}{10}= 3,75 \ kN/m$
+
+            $V'_y = v'_y(g+q)\frac{l_x}{10}= 5,48 \ kN/m$
+    
+            \fbox{L2}
+    
+            \input{assets/images/L2-4}
+
+            Laje tipo 2B \cite[tabela 2.2a]{tabelalajes}
+
+            Por interpolação linear:
+
+            \begin{table}[h]
+                \centering
+                \color{gray!80!black} 
+                \begin{tabular}{l l l l}
+                    $\lambda$ & $v_x$ & $v'_x$ & $v_y$  \\
+                    1,85 & 3,47 & 5,09 & 1,83 
+                \end{tabular}
+                %\caption{Caption}
+                %\label{tab:placeholder}
+            \end{table}
+
+            $V_x = v_x(g+q)\frac{l_x}{10}= 10,45 \ kN/m$
+
+            $V'_x = v'_x(g+q)\frac{l_x}{10}= 15,33 \ kN/m$
+
+            $V_y = v_y(g+q)\frac{l_x}{10}= 5,51 \ kN/m$
+
+            %$V'_y = v'_y(g+q)\frac{l_x}{10}= 5,51 \ kN/m$
+    
+            \fbox{L3}
+    
+            \input{assets/images/L3-4}
+
+            \begin{observacao}
+                Não dá para fazer por tabela, tem que ser por charneiras plásticas.
+            \end{observacao}
+    
+            \fbox{L4}
+    
+            \input{assets/images/L4-4}
+
+            Laje tipo 3 \cite[tabela 2.2b]{tabelalajes}
+
+            Por interpolação linear:
+
+            \begin{table}[h]
+                \centering
+                \color{gray!80!black} 
+                \begin{tabular}{l l l l l}
+                    $\lambda$ & $v_x$ & $v'_x$ & $v_y$ & $v'_y$ \\
+                    1,17 & 2,48 & 3,62 & 2,17 & 3,17
+                \end{tabular}
+                %\caption{Caption}
+                %\label{tab:placeholder}
+            \end{table}
+
+            $V_x = v_x(g+q)\frac{l_x}{10}= 7,96 \ kN/m$
+
+            $V'_x = v'_x(g+q)\frac{l_x}{10}= 11,64 \ kN/m$
+
+            $V_y = v_y(g+q)\frac{l_x}{10}= 6,97 \ kN/m$
+
+            $V'_y = v'_y(g+q)\frac{l_x}{10}= 10,19 \ kN/m$
+            
+        \end{enumerate}
+
+    \end{enumerate}
+\end{resposta}

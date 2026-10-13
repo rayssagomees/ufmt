@@ -1,0 +1,63 @@
+\begin{figure}[H]
+    \centering
+\begin{tikzpicture}[
+    scale=1.5,
+    cota/.style={<->, >=stealth, thin, gray!80!black},  % Estilo das linhas de cota
+    retangulo/.style={draw=gray!80!black, thick},        % Estilo do retângulo
+    chamada/.style={gray!60, thin, dashed},              % Linhas de chamada/extensão
+    eixo/.style={->, >=stealth, thick, gray!80!black}   % Estilo dos eixos x e y
+]
+
+    % --- Parâmetros de Dimensão ---
+    \def\wE{2} % Largura do retângulo esquerdo
+    \def\hE{1} % Altura do retângulo esquerdo
+    
+    \def\wD{1} % Largura do retângulo direito (menor)
+    \def\hD{2} % Altura do retângulo direito (menor)
+    
+    % --- Coordenadas ---
+    % Topo comum em y = \hE
+    \coordinate (A_E) at (0, 0);                 % Canto inf. esq. do esquerdo
+    \coordinate (B_E) at (\wE, 0);               % Canto inf. dir. do esquerdo
+    \coordinate (C_E) at (\wE, \hE);             % Canto sup. dir. do esquerdo
+    \coordinate (D_E) at (0, \hE);               % Canto sup. esq. do esquerdo
+
+    \coordinate (A_D) at (\wE, \hE - \hD);       % Canto inf. esq. do direito
+    \coordinate (B_D) at (\wE + \wD, \hE - \hD); % Canto inf. dir. do direito
+    \coordinate (C_D) at (\wE + \wD, \hE);        % Canto sup. dir. do direito
+
+    % --- 1. Desenho dos Retângulos (Alinhados no topo em y = \hE) ---
+    \draw[retangulo] (A_E) rectangle (C_E); % Retângulo da esquerda
+    \draw[retangulo] (A_D) rectangle (C_D); % Retângulo da direita
+    \draw[retangulo, black, line width=3pt] (C_E) rectangle (B_E); 
+    %\draw[retangulo, black, line width=3pt] (A_E) rectangle (B_E); 
+
+    % --- 2. Números nos centros dos retângulos ---
+    \node[font=\large\bfseries, gray!80!black] at ($(A_E)!0.5!(C_E)$) {L1};
+    \node[font=\large\bfseries, gray!80!black] at ($(A_D)!0.5!(C_D)$) {L2};
+
+    % --- 2. Eixos de Coordenadas x e y (Canto inf. esq. do retângulo da esquerda) ---
+    %\draw[eixo] (0.2, 0.2) -- (0.8, 0.2) node[above, font=\small\bfseries] {$x$};
+    %\draw[eixo] (0.2, 0.2) -- (0.2, 0.8) node[right, font=\small\bfseries] {$y$};
+
+    % --- 3. Cotas Horizontais Inferiores (Eixo único com comprimentos separados) ---
+    \def\offsetH{1.5} % Distância do nível inferior do retângulo da esquerda
+    \def\yCota{-\offsetH}
+
+    % Linhas de chamada verticais estendidas até a cota
+    %\draw[chamada] (A_E) -- (0, \yCota - 0.15);
+    %\draw[chamada] (B_E) -- (\wE, \yCota - 0.15);
+    %\draw[chamada] (B_D) -- (\wE + \wD, \yCota - 0.15);
+
+    % Cota do Retângulo da Esquerda (b1)
+    \draw[cota] (0, \yCota) -- (\wE, \yCota) 
+        node[midway, below=3pt, font=\small] {$476 \ \text{ cm}$};
+
+    % Cota do Retângulo da Direita (b2)
+    \draw[cota] (\wE, \yCota) -- (\wE + \wD, \yCota) 
+        node[midway, below=3pt, font=\small] {$446 \ \text{ cm}$};
+
+\end{tikzpicture}
+    %\caption{Dois retângulos alinhados no topo com cotas separadas na base}
+    %\label{fig:retangulos_alinhados}
+\end{figure}

@@ -1,0 +1,72 @@
+\NeedsTeXFormat{LaTeX2e}
+%\ProvidesPackage{Page}[Estilo de página ABNT]
+\ProvidesPackage{assets/style/capa}
+\ProvidesPackage{assets/style/folha-de-rosto}
+\ProvidesPackage{assets/style/page}
+
+% MARGEM
+\setlrmarginsandblock{3cm}{2cm}{*}
+\setulmarginsandblock{3cm}{2cm}{*}
+
+% Aplica, calcula e corrige o layout do memoir automaticamente
+\checkandfixthelayout
+
+% TEXTO PRIMÁRIO
+\renewcommand{\ABNTEXchapterfont}{\sffamily\bfseries}
+\renewcommand{\ABNTEXchapterfontsize}{\Large}
+
+% TEXTO SECUNDÁRIO
+\renewcommand{\ABNTEXsectionfont}{\sffamily}
+\renewcommand{\ABNTEXsectionfontsize}{\Large}
+
+% TEXTO TERCIÁRIO
+\renewcommand{\ABNTEXsubsectionfont}{\sffamily\normalfont}
+\renewcommand{\ABNTEXsubsectionfontsize}{\large}
+
+% TEXTO QUATERNÁRIO
+\renewcommand{\ABNTEXsubsubsectionfont}{\sffamily\itshape}
+\renewcommand{\ABNTEXsubsubsectionfontsize}{\normalsize}
+
+% SUMÁRIO PONTILHADO
+\renewcommand{\cftdotsep}{.8}
+
+% =========================================================================
+% 3. ESPAÇAMENTO DOS TÍTULOS (Igual ao espaçamento de 1,5 do texto body)
+% =========================================================================
+
+% --- Espaçamento para as Seções Primárias (\section) ---
+\setbeforesecskip{-1.0\onelineskip} % 1 linha em branco antes do título
+\setaftersecskip{1.0\onelineskip}   % 1 linha em branco depois do título
+
+% --- Espaçamento para as Seções Secundárias (\subsection) ---
+\setbeforesubsecskip{-1.0\onelineskip}
+\setaftersubsecskip{1.0\onelineskip}
+
+% --- Espaçamento para as Seções Terciárias (\subsubsection) ---
+\setbeforesubsubsecskip{-1.0\onelineskip}
+\setaftersubsubsecskip{1.0\onelineskip}
+
+% --- Espaçamento para as Divisões de 5º Nível (\subsubsubsection / \paragraph) ---
+\setbeforeparaskip{-1.0\onelineskip}
+\setafterparaskip{1.0\onelineskip}
+
+% --- Espaçamento para os Capítulos (\chapter) ---
+\setlength{\beforechapskip}{0pt}            % Alinhado ao topo da mancha gráfica
+\setlength{\afterchapskip}{1.0\onelineskip}  % 1 linha em branco de espaçamento após o título
+
+% =========================================================================
+% CONFIGURAÇÃO DE PARÁGRAFOS (PADRÃO ABNT)
+% =========================================================================
+
+% 1. Define o tamanho do recuo da primeira linha (1,5 cm é o padrão recomendado)
+\setlength{\parindent}{1.5cm}
+
+% 2. Define o espaçamento entre parágrafos como ZERO 
+% (A ABNT exige que a separação seja feita apenas pelo recuo, sem linhas em branco extras)
+\setlength{\parskip}{0.0cm}
+
+% 3. Garante que o primeiro parágrafo após um título também seja indentado
+% (O LaTeX padrão não indenta o primeiro parágrafo, mas a ABNT exige)
+\usepackage{indentfirst}
+
+\endinput

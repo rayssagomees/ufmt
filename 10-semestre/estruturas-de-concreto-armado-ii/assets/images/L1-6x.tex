@@ -1,0 +1,80 @@
+%\begin{multicols}{2}
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[
+        scale=1.5,
+        cota/.style={<->, >=stealth, thin, gray!80!black},
+        chamada/.style={gray!60, thin, dashed},
+        linhaInferior/.style={thick, red!80!black},
+        linhaSuperior/.style={thick, red!80!black},
+        curvaMomento/.style={thick, draw=orange!80!black}
+    ]
+    
+        % --- Parâmetros ---
+        \def\L{4.0}             % Comprimento total lx
+        \def\Lthreequarter{1.0} % 3/4 de lx (3.0 cm)
+        \def\ySup{0.35}         % Posição da linha superior
+        \def\yInf{-0.65}        % Posição da linha inferior
+        \def\offsetCota{0.65}    % Posição do eixo de cotas
+    
+        % --- Coordenadas ---
+        \coordinate (A) at (0, 0);          % Extremidade esquerda (x=0)
+        \coordinate (B) at (\L, 0);         % Engaste (x=lx)
+        \coordinate (P34) at (\Lthreequarter, 0); % Ponto de inflexão em 3/4 lx
+    
+        % 1. Parábola do Diagrama de Momento M(x)
+        % Preenchimento do trecho abaixo da viga (0 a 3/4 lx)
+        \path[fill=white] 
+            plot[domain=0:\Lthreequarter, samples=50] (\x, {-0.4 * \x + 0.1333 * \x*\x})
+            -- (\Lthreequarter, 0) -- (0,0) -- cycle;
+        
+        % Preenchimento do trecho acima da viga (3/4 lx a lx)
+        \path[fill=white] 
+            plot[domain=\Lthreequarter:\L, samples=30] (\x, {-0.4 * \x + 0.1333 * \x*\x})
+            -- (\L, 0) -- (\Lthreequarter, 0) -- cycle;
+    
+        % Linha contínua do Diagrama de Momento
+        \draw[thick, black] 
+            plot[domain=0:\L, samples=60] (\x, {-0.4 * (4 - \x) + 0.1333 * (4 - \x)*(4 - \x)});
+    
+        \node[font=\small, black] at (2.5, 0.18) {$M_x$};
+
+        \node[font=\small, black] at (0.25, 0.18) {$M'_x$};
+    
+        % 2. Linha Principal da Viga
+        \draw[line width=1pt, gray!70!black] (A) -- (B);
+    
+        % 3. Engaste na Extremidade Direita (x = lx)
+        \draw[thick] (0, -0.8) -- (0, 0.8);
+        \path[pattern={Lines[angle=45, distance=4pt, line width=0.5pt]}, pattern color=gray!60] 
+            (0, -0.8) rectangle (0 - 0.3, 0.8);
+    
+        % 4. Linha Superior (A partir de 3/4 de lx até o Engaste)
+        \draw[linhaSuperior] (0, \ySup + 0.3) -- (\Lthreequarter, \ySup + 0.3);
+        %\draw[linhaSuperior] (\Lthreequarter, \ySup-0.08) -- (\Lthreequarter, \ySup+0.08);
+        \node[above, font=\small, red!80!black] at (0.5, \ySup + 0.4) {$A'_{sx}$};
+    
+        % 5. Linha Inferior (De uma extremidade a outra: 0 até lx)
+        \draw[linhaInferior] (0, \yInf) -- (\L, \yInf);
+        %\draw[linhaInferior] (0, \yInf-0.08) -- (0, \yInf+0.08);
+        %\draw[linhaInferior] (\L, \yInf-0.08) -- (\L, \yInf+0.08);
+        \node[below, font=\small, red!80!black] at (2.0, \yInf) {$A_{sx}$};
+    
+        % 6. Eixo de Comprimento lx e Divisão de Cotas
+        %\draw[chamada] (A) -- (0, -\offsetCota - 0.5);
+        %\draw[chamada] (P34) -- (\Lthreequarter, -\offsetCota - 0.1);
+        %\draw[chamada] (B) -- (\L, -\offsetCota - 0.5);
+    
+        %\draw[cota] (0, -\offsetCota) -- (\Lthreequarter, -\offsetCota)
+         %   node[midway, below=2pt, font=\small] {$\frac{3}{4}l_x$};
+    
+        %\draw[cota] (\Lthreequarter, -\offsetCota) -- (\L, -\offsetCota)
+         %   node[midway, below=2pt, font=\small] {$\frac{1}{4}l_x$};
+    
+        \draw[cota] (0, -\offsetCota - 0.4) -- (\L, -\offsetCota - 0.4)
+            node[midway, below=2pt, font=\small] {$l_x$};
+    
+    \end{tikzpicture}
+    %\caption{Caption}
+    %\label{fig:placeholder}
+\end{figure}

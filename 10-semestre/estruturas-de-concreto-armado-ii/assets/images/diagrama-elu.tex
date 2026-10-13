@@ -1,0 +1,163 @@
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[
+    scale=1,
+    cota/.style={<->, >=stealth, thin, black},
+    chamada/.style={gray!50, thin, dashed},
+    deformacao/.style={line width=1.3pt, gray!80!black},
+    tensao/.style={line width=1.3pt, red!80!black, fill=red!10},
+    eixo/.style={dash dot, thin, gray!70!black},
+    armadura/.style={draw=black, fill=black}
+]
+
+    % --- Parâmetros Geométricos ---
+    \def\bw{2}           % Largura bw
+    \def\h{4.0}          % Altura h
+    \def\xn{2.0}         % Posição da linha neutra x
+    \def\yAs{0.4}        % Centro de As (tração)
+    \def\dl{0.45}        % d' (cobrimento até centro de A's)
+    \def\eCu{0.9}        % Escala gráfica de epsilon_cu
+    \def\gap{1.5}        % Distância entre diagramas
+
+    % --- Valores derivados (calculados numericamente) ---
+    \pgfmathsetmacro{\d}{\h-\yAs}                  % Altura útil d
+    \pgfmathsetmacro{\yLN}{\h-\xn}                 % Cota Y da Linha Neutra
+    \pgfmathsetmacro{\yAsl}{\h-\dl}                % Cota Y de A's
+    \pgfmathsetmacro{\yBloco}{\h-0.8*\xn}          % Base do bloco y = 0,8x
+    \pgfmathsetmacro{\yRcd}{\h-0.4*\xn}            % Posição de Rcd
+    \pgfmathsetmacro{\eS}{\eCu*(\yLN-\yAs)/\xn}    % Escala gráfica de epsilon_s (compatível com a L.N.)
+    \pgfmathsetmacro{\eSl}{\eCu*(\yAsl-\yLN)/\xn}  % Escala gráfica de epsilon_s' (compressão, para a esquerda)
+
+    % Localização X de cada diagrama
+    \def\xSec{0}
+    \pgfmathsetmacro{\xDef}{\bw + \gap}
+    \pgfmathsetmacro{\xTen}{\xDef + 2.2 + \gap}
+
+    % ==========================================
+    % 1. SEÇÃO TRANSVERSAL DE CONCRETO ARMADO
+    % ==========================================
+    \draw[thick, fill=white] (\xSec, 0) rectangle (\xSec + \bw, \h);
+
+    % Armadura As (tração, inferior)
+    \coordinate (As1) at (\xSec + 0.6, \yAs);
+    \coordinate (As2) at (\xSec + \bw - 0.6, \yAs);
+    \draw[armadura] (As1) circle (0.12);
+    \draw[armadura] (As2) circle (0.12);
+    \node[above=3pt, font=\small\bfseries] at ($(As1)!0.5!(As2)$) {$A_s$};
+
+    % Armadura A's (compressão, superior)
+    \coordinate (Asl1) at (\xSec + 0.6, \yAsl);
+    \coordinate (Asl2) at (\xSec + \bw - 0.6, \yAsl);
+    \draw[armadura] (Asl1) circle (0.12);
+    \draw[armadura] (Asl2) circle (0.12);
+    \node[below=3pt, font=\small\bfseries] at ($(Asl1)!0.5!(Asl2)$) {$A'_s$};
+
+    % Estribo
+    \draw[thick, rounded corners=2pt] (\xSec + 0.25, 0.25) rectangle (\xSec + \bw - 0.25, \h - 0.25);
+
+    % Momento fletor de cálculo M_d (seta curva)
+    \draw[->, >=stealth, line width=1.4pt]
+        ({\xSec+\bw+0.5*cos(-55)}, {0.9+0.5*sin(-55)})
+        arc[start angle=-55, end angle=55, radius=0.5];
+    \node[right=1pt, font=\small\bfseries] at (\xSec+\bw+0.5, 0.9) {$M_d$};
+
+    % ==========================================
+    % 2. DIAGRAMA DE DEFORMAÇÕES (\epsilon)
+    % ==========================================
+    % Eixo de Referência
+    \draw[thick] (\xDef, 0) -- (\xDef, \h);
+
+    % Linha Neutra
+    \draw[eixo] (\xSec - 0.2, \yLN) -- (\xTen + 3.6, \yLN) node[right, font=\footnotesize\bfseries] {L.N.};
+
+    % Linha de Deformação
+    \draw[deformacao] (\xDef - \eCu, \h) -- (\xDef + \eS, \yAs);
+
+    % Preenchimento Suave
+    %\fill[gray!10, opacity=0.5] (\xDef, \h) -- (\xDef - \eCu, \h) -- (\xDef, \yLN) -- cycle;
+    %\fill[gray!10, opacity=0.5] (\xDef, \yLN) -- (\xDef + \eS, \yAs) -- (\xDef, \yAs) -- cycle;
+
+    % Deformação no concreto (\epsilon_cu)
+    \draw[->, >=stealth, thick, gray!80!black] (\xDef, \h) -- (\xDef - \eCu, \h);
+    \node[above=2pt, font=\small\bfseries, gray!80!black] at (\xDef - 0.7, \h) {$\varepsilon_{cu}$};
+
+    % Deformação na armadura comprimida (\epsilon'_s)
+    \draw[->, >=stealth, thick, gray!80!black] (\xDef, \yAsl) -- (\xDef - \eSl, \yAsl);
+    \node[right=3pt, font=\small\bfseries, gray!80!black] at (\xDef, \yAsl) {$\varepsilon'_s$};
+
+    % Deformação na armadura tracionada (\epsilon_s)
+    \draw[->, >=stealth, thick, gray!80!black] (\xDef, \yAs) -- (\xDef + \eS, \yAs)
+        node[right=2pt, font=\small\bfseries, gray!80!black] {$\varepsilon_s$};
+
+    \node[below=22pt, font=\small\bfseries] at (\xDef, 0) {ELU};
+
+    % ==========================================
+    % 3. DIAGRAMA DE TENSÕES SIMPLIFICADO (NBR 6118)
+    % ==========================================
+    % Eixo de Referência
+    \draw[thick] (\xTen, 0) -- (\xTen, \h);
+
+    % Bloco Retangular Simplificado (Profundidade y = 0,8 x)
+    \fill[red!15] (\xTen, \h) rectangle (\xTen + 1.6, \yBloco);
+    \draw[tensao] (\xTen, \h) -- (\xTen + 1.6, \h) -- (\xTen + 1.6, \yBloco) -- (\xTen, \yBloco);
+
+    % Força de compressão do concreto Rcd
+    \draw[->, >=stealth, line width=1.5pt, black] (\xTen + 2.3, \yRcd) -- (\xTen + 0.1, \yRcd)
+        node[pos=0, right=2pt, font=\small\bfseries] {$R_{cd}$};
+
+    % Força de compressão da armadura R's
+    \draw[->, >=stealth, line width=1.5pt, black] (\xTen + 2.3, \yAsl) -- (\xTen + 0.1, \yAsl)
+        node[pos=0, right=2pt, font=\small\bfseries] {$R'_s$};
+
+    % Força de tração da armadura Rs
+    \draw[->, >=stealth, line width=1.5pt, black] (\xTen, \yAs) -- (\xTen + 2.2, \yAs)
+        node[pos=1, right=2pt, font=\small\bfseries] {$R_s$};
+
+    % Tensão no concreto
+    \node[above=2pt, font=\small\bfseries, black] at (\xTen + 0.8, \h) {$\sigma_{cd}$};
+
+    \node[below=22pt, font=\small\bfseries] at (\xTen + 0.8, 0) {Tensões};
+
+    % ==========================================
+    % 4. COTAS DE DIMENSÃO
+    % ==========================================
+    \def\offLeft{1.2}
+
+    % Base bw
+    \draw[cota] (\xSec, -0.4) -- (\xSec + \bw, -0.4)
+        node[midway, fill=white, inner sep=1.5pt, font=\small\bfseries] {$b_w$};
+
+    % Altura x (Linha Neutra)
+    \draw[chamada] (\xDef, \h) -- (\xDef - \offLeft, \h);
+    \draw[chamada] (\xDef, \yLN) -- (\xDef - \offLeft, \yLN);
+    \draw[cota] (\xDef - \offLeft + 0.1, \yLN) -- (\xDef - \offLeft + 0.1, \h)
+        node[midway, left=1pt, font=\small\bfseries] {$x$};
+
+    % Altura do Bloco y = 0,8 x
+    %\draw[chamada] (\xTen + 1.6, \yBloco) -- (\xTen + 3.4, \yBloco);
+    %\draw[chamada] (\xTen + 1.6, \h) -- (\xTen + 3.4, \h);
+    \draw[cota] (\xTen + 3.3, \yBloco) -- (\xTen + 3.3, \h)
+        node[midway, right=1pt, font=\small\bfseries] {$y = \lambda\ x$};
+
+    % Braço de alavanca z (entre Rcd e Rs)
+    \draw[chamada] (\xTen, \yRcd) -- (\xTen - 0.5, \yRcd);
+    \draw[chamada] (\xTen, \yAs) -- (\xTen - 0.5, \yAs);
+    \draw[cota] (\xTen - 0.4, \yAs) -- (\xTen - 0.4, \yRcd)
+        node[midway, left=1pt, font=\small\bfseries] {$z$};
+
+    % Altura útil d
+    \draw[cota] (\xSec - 0.8, \yAs) -- (\xSec - 0.8, \h)
+        node[midway, left=1pt, font=\small\bfseries] {$d$};
+
+    % Altura total h
+    \draw[cota] (\xSec - 1.4, 0) -- (\xSec - 1.4, \h)
+        node[midway, left=1pt, font=\small\bfseries] {$h$};
+
+    % Cobrimento d'
+    \draw[cota] (\xSec - 0.35, \yAsl) -- (\xSec - 0.35, \h)
+        node[midway, left=1pt, font=\scriptsize\bfseries] {$d'$};
+
+    \end{tikzpicture}
+    %\caption{dfdf}
+    %\label{sfdf}
+\end{figure}

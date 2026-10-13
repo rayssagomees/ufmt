@@ -1,0 +1,226 @@
+\aula{01b}{20}{agosto}{2026}
+
+\chapter*{Exercício}
+
+\begin{enumerate}
+    \item Considerando a planta de forma estrutural apresentada, pede-se:
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=1\linewidth]{assets/images/forma-pavimento-tipo.png}
+        \caption{Forma pavimento tipo.}
+        \label{fig:forma-pavimento-tipo}
+    \end{figure}
+    
+    \begin{itemize}
+        \item classificar as lajes em armadura me uma ou duas direções;
+        \item indicar a vinculação de cada uma das lajes;
+        \item considerando carregamento permanente $g=3,5 \ kN/m^2$ (peso próprio da laje + peso próprio do piso e revestimentos) e carregamento variável normal $q=3 \ kN/m^2$ (edifícios comerciais), calcular as reações de apoio das lajes.
+        \item considerando carregamento permanente $g=3,5 \ kN/m^2$ e carregamento variável normal $q=3\ kN/m^2$, calcular e compatibilizar os momentos atuando nas lajes.
+    \end{itemize}
+\end{enumerate}
+
+\begin{resposta}
+    \begin{enumerate}
+        \item Determinação dos vãos efetivos e classificação
+
+        \begin{observacao}
+            \begin{math}
+                l_x \ \text{menor dimensão} \newline
+                l_x \ \text{maior dimensão}
+            \end{math}
+        \end{observacao}
+
+        \begin{observacao}
+            \begin{math}
+            b_{w_0} \ \text{zero é a indicação da viga}
+            \end{math}
+        \end{observacao}
+
+        \begin{observacao}
+            \begin{math}
+                \lambda \leq 2 \ \text{armada em duas direções} \newline
+                \lambda > 2 \ \text{armada em uma direção}
+            \end{math}
+        \end{observacao}
+
+        \fbox{L1}
+
+        \input{assets/images/L1-1}
+
+        \begin{enumerate}
+        
+        \begin{multicols}{2}
+            \item Direção horizontal
+
+            $l_0= 470 \ cm$
+
+            $a_1 \leq \begin{cases}
+                \frac{b_{w_4}}{2} = \frac{20}{2}=10 \ cm \\
+                0,3h = 0,3 \times 10 = 3 \ cm
+            \end{cases}$
+
+            $a_2 \leq \begin{cases}
+                \frac{b_{w_5}}{2} = 10 \ cm \\
+                0,3 h = 3 \ cm
+            \end{cases}$
+
+            $l_{ef}= l_0 +a_1+a_2 = 476 \ cm$
+            
+            \item Direção vertical
+
+            $l_0= 000 \ cm$
+
+            $a_1 \leq \begin{cases}
+                \frac{b_{w_1}}{2} = 10 \ cm \\
+                0,3h = 3 \ cm
+            \end{cases}$
+
+            $a_2 \leq \begin{cases}
+                \frac{b_{w_2}}{2} = 10 \ cm \\
+                0,3 h = 3 \ cm
+            \end{cases}$
+
+            $l_{ef}= l_0 +a_1+a_2 = 256 \ cm$
+        \end{multicols}
+
+            $\lambda = \frac{l_y}{l_x} = \frac{476}{256} \approx 1,86 \leq 2 \to$ armada em duas direções
+            
+        \end{enumerate}
+
+        \fbox{L2}
+
+        \input{assets/images/L2-1}
+
+        \begin{enumerate}
+        \begin{multicols}{2}
+            \item Direção horizontal
+
+            $l_0= 440 \ cm$
+
+            $a_1 \leq \begin{cases}
+                \frac{b_{w_1}}{2} = 10 \ cm \\
+                0,3h = 3 \ cm
+            \end{cases}$
+
+            $a_2 \leq \begin{cases}
+                \frac{b_{w_3}}{2} = 10 \ cm \\
+                0,3 h = 3 \ cm
+            \end{cases}$
+
+            $l_{ef}= l_0 +a_1+a_2 = 446 \ cm$
+            
+            \item Direção vertical
+
+            $l_0= 820 \ cm$
+
+            $a_1 \leq \begin{cases}
+                \frac{b_{w_5}}{2} = 10 \ cm \\
+                0,3h = 3 \ cm
+            \end{cases}$
+
+            $a_2 \leq \begin{cases}
+                \frac{b_{w_6}}{2} = \frac{25}{2} = 12,5 \ cm \\
+                0,3 h = 3 \ cm
+            \end{cases}$
+
+            $l_{ef}= l_0 +a_1+a_2 = 826 \ cm$
+        \end{multicols}
+
+            $\lambda = \frac{l_y}{l_x} = \frac{826}{446} \approx 1,85 \leq 2 \to$ armada em duas direções
+            
+        \end{enumerate}
+
+        \paracasa
+
+        \fbox{L3}
+
+        \input{assets/images/L3-1}
+
+        \begin{enumerate}
+        \begin{multicols}{2}
+            \item Direção horizontal
+
+            $l_0= 150 \ cm$
+
+            $a_1 \leq \begin{cases}
+                \frac{b_{w_4}}{2} = 10 \ cm \\
+                0,3h = 3 \ cm
+            \end{cases}$
+
+            %$a_2 \le \begin{cases}
+            %    \frac{b_w}{2} = 00 \ cm \\
+            %    0,3 h = 00 \ cm
+            %\end{cases}$
+
+            \vspace{2cm}
+
+            $l_{ef}= l_0 +a_1+a_2 = 153 \ cm$
+            
+            \item Direção vertical
+
+            $l_0= 550\ cm$
+
+            $a_1 \leq \begin{cases}
+                \frac{b_{w_2}}{2} = 10 \ cm \\ 
+                0,3h = 3 \ cm
+            \end{cases}$
+
+            $a_2 \leq \begin{cases}
+                \frac{b_{w_3}}{2} = 10 \ cm \\
+                0,3 h = 3 \ cm
+            \end{cases}$
+
+            $l_{ef}= l_0 +a_1+a_2 = 556 \ cm$
+        \end{multicols}
+
+            $\lambda = \frac{l_y}{l_x} = \frac{556}{153} \approx 3,63 > 2 \to$ armada em uma direção
+            
+        \end{enumerate}
+
+        %\newpage
+
+        \fbox{L4}
+
+        \input{assets/images/L4-1}
+
+        \begin{enumerate}
+        \begin{multicols}{2}
+            \item Direção horizontal
+
+            $l_0= 470 \ cm$
+
+            $a_1 \leq \begin{cases}
+                \frac{b_{w_2}}{2} = 10 \ cm \\
+                0,3h = 3 \ cm
+            \end{cases}$
+
+            $a_2 \leq\begin{cases}
+                \frac{b_{w_3}}{2} = 10 \ cm \\
+                0,3 h = 3 \ cm
+            \end{cases} $
+
+            $l_{ef}= l_0 +a_1+a_2 = 476 \ cm$
+            
+            \item Direção vertical
+
+            $l_0= 550 \ cm$
+
+            $a_1 \leq \begin{cases}
+                \frac{b_{w_4}}{2} = 10 \ cm \\
+                0,3h = 3 \ cm
+            \end{cases}$
+
+            $a_2 \leq \begin{cases}
+                \frac{b_{w_5}}{2} = 10 \ cm \\
+                0,3 h = 3 \ cm
+            \end{cases}$
+
+            $l_{ef}= l_0 +a_1+a_2 = 556 \ cm$
+        \end{multicols}
+
+            $\lambda = \frac{l_y}{l_x} = \frac{556}{476} \approx 1,17 \leq 2 \to$ armada em duas direções
+            
+        \end{enumerate}
+    \end{enumerate}
+\end{resposta}

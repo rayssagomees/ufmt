@@ -1,0 +1,40 @@
+\begin{figure}[H]
+    \centering
+\begin{tikzpicture}[
+    scale=1.5,
+    cota/.style={<->, >=stealth, thin, gray!80!black},  % Estilo das linhas de cota
+    retangulo/.style={draw=gray!80!black, thick},        % Estilo do retângulo
+    eixo/.style={->, >=stealth, thick, gray!80!black}   % Estilo dos eixos x e y
+]
+
+    % 1. Coordenadas do retângulo
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (2, 0);
+    \coordinate (C) at (2, 3);
+    \coordinate (D) at (0, 3);
+
+    % 2. Hachura no lado esquerdo (fora do retângulo, sem borda)
+    % Vai de x = -0.3 até 0, ao longo de toda a altura (y = 0 até 3)
+    \path[pattern={Lines[angle=45, distance=6pt, line width=0.5pt]}, pattern color=gray!60] (-0.3, 0) rectangle (0, 3);
+
+    % 3. Desenho do Retângulo
+    \draw[retangulo] (A) rectangle (C);
+
+    % 4. Eixos de Coordenadas x e y (Origem no canto inferior esquerdo, dentro do retângulo)
+    \draw[eixo] (0.2, 0.2) -- (0.8, 0.2) node[above, font=\small\bfseries] {$x$};
+    \draw[eixo] (0.2, 0.2) -- (0.2, 0.8) node[right, font=\small\bfseries] {$y$};
+
+    % --- COTA HORIZONTAL (Texto abaixo da linha) ---
+    \def\offsetH{0.4}
+    \draw[cota] (0, -\offsetH) -- (2, -\offsetH) 
+        node[midway, below=3pt, font=\small] {$446 \text{ cm}$};
+
+    % --- COTA VERTICAL (Afastada para não sobrepor a hachura externa) ---
+    \def\offsetV{0.6}
+    \draw[cota] (-\offsetV, 0) -- (-\offsetV, 3) 
+        node[midway, left=3pt, font=\small, rotate=90, anchor=south] {$826 \text{ cm}$};
+
+\end{tikzpicture}
+    %\caption{Caption}
+    %\label{fig:placeholder}
+\end{figure}

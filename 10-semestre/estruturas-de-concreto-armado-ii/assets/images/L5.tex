@@ -1,0 +1,88 @@
+\begin{figure}[H]
+    \centering
+\begin{tikzpicture}[
+    scale=1.2,
+    retangulo/.style={draw=gray!80!black, thick},
+    rotuloLetra/.style={font=\small\bfseries, black},
+    rotuloNumero/.style={font=\normalsize\bfseries, gray!90!black}
+]
+
+    % --- Definição dos Parâmetros de Dimensão ---
+    \def\wCentro{3.0}       % Largura dos retângulos centrais (1 e 2)
+    \def\hCima{1.8}         % Altura do retângulo superior (1)
+    \def\hBaixo{2.0}        % Altura do retângulo inferior (2)
+    
+    \def\wDir{2.0}          % Largura do retângulo da direita (3)
+    \def\hDir{\hCima + \hBaixo} % Altura total combinada do retângulo da direita (3.8)
+    
+    \def\wEsq{1.25}          % Largura do retângulo da esquerda (4)
+    \def\hEsq{\hBaixo}      % Altura do retângulo da esquerda (2.0)
+
+    % --- Coordenadas ---
+    % Retângulo 2 (Baixo)
+    \coordinate (A2) at (0, 0);
+    \coordinate (B2) at (\wCentro, 0);
+    \coordinate (C2) at (\wCentro, \hBaixo);
+    \coordinate (D2) at (0, \hBaixo);
+
+    % Retângulo 1 (Topo)
+    \coordinate (A1) at (0, \hBaixo);
+    \coordinate (B1) at (\wCentro, \hBaixo);
+    \coordinate (C1) at (\wCentro, \hBaixo + \hCima);
+    \coordinate (D1) at (0, \hBaixo + \hCima);
+
+    % Retângulo 3 (Direita)
+    \coordinate (A3) at (\wCentro, 0);
+    \coordinate (B3) at (\wCentro + \wDir, 0);
+    \coordinate (C3) at (\wCentro + \wDir, \hDir);
+    \coordinate (D3) at (\wCentro, \hDir);
+
+    % Retângulo 4 (Esquerda)
+    \coordinate (A4) at (-\wEsq, 0);
+    \coordinate (B4) at (0, 0);
+    \coordinate (C4) at (0, \hEsq);
+    \coordinate (D4) at (-\wEsq, \hEsq);
+
+    % --- Desenho dos Retângulos ---
+    \draw[retangulo] (A1) rectangle (C1); % Retângulo 1 (Topo)
+    \draw[retangulo] (A2) rectangle (C2); % Retângulo 2 (Baixo)
+    \draw[retangulo] (A3) rectangle (C3); % Retângulo 3 (Direita)
+    \draw[retangulo] (A4) rectangle (C4); % Retângulo 4 (Esquerda)
+
+    % --- Números no Centro de Cada Retângulo ---
+    \node[rotuloNumero] at ($(A1)!0.5!(C1)$) {L1};
+    \node[rotuloNumero] at ($(A2)!0.5!(C2)$) {L3};
+    \node[rotuloNumero] at ($(A3)!0.5!(C3)$) {L2};
+    \node[rotuloNumero] at ($(A4)!0.5!(C4)$) {L4};
+
+    % --- Letras Identificadoras em Cada Aresta (Lados) ---
+    % Retângulo 1 (Topo)
+    \node[below, rotuloLetra] at ($(D1)!0.5!(C1)$) {$V_x$}; 
+    \node[right, rotuloLetra]  at ($(D1)!0.5!(A1)$) {$V_y$}; 
+    \node[above, rotuloLetra] at ($(A1)!0.5!(B1)$) {$V'_x$};
+    \node[left, rotuloLetra] at ($(B1)!0.5!(C1)$) {$V'_y$}; 
+
+    % Retângulo L3 (Baixo)
+    \node[below, rotuloLetra] at ($(A1)!0.5!(B1)$) {$V'_y$};
+    \node[right, rotuloLetra]  at ($(D2)!0.5!(A2)$) {$V_x$}; 
+    \node[above, rotuloLetra] at ($(A2)!0.5!(B2)$) {$V_y$};
+    \node[left, rotuloLetra] at ($(B2)!0.5!(C2)$) {$V'_x$};  
+    
+    % Retângulo L2 (Direita)
+    \node[right, rotuloLetra] at ($(B1)!0.5!(C2)$) {$V'_x$}; 
+    %\node[right, rotuloLetra] at ($(B2)!0.5!(C2)$) {$g$}; 
+    \node[below, rotuloLetra] at ($(D3)!0.5!(C3)$) {$V_y$}; 
+    \node[left, rotuloLetra] at ($(C3)!0.5!(B3)$) {$V_x$}; 
+    \node[above, rotuloLetra] at ($(A3)!0.5!(B3)$) {$V_y$}; 
+
+    % Retângulo L4 (Esquerda)
+    \node[left, rotuloLetra]  at ($(D2)!0.5!(A2)$) {$V'_x$}; 
+    \node[below, rotuloLetra] at ($(D4)!0.5!(C4)$) {$V_y$}; % Aresta superior esquerda
+    %\node[right, rotuloLetra]  at ($(D4)!0.5!(A4)$) {$l$}; % Aresta esquerda
+    \node[above, rotuloLetra] at ($(A4)!0.5!(B4)$) {$V_y$}; % Aresta inferior esquerda
+    \draw[retangulo,white,dashed] (D4) rectangle (A4); % Retângulo 1 (Topo)
+
+\end{tikzpicture}
+    %\caption{Arranjo de quatro retângulos numerados com arestas identificadas por letras}
+    %\label{fig:retangulos_arestas}
+\end{figure}

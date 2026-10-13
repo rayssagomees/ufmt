@@ -1,0 +1,83 @@
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[
+        scale=1,
+        cota/.style={<->, >=stealth, thin, gray!80!black},
+        chamada/.style={gray!60, thin, dashed},
+        setaMomento/.style={->, >=stealth, line width=1.2pt, black},
+        armadura/.style={draw=black, fill=black},
+        estribo/.style={draw=black, line width=1.2pt, rounded corners=3pt}
+    ]
+
+        % --- Parâmetros ---
+        \def\bw{2.8}        % Largura da base (bw)
+        \def\h{4.2}         % Altura total (h)
+        \def\cob{0.35}      % Espessura do cobrimento (c)
+
+        % Coordenadas dos cantos da seção transversal
+        \coordinate (A) at (0, 0);
+        \coordinate (B) at (\bw, 0);
+        \coordinate (C) at (\bw, \h);
+        \coordinate (D) at (0, \h);
+
+        % 1. Seção Transversal Retangular Externa
+        \draw[thick, fill=white] (A) rectangle (C);
+
+        % 2. Estribo (Retângulo interno com cantos arredondados)
+        \draw[estribo] (\cob, \cob) rectangle (\bw - \cob, \h - \cob);
+
+        % 3. Barras de Armadura de Tração As (Inferior)
+        \def\yBarra{\cob + 0.22}
+        \coordinate (As1) at (\cob + 0.3, \yBarra);
+        \coordinate (As2) at (\bw - \cob - 0.3, \yBarra);
+
+        \draw[armadura] (As1) circle (0.1);
+        \draw[armadura] (As2) circle (0.1);
+
+        % Rótulo da Armadura As
+        \node[above, font=\small] at ($(As1)!0.5!(As2)$) {$A_s$};
+
+        % Indicação/Rótulo do Estribo
+        %\draw[->, >=stealth, thin, gray!80!black] (\bw/2 + 0.7, \h - \cob - 0.6) -- (\bw - \cob, \h - \cob - 0.6)
+            %node[left=18pt, font=\small] {Estribo};
+
+        % 4. Momento Fletor Aplicado Md (Seta Curva)
+        \draw[setaMomento] (\bw + 2.9, \h/2 + 0.2) arc (90:-90:0.5)
+            node[midway, left=2pt, font=\small] {$M_r = 120 \ kNm$};
+
+        % 5. Cotas de Dimensão (bw, h, d, c)
+        \def\offsetB{0.4}
+        \def\offsetH{0.4}
+        \def\offsetD{1.1}
+
+        % Cota da Base bw
+        %\draw[chamada] (A) -- (0, -\offsetB - 0.05);
+        %\draw[chamada] (B) -- (\bw, -\offsetB - 0.05);
+        \draw[cota] (0, -\offsetB) -- (\bw, -\offsetB)
+            node[midway, below=2pt, font=\small\bfseries] {$b_w = 30 \ cm$};
+
+        % Cota da Altura Total h (Esquerda)
+        %\draw[chamada] (D) -- (-\offsetH - 0.05, \h);
+        %\draw[chamada] (A) -- (-\offsetH - 0.05, 0);
+        \draw[cota] (0 -\offsetD, 0) -- (0 -\offsetD, \h)
+            node[midway, left=2pt, font=\small\bfseries] {$h= 45 \ cm$};
+
+        % Cota da Altura Útil d (Direita)
+        %\draw[chamada] (C) -- (\bw + \offsetD + 0.05, \h);
+        %\draw[chamada] (\bw, \yBarra) -- (\bw + \offsetD + 0.05, \yBarra);
+        \draw[cota] (0 -\offsetB, \yBarra) -- (0 -\offsetB, \h)
+            node[midway, left=2pt, font=\small\bfseries] {$d$};
+
+        % Linha de centro para indicação da altura útil d
+        %\draw[dash dot, thin, gray!80!black] (0.2, \yBarra) -- (\bw + \offsetD + 0.05, \yBarra);
+
+        % Cota do Cobrimento c (Inferior e Lateral)
+        %\draw[chamada] (0, 0) -- (0, -\offsetB - 0.6);
+        %\draw[chamada] (\cob, 0) -- (\cob, -\offsetB - 0.6);
+        %\draw[cota] (0, -\offsetB - 0.45) -- (\cob, -\offsetB - 0.45)
+            %node[midway, below=1pt, font=\footnotesize\bfseries] {$c$};
+
+    \end{tikzpicture}
+    %\caption{Seção transversal retangular com indicação do estribo, cobrimento $c$ e armadura $A_s$}
+    %\label{fig:secao_cobrimento_estribo}
+\end{figure}

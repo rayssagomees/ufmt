@@ -1,0 +1,62 @@
+
+CONVERTER DE TEX PARA STY
+
+% PREENCHER INFORMAÇÕES =================================================
+\newcommand{\universidade}{Universidade Federal de Mato Grosso}
+\newcommand{\campus}{Campus Universitário do Araguaia}
+\newcommand{\instituto}{Instituto de Ciências Exatas e da Terra}
+\newcommand{\curso}{Curso de Engenharia Civil}
+
+\newcommand{\discente}{Rayssa Carolina Gomes dos Santos}
+\newcommand{\rga}{202211741025}
+
+\newcommand{\titulotrabalho}{Pesquisa}
+
+\newcommand{\cidade}{Barra do Garças}
+\newcommand{\ano}{2026}
+
+\newcommand{\disciplina}{Mecânica dos Solos II}
+\newcommand{\docente}{Wagner Mendonça Alves Aguiar}
+
+\newcommand{\tipoDocumento}{}
+
+% CABEÇALHO COM LOGO =================================================
+\newcommand{\cabecalho}{%
+\raggedright
+\begin{tabular}{l l l}
+    %\hline 
+    \multirow{3}{*}{\includegraphics[width=1.25cm]{assets//images/ufmt-logotipo.png}} & \universidade & \hspace{6.75cm}. \\
+     & Docente: \docente & Disciplina: \disciplina \\
+    & Discente: \discente & Matrícula: \rga \\
+    %\hline
+    \vspace{.25cm}
+\end{tabular}
+}
+
+% CABEÇALHO DE PÁGINA =================================================
+\newcommand{\headerfix}{
+    \begin{multicols}{2}
+        \MakeUppercase{
+            \raggedright
+                \textbf{\tipoDocumento} \par
+                \columnbreak
+            \raggedleft
+            
+            \begin{flushright}
+                \textbf{\disciplina}
+            \end{flushright}
+        }
+    \end{multicols} 
+    \vspace{-.8cm}
+    
+    \underline{\hspace{\textwidth}} \vspace{-.5cm}
+}
+
+% AULA COM DATA =================================================
+\newcommand{\aula}[5]{
+%\newpage
+    %\begin{itemize}[label=] % \ding{70} é o código do símbolo "✦" \\\\ \hfill (Para chegar na outra extremidade)
+        %\item 
+        \textbf{Aula #1} — \textit{#2 de #3 de \ano}
+    %\end{itemize}
+}

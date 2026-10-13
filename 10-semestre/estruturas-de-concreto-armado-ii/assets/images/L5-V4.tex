@@ -1,0 +1,96 @@
+\begin{figure}[H]
+    \centering
+\begin{tikzpicture}[
+    scale=1.5,
+    cota/.style={<->, >=stealth, thin, gray!80!black},
+    chamada/.style={gray!60, thin, dashed},
+    setaCarga/.style={->, >=stealth, thin, black},
+    setaCarga2/.style={->, >=stealth, thin, black},
+    setaCarga3/.style={->, >=stealth, thin, black}
+]
+
+    % --- Parâmetros ---
+    \def\L{3.0}           % Comprimento de cada vão (Vão 1: 0 a 3, Vão 2: 3 a 6)
+    \def\hCargaUm{0.5}    % Altura da 1ª camada (carga uniforme contínua)
+    \def\hCargaDois{1.1}  % Altura da 2ª camada (separada por vão)
+    \def\hCargaTres{1.7}  % Altura da 3ª camada (igual acima da segunda)
+
+    % Coordenadas dos apoios
+    \coordinate (A) at (0, 0);       % Extremidade esquerda
+    \coordinate (B) at (3, 0);       % Apoio central
+    \coordinate (C) at (6, 0);       % Extremidade direita
+
+    % 1. Desenho do Corpo da Viga
+    \draw[line width=1pt, gray!80!black] (A) -- (C);
+
+    % 2. Apoios de Segundo Gênero (Articulados / Pinos) em A, B e C
+    \foreach \pt in {A,B, C} {
+        % Triângulo do apoio
+        \draw[thick, fill=white] (\pt) -- ($(\pt) + (-0.25, -0.4)$) -- ($(\pt) + (0.25, -0.4)$) -- cycle;
+        % Base do apoio
+        \draw[thick] ($(\pt) + (-0.35, -0.4)$) -- ($(\pt) + (0.35, -0.4)$);
+        % Hachura do terreno sob o apoio
+        %\path[pattern={Lines[angle=45, distance=4pt, line width=0.5pt]}, pattern color=gray!60] 
+            %($(\pt) + (-0.35, -0.65)$) rectangle ($(\pt) + (0.35, -0.4)$);
+    }
+
+    % Rótulos dos Apoios
+    \node[below=18pt, gray!80!black, font=\small] at (A) {P6};
+    \node[below=18pt, gray!80!black, font=\small] at (B) {P4};
+    \node[below=18pt, gray!80!black, font=\small] at (C) {P1};
+
+    % 3. Primeira Carga Distribuída Uniforme (Contínua de A até C)
+    \draw[thick, black] (0, \hCargaUm) -- (6, \hCargaUm);
+    \node[right, font=\small, black] at (6, \hCargaUm) {$g$};
+    \foreach \x in {0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 3.0, 3.3, 3.6, 3.9, 4.2, 4.5, 4.8, 5.1, 5.4, 5.7, 6.0} {
+        \draw[setaCarga] (\x, \hCargaUm) -- (\x, 0.08);
+    }
+
+    % 4. Segunda Carga Distribuída (Separada no apoio central B)
+    % Vão 1 (A até B)
+    \draw[thick, black] (0, \hCargaDois) -- (2.9, \hCargaDois);
+    \node[below, font=\small, black] at (-0.4, \hCargaDois) {$V^{L4}_{x}$};
+    \foreach \x in {0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 2.9} {
+        \draw[setaCarga2] (\x, \hCargaDois) -- (\x, \hCargaUm + 0.05);
+    }
+    % Vão 2 (B até C)
+    \draw[thick, black] (3.1, \hCargaDois) -- (6, \hCargaDois);
+    \node[below, font=\small, black] at (6.4, \hCargaDois) {$V^{L1}_{y}$};
+    \foreach \x in {3.1, 3.3, 3.6, 3.9, 4.2, 4.5, 4.8, 5.1, 5.4, 5.7, 6.0} {
+        \draw[setaCarga2] (\x, \hCargaDois) -- (\x, \hCargaUm + 0.05);
+    }
+
+    % 5. Terceira Carga Distribuída (Igual e empilhada acima da segunda)
+    % Vão 1 (A até B)
+    \draw[thick, black] (0, \hCargaTres) -- (2.9, \hCargaTres);
+    \node[below, font=\small, black] at (-0.4, \hCargaTres) {$V^{'L3}_{x}$};
+    \foreach \x in {0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 2.9} {
+        \draw[setaCarga3] (\x, \hCargaTres) -- (\x, \hCargaDois + 0.05);
+    }
+    % Vão 2 (B até C)
+    %\draw[thick, black] (3.1, \hCargaTres) -- (6, \hCargaTres);
+    %\node[below, font=\small, black] at (6.4, \hCargaTres) {$V'^{L1}_{y}$};
+    %\foreach \x in {3.1, 3.3, 3.6, 3.9, 4.2, 4.5, 4.8, 5.1, 5.4, 5.7, 6.0} {
+        %\draw[setaCarga3] (\x, \hCargaTres) -- (\x, \hCargaDois + 0.05);
+    %$}
+
+    % 6. Eixo de Cotas de Comprimento
+    \def\offsetH{0.95}
+    %\draw[chamada] (A) -- (0, -\offsetH - 0.5);
+    %\draw[chamada] (B) -- (3, -\offsetH - 0.5);
+    %\draw[chamada] (C) -- (6, -\offsetH - 0.5);
+
+    % Cotas individuais dos vãos
+    \draw[cota] (0, -\offsetH) -- (3, -\offsetH)
+        node[midway, below=2pt, font=\small] {$q_1$};
+
+    \draw[cota] (3, -\offsetH) -- (6, -\offsetH)
+        node[midway, below=2pt, font=\small] {$q_2$};
+
+    % Cota total do comprimento
+    %\draw[cota] (0, -\offsetH - 0.4) -- (6, -\offsetH - 0.4)
+        %node[midway, below=2pt, font=\small] {$l = l_1 + l_2$};
+
+\end{tikzpicture}
+    %\caption{Viga contínua com três apoios articulados e três camadas de cargas distribuídas}
+\end{figure}

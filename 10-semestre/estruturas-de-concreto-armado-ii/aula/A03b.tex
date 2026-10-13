@@ -1,0 +1,132 @@
+\aula{03b}{03}{setembro}{2026}
+
+\begin{resposta}
+    \begin{enumerate}[start=7]
+        \item Compatibilização dos momentos fletores
+
+        \input{assets/images/L0-7}
+
+        \begin{enumerate}
+
+        \item Método por cálculo
+
+            \begin{enumerate}
+                \item Corte AA
+
+                \input{assets/images/7-AA}
+    
+                \begin{observacao}
+                    Não precisa fazer a compatibilização da L1 para ficar a favor da segurança.
+                \\ref{}end{observacao}
+                \end{observacao}
+    
+                $M_{med} \geq \begin{cases}
+                    \frac{M'+M'_{0}}{2} = \frac{16,04+3,61}{2}=9,83 \ kN m/m \\
+                    0,8M'=0,8 \times 16,04 = 12,83 \ kN m/m
+                \end{cases}$
+    
+                $M_{c,\ L2}= M_{eixo} + \frac{M'-M_{med}}{2}= 7,8 + \frac{16,04 - 12,83}{2} = 9,41 \ kN m/m$ \newline
+                
+                \item Corte BB
+
+                \input{assets/images/7-BB}
+    
+                \begin{observacao}
+                    Como a L3 é em balanço, os valores se mantém.
+                \end{observacao}
+    
+                $M_{med} \geq \begin{cases}
+                    \frac{M'+M'_{0}}{2} = \frac{16,04+12,89}{2}= 14,77 \ kN m/m \\
+                    0,8M'=0,8 \times 16,04 = 12,83 \ kN m/m
+                \end{cases}$
+    
+                $M_{c,\ L2}= M_{eixo} + \frac{M'-M_{med}}{2}= 7,8 + \frac{16,04 - 14,77}{2} = 8,59 \ kN m/m$ \newline
+                
+                \item Corte CC
+
+                \input{assets/images/7-CC}
+    
+                \begin{observacao}
+                    Não precisa fazer a compatibilização da L1 para ficar a favor da segurança.
+                \end{observacao}
+    
+                $M_{med} \geq \begin{cases}
+                    \frac{M'+M'_{0}}{2} = \frac{11,54+5,12}{2}=8,83 \ kN m/m \\
+                    0,8M'=0,8 \times 11,54 = 9,23 \ kN m/m
+                \end{cases}$
+    
+                $M_{c,\ L4}= M_{eixo} + \frac{M'-M_{med}}{2}= 4,04 + \frac{11,54 - 9,23}{2} = 5,20 \ kN m/m$ \newline
+            \end{enumerate}
+    
+            \input{assets/images/L0-7-R1}
+
+        \item Método ABNT
+    
+            \input{assets/images/L0-7-R2}
+            
+        \end{enumerate}
+
+        \newpage
+
+        \section*{Dimensionamento a flexão por tabelas Kc e Ks}
+
+        \input{assets/images/diagrama-elu}
+
+        \subsection*{Equilíbrio de momento}
+
+        $M_d = R_c \Big(d-\frac{y}{2}\Big)+R's(d-d')) \newline M_d = (b_w \ y \ \sigma_{cd})\Big(d-\frac{y}{2}\Big) + (A's \ \sigma'_s)(d-d') \newline M_d = (b_w \ \lambda \ x \ \alpha_c \ \eta_c \ f_{cd})\Big(d-\frac{\lambda \ x}{2}\Big) + (A's \ \sigma'_s)(d-d') \to \beta_x=\frac{x}{d} \leftrightarrow x = \beta_x \ d \newline M_d = b_w \ \lambda \ \beta_x \ d \ \alpha_c \ \eta_c \ f_{cd}\Big(d-\frac{\lambda \ \beta_x \ d}{2}\Big) + \cancelto{0}{(A's \ \sigma'_s)(d-d')} \newline M_d = b_w \ \lambda \ \beta_x \ d^2 \ \alpha_c \ \eta_c \ f_{cd}\Big(1-\frac{\lambda \beta_x}{2}\Big)$ \newline
+
+        $\to f_{ck} = 40 \ MPa \ (\lambda = 0,8, \eta_c=1, \alpha_c=0,85)$
+
+        $M_d = b_w \ \lambda \ \beta_x \ d^2 \ \alpha_c \ \eta_c \ f_{cd}\Big(1-\frac{\lambda \beta_x}{2}\Big) \newline M_d = 0,68 \ b_w \ d^2 \ f_{cd} \ \beta_x(1-0,4 \beta_x) \longleftrightarrow \cancelto{K_c=f(\beta_x,f_{cd})}{\frac{b_w \ d^2}{M_d}}=\frac{1}{0,68 \ \beta_x \ f_{cd} (1-0,4 \beta_x)}$ \newline
+
+        \subsection*{Do equilíbrio de tensões}
+
+        $M_d = R_s \Big(d-\frac{y}{2}\Big) \newline M_d = A_s \ \sigma_{sd} \Big(d-\frac{\lambda \ x}{2}\Big) \to \beta_x = \frac{x}{d} \leftrightarrow x = \beta_x \ d \newline M_d = A_s \ \sigma_{sd} \Big(d-\frac{\lambda \ \beta_x \ d}{2}\Big)$ \newline
+
+        $\to f_{ck} < 50 \ MPa (\lambda = 0,80)$
+
+        $M_d = A_s \ \sigma_{sd} \Big(d-\frac{\lambda \ \beta_x \ d}{2}\Big) \newline M_d = A_s \ \sigma_{sd} \ d\Big(1-0,4 \ \beta_x\Big) \newline \cancelto{K_s=f(\sigma_s,\beta_x)}{\frac{A_s \ \sigma_{sd}}{M_d}}=\frac{1}{1-0,4 \ \beta_x}$
+    \end{enumerate}
+\end{resposta}
+
+\newpage
+
+\section*{Exemplo}
+
+\begin{enumerate}
+    \item Calcule a área de aço. Dados: C25, aço CA-50, CAA-II.
+
+    \input{assets/images/7-exemplo}
+
+    \begin{resposta}
+        \begin{enumerate}
+            \item Momento de projeto
+
+            $\gamma_c = 1,4$ \cite[tabela 12.1]{nbr6118} \newline
+
+            $M_d = \gamma_c \ M_r = 1,4 \times 120 = 168 \ kNm = 16\ 800\ kN \ cm$  \newline
+            
+            \item Altura útil
+
+            $d = h - c - \phi_e - n\frac{\phi_\ell}{2} = 45 \cdot 10^{-2} - 25 \cdot 10^{-3} - 5 \cdot 10^{-3} - 2\ \frac{10 \cdot 10^{-3}}{2} = 41 \ cm$ \newline
+            
+            \item Kc
+
+            $K_c = \frac{b_w \ d^2}{M_d} = \frac{30 \times 41^2}{16800} = 3 \ cm^2/kN$ \newline
+            
+            \item Tipo de armadura
+
+            $\beta_x = 0,32 \leq 0,45 \to$ armadura simples, domínio 3 \cite[tabela 1.1a]{tabelaskcks} \newline
+            
+            \item Ks
+
+            $K_s = 0,026$ \cite[tabela 1.1a]{tabelaskcks} \newline
+
+            \item Área de aço
+
+            $K_s = \frac{A_s \ d }{M_d} \longleftrightarrow A_s = \frac{K_s \ M_d}{d} = \frac{0,026 \times 16 800}{41} = 10,65 \ cm^2$
+            
+        \end{enumerate}
+    \end{resposta}
+\end{enumerate}

@@ -1,0 +1,60 @@
+\begin{figure}[H]
+    \centering
+\begin{tikzpicture}[
+    scale=1.5,
+    cota/.style={<->, >=stealth, thin, gray!80!black},  % Estilo das linhas de cota
+    retangulo/.style={draw=gray!80!black, thick},        % Estilo do retângulo
+    chamada/.style={gray!60, thin, dashed},              % Linhas de chamada/extensão
+    eixo/.style={->, >=stealth, thick, gray!80!black}   % Estilo dos eixos x e y
+]
+
+    % --- Parâmetros de Dimensão ---
+    \def\wD{1} % Largura do retângulo superior (2)
+    \def\hD{1.5} % Altura do retângulo superior (2)
+    
+    \def\wE{1} % Largura do retângulo inferior (1)
+    \def\hE{2} % Altura do retângulo inferior (1)
+    
+    % --- Coordenadas ---
+    % Retângulo 1 (Inferior)
+    \coordinate (A1) at (0, 0);
+    \coordinate (B1) at (\wE, 0);
+    \coordinate (C1) at (\wE, \hE);
+    \coordinate (D1) at (0, \hE);
+
+    % Retângulo 2 (Superior, posicionado logo acima do retângulo 1)
+    \coordinate (A2) at (0, \hE);
+    \coordinate (B2) at (\wD, \hE);
+    \coordinate (C2) at (\wD, \hE + \hD);
+    \coordinate (D2) at (0, \hE + \hD);
+
+    % --- 1. Desenho dos Retângulos ---
+    \draw[retangulo] (A1) rectangle (C1); % Retângulo 1 (Inferior)
+    \draw[retangulo] (A2) rectangle (C2); % Retângulo 2 (Superior)
+    \draw[retangulo, black, line width=3pt] (C1) rectangle (D1); 
+
+    % --- 2. Números nos centros dos retângulos ---
+    \node[font=\large\bfseries, gray!80!black] at ($(A2)!0.5!(C2)$) {L1};
+    \node[font=\large\bfseries, gray!80!black] at ($(A1)!0.5!(C1)$) {L4};
+
+    % --- 3. Cotas Verticais (À esquerda, separadas para cada retângulo) ---
+    \def\offsetV{0.5}
+    \def\xCota{-\offsetV}
+
+    % Linhas de chamada
+    %\draw[chamada] (A1) -- (\xCota - 0.15, 0);
+    %\draw[chamada] (D1) -- (\xCota - 0.15, \hE);
+    %\draw[chamada] (D2) -- (\xCota - 0.15, \hE + \hD);
+
+    % Altura do Retângulo 2
+    \draw[cota] (\xCota, \hE) -- (\xCota, \hE + \hD)
+        node[midway, left=3pt, font=\small, rotate=90, anchor=south] {$256\text{ cm}$};
+
+    % Altura do Retângulo 1
+    \draw[cota] (\xCota, 0) -- (\xCota, \hE)
+        node[midway, left=3pt, font=\small, rotate=90, anchor=south] {$556\text{ cm}$};
+
+\end{tikzpicture}
+    %\caption{Dois retângulos empilhados com identificações e cotas}
+    %\label{fig:retangulos_empilhados}
+\end{figure}

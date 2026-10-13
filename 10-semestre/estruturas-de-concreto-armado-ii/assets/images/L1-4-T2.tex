@@ -1,0 +1,52 @@
+\begin{tikzpicture}[
+    scale=3,
+    cota/.style={<->, >=stealth, thin, gray!80!black},
+    chamada/.style={gray!60, thin, dashed}
+]
+    % Coordenadas espelhadas na vertical
+    \coordinate (A) at (1.268, 0);
+    \coordinate (D) at (1.268, 2);
+    \coordinate (P1) at (0, 1.268);
+    \coordinate (H) at (1.268, 1.268); % Ponto do corte na borda direita
+
+    % Desenho do Triângulo
+    \draw[thick] (D) -- (A);                  % Borda vertical da direita
+    \draw[thick] (A) -- (P1) -- (D);          % Linhas de charneira
+    \draw[thick,dashed] (P1) -- (H);          % Linha de corte/altura
+
+    % Símbolos de Ângulo Reto (90°) na interseção
+    \draw[thin, gray!80!black] (1.268, 1.268-0.08) -- (1.268-0.08, 1.268-0.08) -- (1.268-0.08, 1.268);
+    \fill[gray!80!black] (1.268-0.03, 1.268-0.03) circle (0.3pt);
+    
+    \draw[thin, gray!80!black] (1.268, 1.268+0.08) -- (1.268-0.08, 1.268+0.08) -- (1.268-0.08, 1.268);
+    \fill[gray!80!black] (1.268-0.03, 1.268+0.03) circle (0.3pt);
+
+    % --- INDICAÇÃO DOS ÂNGULOS ---
+    % Canto superior (D): 60° com a vertical
+    \draw[thin, gray!80!black] (1.268, 1.5) arc (270:210:0.5);
+    \node[font=\tiny, gray!90!black] at (1.268-0.35, 1.55) {$60^\circ$};
+
+    % Canto inferior (A): 45° com a vertical
+    \draw[thin, gray!80!black] ($(A)+(135:0.5)$) arc (135:90:0.5);
+    \node[font=\tiny, gray!90!black] at (1.268-0.25, 0.5) {$45^\circ$};
+
+    % --- EIXO DE COTA HORIZONTAL (Largura c) ---
+    \def\offsetH{0.2}
+    %\draw[chamada] (A) -- (1.268, -\offsetH);
+    %\draw[chamada] (P1) -- (0, -\offsetH);
+    \draw[cota] (0, -\offsetH) -- (1.268, -\offsetH)
+        node[midway, below=2pt, font=\small] {$c$};
+
+    % --- EIXOS DE COTA VERTICAIS (Alturas à direita) ---
+    \def\offsetV{0.2}
+    %\draw[chamada] (A) -- (1.268+\offsetV, 0);
+    %\draw[chamada] (H) -- (1.268+\offsetV, 1.268);
+    %\draw[chamada] (D) -- (1.268+\offsetV, 2);
+
+    \draw[cota] (1.268+\offsetV, 0) -- (1.268+\offsetV, 1.268)
+        node[midway, right=2pt, font=\small, rotate=-90, anchor=south] {$c$};
+
+    \draw[cota] (1.268+\offsetV, 1.268) -- (1.268+\offsetV, 2)
+        node[midway, right=2pt, font=\small, rotate=-90, anchor=south] {$256-c$};
+
+\end{tikzpicture}
