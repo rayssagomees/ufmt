@@ -47,9 +47,17 @@
 
 <br>
 
+## 2026/2
+
+### ESTRUTURAS DE CONCRETO ARMADO II
+
+| Conteúdo |  |
+| :--- | :--- |
+| Aulas | <a target="_blank" href="https://github.com/rayssagomees/ufmt/blob/main/10-semestre/estruturas-de-concreto-armado-ii/main.pdf">Acessar</a> |
+
 <br>
 
-<div align="right"><a target="_blank" href="https://github.com/raysantori/ufmt#">🔝 Voltar ao topo</a></div>
+<div align="right"><a target="_blank" href="https://github.com/rayssagomees/ufmt#">🔝 Voltar ao topo</a></div>
 
 <strong>Mostre apoio!</strong> ⭐ Se gostou do conteúdo.
 
