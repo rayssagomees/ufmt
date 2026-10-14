@@ -4,8 +4,168 @@
     \begin{enumerate}[start=9]
 
         \item Dimensionamento armaduras negativas
+        
+        \input{assets/images/L0-7-R2.tex}
+        
+        \fbox{L1-L2} \fbox{L2-L4}
+
+        \input{assets/images/9-AA.tex}
+
+        \begin{enumerate}
+            \item Momento de projeto
+
+            $M'k = 16,04 \ kN m/m$
+
+            $\gamma_c = 1,4$ \cite[tabela 12.1]{nbr6118}
+
+            $M'_d = \gamma_c \ M'k = 1,4 \times 16,04 = 2245,6 \ kN cm/m$ \newline
+
+            \item Altura útil
+            
+            $d' = h - c - \frac{\phi_\ell}{2} = 10 \cdot 10^{-2} - 20 \cdot 10^{-3} - \frac{ 10\cdot 10^{-3}}{2} = 7,5 \ cm$ \newline
+            
+            \item Taxa mínima de armadura
+            
+            $\rho_s \geq \rho_{min} \text{\cite[tabela 17.3 e tabela 19.1]{nbr6118}} \newline \frac{A_s}{b_w\ h} \geq \frac{0,179}{100} \longleftrightarrow A_s{min} = \frac{0,179 \times 100 \times 10}{100} = 1,79 \ cm^2/m$ \newline
+            
+            \item Área de aço
+            
+            $K_c = \frac{b\ d'^2}{M_d} = \frac{100 \times 7,5^2}{2245,6} = 2,50 \ cm^2/kN$
+
+            $\beta_x = 0,24 < 0,45 \to$ armadura simples, domínio 2 \cite[tabela 1.1a]{tabelaskcks}
+
+            $K_s = \frac{A_s \ d'}{M_d} \longleftrightarrow A_s =\frac{0,025 \times 2245,6}{7,5} = 7,49\ cm^2/m$ \newline
+
+            %\newpage
+            
+            \item Armadura de distribuição negativa \cite[item 20.1]{nbr6118}
+            
+            A armadura secundária ou armadura de distribuição serve, apenas, como elementos construtivo.
+            
+            $A'_{s,dist} \geq \begin{cases}
+                20\%A_s = \frac{20}{100} \ 7,49 = 1,50 \ cm^2 \\
+                0,9 \ cm^2/m
+            \end{cases}$ \newline
+
+            \item Determinação da bitola e do espaçamento
+            
+            \begin{observacao}
+                Sempre considerar a altura da menor laje.
+            \end{observacao}
+            
+            $\phi_{\ell, max} = \frac{h}{8} = 1,25 \ cm = 12,5 \ mm$ \newline
+
+            \begin{multicols}{2}
+
+            $S_p \leq \begin{cases}
+                2h = 2 \times 10 = 20 \ cm \\
+                20 \ cm
+            \end{cases}$ \newline
+
+            $S_d \leq 33 \ cm$ \newline
+            \end{multicols}
+
+
+            \begin{multicols}{2}
+
+            $A_{\phi} = \pi \Big(\frac{D}{2}\Big)^2 \newline A_{\phi} = \pi \Big(\frac{12,5 \cdot 10^{-3}}{2}\Big)^2 = 1,23 \ cm^2$\newline
+
+            $S_{\phi, p} = \frac{A_{\phi}}{A_s}\ 100 \newline S_{\phi, d} = \frac{1,23}{7,49} \ 100 = 16,42 \approx 16 \ cm$ \newline
+
+            $\phi_\ell = 12,5 mm$ c/ $16 \ cm$
+
+            $A_{\phi} = \pi \Big(\frac{D}{2}\Big)^2 \newline A_{\phi} = \pi \Big(\frac{6,3 \cdot 10^{-3}}{2}\Big)^2 = 0,31 \ cm^2$ \newline
+
+            $S_{\phi, d} = \frac{A_{\phi}}{A_s}\ 100 \newline S_{\phi, d}= \frac{0,31}{1.79} \ 100 = 17,32 \approx 17 \ cm$ \newline
+
+            $\phi_\ell = 6,3 mm$ c/ $17 \ cm$
+            \end{multicols}
+
+            \begin{observacao}
+                $\ell_x$ vai ser o maior vão efetivo das lajes contínuas.
+            \end{observacao}
+
+            %\begin{multicols}{2}
+                $\ell_x \geq \begin{cases}
+                    \ell_{L1,L2} \geq \begin{cases}
+                    \ell_{x,L1} = 256 \ cm \\
+                    \ell_{x,L2} = 446 \ cm
+                \end{cases} \\ \ell_{L2,L4} \geq \begin{cases}
+                    \ell_{x,L2} = 446 \ cm \\
+                    \ell_{x,L4} = 476 \ cm
+                \end{cases}
+                \end{cases}$
+            %\end{multicols}
+
+            $a_\ell= 0,25 \ \ell_{x} = 0,25 \times 476 = 119 \ cm$
+
+            \input{assets/images/9-As.tex}
+
+        \end{enumerate}
+        
+        \fbox{L1-L4}
+        
+        \fbox{L3-L4}
 
         \item Detalhamento das armaduras
+        
+        \fbox{L1}
+
+        \input{assets/images/L1-10}
+
+        \input{assets/images/L1-10-AA.tex}
+
+        \input{assets/images/L1-10-BB.tex}
+
+        \begin{enumerate}
+            \item Comprimento de ancoragem básico \cite[item 9.4.2.4]{nbr6118}
+            
+            \begin{enumerate}
+                \item Resistência da aderência de cálculo \cite[item 9.3.2]{nbr6118}
+
+                $f_{ctk,inf} = 0,7 \ f_{ct,m}$ \cite[item 8.2.5]{nbr6118}
+
+                $f_{ct,m} = 0,3 f_{ck}^{2/3}$ \cite[item 8.2.5]{nbr6118}
+
+                $\gamma_c = 1,4$ \cite[tabela 12.1]{nbr6118} \newline
+                
+                $f_{ctd} = \frac{f_{ctk, inf}}{\gamma_c} \text{\cite[tabela 8.2]{nbr6118}} \newline f_{ctd} = \frac{0,7 \times 0,3 \times 25^{2/3}}{1,4} =  1,28 \ MPa$ \newline
+                
+                $\eta_1 = 2,25$ \cite[tabela 8.2]{nbr6118}
+                
+                $\eta_2 = 1$ \cite[item 9.3.1]{nbr6118}
+                
+                $\eta_3 = 1$ \cite[item 9.3.2.1]{nbr6118} \newline
+                
+                $f_{bd} = \eta_1 \ \eta_2 \ \eta_3 f_{ctd} = 2,25 \times 1 \times 1 \times 1,28 = 2,89 \ MPa$ \newline
+            \end{enumerate}
+
+            $\gamma_s = 1,15$ \cite[tabela 12.1]{nbr6118}
+
+            $f_{yd}=\frac{f_{yk}}{\gamma_s}$ \newline
+
+            $\ell_b = \frac{\phi}{4}\frac{f_{yd}}{f_{bd}} \geq 25 \phi \newline \ell_b = \frac{\times 0,5}{4}\frac{\frac{500}{1,15}}{2,89} \geq 25 \times 0,5 \newline \ell_b = 18,81  \geq 12,5$ \newline
+
+            \item Comprimento de ancoragem necessário \cite[item 9.4.2.5]{nbr6118}
+            
+            \begin{observacao}
+                $1$ para ficar a favor da segurança.
+            \end{observacao}
+
+            $\alpha = 1$ \cite[item 9.4.2.5]{nbr6118} \newline
+
+            $\ell_{b,nec} = \alpha\ \ell_b \frac{A_{s,calc}}{A_{s,ef}} \geq  \ell_{b,min} \newline \ell_{b,nec} = \alpha\ \ell_b \cancelto{1}{\frac{A_{s,calc}}{A_{s,ef}}} \geq \begin{cases}
+                0,3 \ell_b = 0,3 \times 18,81 = 5,64 \ cm \\
+                10\phi = 10 \times 0,5 = 5 \ cm \\
+                10 \ cm
+            \end{cases} \newline \ell_{b,nec} = 1 \times 18,81 = 18,81 \geq 10 \ cm$
+        \end{enumerate}
+        
+        \fbox{L2}
+        
+        \fbox{L3}
+        
+        \fbox{L4}
         
     \end{enumerate}
 \end{resposta}

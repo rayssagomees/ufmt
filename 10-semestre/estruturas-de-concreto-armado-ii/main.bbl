@@ -1,0 +1,19 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.7 }
+
+\bibitem[{Associação Brasileira de Normas Técnicas} 2023]{nbr6118}
+\abntrefinfo{ABNT NBR 6118}{ABNT NBR 6118}{2023}
+{{Associação Brasileira de Normas Técnicas}. \emph{NBR 6118: Projeto de
+  estruturas de concreto}.
+Rio de Janeiro, 2023. 242~p.}
+
+\bibitem[Silva et al. 2023]{tabelaskcks}
+\abntrefinfo{Silva et al.}{SILVA et al.}{2023}
+{SILVA, G. d.~S. et al. \emph{Tabelas Kc e Ks para fck < 90 MPa}. 1. ed. Barra
+  do Garças: Universidade Federal de Mato Grosso, 2023.}
+
+\end{thebibliography}

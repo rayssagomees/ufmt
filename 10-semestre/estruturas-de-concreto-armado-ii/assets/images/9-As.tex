@@ -1,0 +1,70 @@
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[
+        scale=1.5,
+        retangulo/.style={draw=gray!80!black, thick},
+        rotuloLetra/.style={font=\footnotesize, blue!80!black},
+        eixo/.style={->, >=stealth, thick, black},
+        corte/.style={draw=black, dash dot, thick},
+        setaCorte/.style={->, >=stealth, thick, black},        barraPrinc/.style={line width=1.4pt, red!85!black},
+        barraSec/.style={line width=0.8pt, blue!80!black},
+    ]
+
+        % --- Definição dos Parâmetros de Dimensão ---
+        \def\wCentro{3.2}       % Largura dos retângulos centrais (L1 e L3)
+        \def\hCima{2.0}         % Altura do retângulo superior (L1)
+        \def\hBaixo{2.2}        % Altura do retângulo inferior (L3)
+        
+        \def\wDir{2.2}          % Largura do retângulo da direita (L2)
+        \def\hDir{\hCima + \hBaixo} % Altura total da laje L2
+        
+        \def\wEsq{1.6}          % Largura do retângulo da esquerda (L4)
+        \def\hEsq{\hBaixo}      % Altura da laje L4
+
+        % --- Coordenadas ---
+        \coordinate (A2) at (0, 0);
+        \coordinate (B2) at (\wCentro, 0);
+        \coordinate (C2) at (\wCentro, \hBaixo);
+        \coordinate (D2) at (0, \hBaixo);
+
+        \coordinate (A1) at (0, \hBaixo);
+        \coordinate (B1) at (\wCentro, \hBaixo);
+        \coordinate (C1) at (\wCentro, \hBaixo + \hCima);
+        \coordinate (D1) at (0, \hBaixo + \hCima);
+
+        \coordinate (A3) at (\wCentro, 0);
+        \coordinate (B3) at (\wCentro + \wDir, 0);
+        \coordinate (C3) at (\wCentro + \wDir, \hDir);
+        \coordinate (D3) at (\wCentro, \hDir);
+
+        \coordinate (A4) at (-\wEsq, 0);
+        \coordinate (B4) at (0, 0);
+        \coordinate (C4) at (0, \hEsq);
+        \coordinate (D4) at (-\wEsq, \hEsq);
+
+        % --- Desenho dos Retângulos ---
+        \draw[retangulo] (A1) rectangle (C1); % L1
+        \draw[retangulo] (A2) rectangle (C2); % L3
+        \draw[retangulo] (A3) rectangle (C3); % L2
+        \draw[retangulo] (A4) rectangle (C4); % L4
+        \draw[retangulo,white,dashed] (D4) rectangle (A4); % L3
+        
+        \node[below, right=50pt] at ($(A3)!0.5!(B3)$) {$kN m/m$}; 
+
+        % --- Malha de armadura sobre o apoio B2 -> C1 ---
+        \def\lbarra{0.55}   % meio-comprimento das barras principais
+        \def\dSec{0.30}     % afastamento das barras secundárias ao eixo B2-C1
+
+        % Barras principais (horizontais), espaçadas ao longo de B2-C1
+        \foreach \y in {0.15,0.45,...,4.05} {
+            \draw[barraPrinc] (\wCentro-\lbarra, \y) -- (\wCentro+\lbarra, \y);
+        }
+
+        % Barras secundárias (verticais), de B2 até C1
+        \draw[barraSec] (\wCentro-\dSec, 0) -- (\wCentro-\dSec, \hDir);
+        \draw[barraSec] (\wCentro+\dSec, 0) -- (\wCentro+\dSec, \hDir);
+
+    \end{tikzpicture}
+    %\caption{Arranjo de lajes com eixos locais numerados e cortes transversais A, B e C}
+    %\label{fig:lajes_cortes}
+\end{figure}
