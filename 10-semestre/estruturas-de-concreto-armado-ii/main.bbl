@@ -5,6 +5,12 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.7 }
 
+\bibitem[{Associação Brasileira de Normas Técnicas} 2019]{nbr6120}
+\abntrefinfo{ABNT NBR 6120}{ABNT NBR 6120}{2019}
+{{Associação Brasileira de Normas Técnicas}. \emph{NBR 6120: Ações para o
+  cálculo de estruturas de edificações}.
+Rio de Janeiro, 2019. 61~p.}
+
 \bibitem[{Associação Brasileira de Normas Técnicas} 2023]{nbr6118}
 \abntrefinfo{ABNT NBR 6118}{ABNT NBR 6118}{2023}
 {{Associação Brasileira de Normas Técnicas}. \emph{NBR 6118: Projeto de
@@ -15,5 +21,10 @@ Rio de Janeiro, 2023. 242~p.}
 \abntrefinfo{Silva et al.}{SILVA et al.}{2023}
 {SILVA, G. d.~S. et al. \emph{Tabelas Kc e Ks para fck < 90 MPa}. 1. ed. Barra
   do Garças: Universidade Federal de Mato Grosso, 2023.}
+
+\bibitem[Universidade de Sao Paulo 2007]{tabelalajes}
+\abntrefinfo{Tabelas de lajes}{TABELAS DE LAJES}{2007}
+{UNIVERSIDADE DE SAO PAULO. \emph{Tabelas de lajes}.
+Sao Carlos, 2007. 24~p.}
 
 \end{thebibliography}

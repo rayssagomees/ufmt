@@ -1,6 +1,20 @@
 This is BibTeX, Version 0.99e
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
+A level-1 auxiliary file: aula/00-capa.aux
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+A level-1 auxiliary file: aula/A01b.aux
+Reallocating 'name_of_file' (item size: 1) to 13 items.
+A level-1 auxiliary file: aula/A02.aux
+Reallocating 'name_of_file' (item size: 1) to 16 items.
+A level-1 auxiliary file: aula/A03a-1.aux
+Reallocating 'name_of_file' (item size: 1) to 16 items.
+A level-1 auxiliary file: aula/A03a-2.aux
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+A level-1 auxiliary file: aula/A03b.aux
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+A level-1 auxiliary file: aula/A04a.aux
 Reallocating 'name_of_file' (item size: 1) to 14 items.
 A level-1 auxiliary file: aula/A04b.aux
 Reallocating 'name_of_file' (item size: 1) to 16 items.
@@ -27,44 +41,44 @@ Reallocating 'global_strs' (item size: 1) to 4000000 items.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 3 entries,
+You've used 5 entries,
             6714 wiz_defined-function locations,
-            1210 strings with 9792 characters,
-and the built_in function-call counts, 2229 in all, are:
-= -- 297
+            1228 strings with 10047 characters,
+and the built_in function-call counts, 3083 in all, are:
+= -- 371
 > -- 42
 < -- 1
 + -- 62
 - -- 12
-* -- 131
-:= -- 339
-add.period$ -- 8
-call.type$ -- 3
-change.case$ -- 22
-chr.to.int$ -- 6
-cite$ -- 2
-duplicate$ -- 73
-empty$ -- 161
+* -- 183
+:= -- 423
+add.period$ -- 16
+call.type$ -- 5
+change.case$ -- 32
+chr.to.int$ -- 8
+cite$ -- 4
+duplicate$ -- 125
+empty$ -- 275
 format.name$ -- 61
-if$ -- 547
+if$ -- 791
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 45
-newline$ -- 17
+missing$ -- 73
+newline$ -- 27
 num.names$ -- 5
-pop$ -- 69
+pop$ -- 93
 preamble$ -- 1
-purify$ -- 11
+purify$ -- 17
 quote$ -- 0
-skip$ -- 153
+skip$ -- 209
 stack$ -- 1
-substring$ -- 84
-swap$ -- 29
+substring$ -- 118
+swap$ -- 49
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 9
+while$ -- 11
 width$ -- 0
-write$ -- 38
+write$ -- 68
